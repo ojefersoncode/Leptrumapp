@@ -13,15 +13,19 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
-  const handleLogin = async (e: { preventDefault: () => void; }) => {
+  const handleLogin = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
     setError("");
     try {
       const { error } = await supabase.auth.signInWithPassword({ email, password });
       if (error) throw error;
-      router.push("/home"); // Redireciona para a home
+      router.push("/home");
     } catch (err) {
-      setError(err.message);
+      if (err instanceof Error) {
+        setError(err.message); 
+      } else {
+        setError("Ocorreu um erro inesperado.");
+      }
     }
   };
 
@@ -61,7 +65,9 @@ const Login = () => {
               />
             </div>
             {error && <p className="text-sm text-red-600">{error}</p>}
-            <Button type="submit" className="w-full bg-indigo-600 mt-4">Entrar</Button>
+            <Button type="submit" className="w-full bg-indigo-600 mt-4">
+              Entrar
+            </Button>
           </form>
         </CardContent>
         <CardFooter className="text-center">

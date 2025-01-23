@@ -6,37 +6,32 @@ import { supabase } from "@/lib/supabaseClient";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardContent, CardFooter } from "@/components/ui/card";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
-import { CheckCircle2, AlertCircle } from "lucide-react";
+import { AlertCircle } from "lucide-react";
 
 const Signin = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
-  const [dialogOpen, setDialogOpen] = useState(false);
-  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState(""); // Estado para mensagens de erro
   const router = useRouter(); // Inicializa o roteador do Next.js
 
-  const handleSignup = async (e: { preventDefault: () => void; }) => {
+  const handleSignup = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
-    setError("");
-    setSuccess(false);
+    setError(""); // Reseta a mensagem de erro
+
+    // Valida campos vazios
+    if (!email || !password) {
+      setError("Preencha todos os campos.");
+      return;
+    }
+
     try {
       const { error } = await supabase.auth.signUp({ email, password });
       if (error) throw error;
 
-      setSuccess(true);
-      setDialogOpen(true);
-
-      // Redirecionar para a página de login após 3 segundos
-      setTimeout(() => {
-        setDialogOpen(false);
-        router.push("/login");
-      }, 3000);
-    } catch (err) {
-      setError(err.message);
-      setSuccess(false);
-      setDialogOpen(true);
+      // Redirecionar para a página de login
+      router.push("/login");
+    } catch (err: any) {
+      setError(err.message || "Erro ao criar conta. Tente novamente.");
     }
   };
 
@@ -75,6 +70,12 @@ const Signin = () => {
                 required
               />
             </div>
+            {error && (
+              <div className="flex items-center text-sm text-red-600 mt-2">
+                <AlertCircle className="w-5 h-5 mr-2" />
+                {error}
+              </div>
+            )}
             <Button type="submit" className="w-full bg-indigo-700 mt-4">
               Criar conta
             </Button>
@@ -89,36 +90,6 @@ const Signin = () => {
           </p>
         </CardFooter>
       </div>
-
-      {/* Dialog para feedback */}
-      <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
-        <DialogContent>
-          <DialogHeader>
-            {success ? (
-              <>
-                <CheckCircle2 className="h-6 w-6 text-green-600" />
-                <DialogTitle>Conta criada com sucesso!</DialogTitle>
-                <DialogDescription>
-                  Verifique seu email para confirmar o cadastro. Você será redirecionado para o login em instantes.
-                </DialogDescription>
-              </>
-            ) : (
-              <>
-                <AlertCircle className="h-6 w-6 text-red-600" />
-                <DialogTitle>Erro ao criar conta</DialogTitle>
-                <DialogDescription>
-                  {error || "Ocorreu um erro ao tentar criar sua conta. Tente novamente."}
-                </DialogDescription>
-              </>
-            )}
-          </DialogHeader>
-          {!success && (
-            <Button onClick={() => setDialogOpen(false)} className="mt-4 w-full">
-              Fechar
-            </Button>
-          )}
-        </DialogContent>
-      </Dialog>
     </div>
   );
 };
