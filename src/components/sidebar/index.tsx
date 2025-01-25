@@ -6,16 +6,13 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import {
     Home,
-    LeafyGreen, Mic, Search,
+    Search,
     Store,
-    Heart,
     ShoppingBag,
     Menu,
-    TicketPercent,
     Settings,
-    HeartOff,
-    Pin,
     MapPin,
+    ChartLine,
 } from "lucide-react";
 
 import {
@@ -45,18 +42,18 @@ export function Sidebar() {
                                 </button>
                             </SheetTrigger>
 
-                            <SheetContent side={"left"} className="sm:max-w-x bg-indigo-950">
+                            <SheetContent side={"left"} className="sm:max-w-x text-slate-50 border-none bg-indigo-950">
                                 <DialogTitle>
                                     <VisuallyHidden>Leptrum</VisuallyHidden>
 
                                 </DialogTitle>
-                                <nav className="grid gap-6 text-lg bg-indigo-950 font-medium">
+                                <nav className="grid gap-5 text-lg  font-medium">
 
                                     <div className="flex items-center gap-4">
                                         <Link
                                             href="#"
                                             className="flex h-10 w-10 bg-primary rounded-xl text-lg 
-                                        items-center justify-center text-primary-foreground md:text-base"
+                                        items-center justify-center text-slate-50 md:text-base"
                                             prefetch={false} >
                                             <ShoppingBag className="h-5 w-5 transition-all" />
                                             <span className="sr-only">Logo</span>
@@ -64,26 +61,33 @@ export function Sidebar() {
                                         <h1 className="text-slate-200">Menu</h1>
                                     </div>
 
+                                    <div>
+
+                                        <div className="flex items-center text-slate-50 text-sm px-2.5 mb-4">
+                                            <h1>Nome Da Loja</h1>
+                                        </div>
+
+                                        <div className="flex mb-2 items-center px-2.5 text-slate-200 gap-2 whitespace-nowrap flex-shrink-0">
+                                            <MapPin className="h-4 w-4" />
+                                            <span className="font-semibold text-sm">Ponte Nova</span>
+                                        </div>
+                                        <hr className="bg-slate-600 opacity-50 mt-3" />
+                                    </div>
+
+
+
                                     <Link
                                         href="#"
                                         className="flex items-center gap-4 px-2.5 
-                                    text-muted-foreground hover:text-foreground"
+                                    text-slate-50 hover:text-slate-400"
                                         prefetch={false} >
                                         <Home className="h-5 w-5 transition-all" />
                                         Home
                                     </Link>
                                     <Link
                                         href="#"
-                                        className="flex items-center gap-4 px-2.5
-                                     text-muted-foreground hover:text-foreground"
-                                        prefetch={false} >
-                                        <TicketPercent className="h-5 w-5 transition-all" />
-                                        Destaques
-                                    </Link>
-                                    <Link
-                                        href="#"
                                         className="flex items-center gap-4 px-2.5 
-                                    text-muted-foreground hover:text-foreground"
+                                    text-slate-50 hover:text-slate-400"
                                         prefetch={false} >
                                         <Store className="h-5 w-5 transition-all" />
                                         Lojas
@@ -91,15 +95,23 @@ export function Sidebar() {
                                     <Link
                                         href="#"
                                         className="flex items-center gap-4 px-2.5 
-                                    text-muted-foreground hover:text-foreground"
+                                    text-slate-50 hover:text-slate-400"
                                         prefetch={false} >
                                         <ShoppingBag className="h-5 w-5 transition-all" />
                                         Quero vender
                                     </Link>
                                     <Link
                                         href="#"
+                                        className="flex items-center gap-4 px-2.5
+                                     text-slate-50 hover:text-slate-400"
+                                        prefetch={false} >
+                                        <ChartLine className="h-5 w-5 transition-all" />
+                                        Dashboard
+                                    </Link>
+                                    <Link
+                                        href="#"
                                         className="flex items-center gap-4 px-2.5 
-                                    text-muted-foreground hover:text-foreground"
+                                    text-slate-50 hover:text-slate-400"
                                         prefetch={false} >
                                         <Settings className="h-5 w-5 transition-all" />
                                         Configurações
@@ -115,10 +127,6 @@ export function Sidebar() {
 
 
                     <div className="flex w-full items-center justify-end gap-2">
-                        <div className="flex items-center justify-center text-slate-200 gap-2 whitespace-nowrap flex-shrink-0">
-                            <MapPin className="h-4 w-4" />
-                            <span className="font-semibold text-sm">Ponte Nova</span>
-                        </div>
 
                         {/* Dialog search*/}
                         <Dialog>
