@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import ProductSkeleton from "@/components/ProductSkeleton";
 import { Card, CardHeader, CardContent, CardFooter } from "@/components/ui/card";
-import { Heart, MapPin } from "lucide-react";
+import { MapPin } from "lucide-react";
 import { Sidebar } from "@/components/sidebar";
 
 type Product = {
@@ -55,10 +55,6 @@ const Home = () => {
                 />
               </CardHeader>
               <CardContent>
-                <div className="flex justify-between items-center mb-1">
-                  <span className="font-bold text-lg">R$: {product.price.toFixed(2)}</span>
-                  <Heart />
-                </div>
                 <h3 className="text-base font-semibold line-clamp-2">{product.title}</h3>
               </CardContent>
               <CardFooter className="flex items-center gap-2">

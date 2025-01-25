@@ -26,6 +26,7 @@ const CreateStore = () => {
                                 className="mt-1"
                             />
                         </div>
+
                         <div>
                             <label htmlFor="urldaloja" className="block text-sm mb-2 font-medium text-slate-800">
                                 Url da loja
@@ -52,7 +53,7 @@ const CreateStore = () => {
                             <Label htmlFor="picture">Logo da loja</Label>
                             <Input id="picture" type="file" />
                         </div>
-                        <Button className="w-full bg-indigo-700 mt-4">Cadastrar loja</Button>
+                        <Button className="w-full bg-indigo-700 mt-4">Proximo passo</Button>
                     </form>
                 </CardContent>
             </Card>
