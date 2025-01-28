@@ -5,37 +5,80 @@ import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@radix-ui/react-label";
-import { useRouter } from "next/router"; // Importando o useRouter do Next.js
-import supabase from "@/lib/supabase"; // Importando o cliente Supabase
+import { useRouter } from "next/navigation";
+import { supabase } from "@/lib/supabaseClient";
 
 const CreateStore = () => {
-    const router = useRouter(); // Hook do Next.js para navegação
-    const [nomeLoja, setNomeLoja] = useState("");
-    const [urlLoja, setUrlLoja] = useState("");
+    const router = useRouter();
+    const [storeName, SetstoreName] = useState("");
+    const [storeUrl, SetstoreUrl] = useState("");
     const [categoria, setCategoria] = useState("");
-    const [logo, setLogo] = useState(null);
+    const [logo, setLogo] = useState<File | null>(null);
 
-    const handleSubmit = async (event) => {
+    type SupabaseStorageResponse = {
+        data: { publicUrl: string };
+        error?: any; // Tornando 'error' opcional
+    };
+
+    const uploadImage = async (file: File | null) => {
+        if (!file) return null;
+
+        const fileExt = file.name.split(".").pop();
+        const fileName = `${Math.random()}.${fileExt}`;
+        const filePath = `${fileName}`;
+
+        // Upload da imagem para o Supabase Storage
+        const { data, error } = await supabase.storage
+            .from("storeLogos")
+            .upload(filePath, file);
+
+        if (error) {
+            console.error("Erro ao fazer upload:", error.message || error);
+            return null;
+        }
+
+        // Obter a URL pública
+        const { data: publicUrlData, error: urlError }: SupabaseStorageResponse = supabase
+            .storage
+            .from("storeLogos")
+            .getPublicUrl(filePath);
+
+        if (urlError) {
+            console.error("Erro ao obter a URL pública:", urlError.message || urlError);
+            return null;
+        }
+
+        return publicUrlData?.publicUrl || null;
+    };
+
+    const handleSubmit = async (event: { preventDefault: () => void }) => {
         event.preventDefault();
 
-        // Enviar dados para o Supabase
         try {
+            // Enviar a imagem
+            const imageUrl = logo ? await uploadImage(logo) : "";
+
+            // Enviar os dados para a  tabela "stores"
             const { data, error } = await supabase
-                .from("lojas") // Substitua por sua tabela no Supabase
+                .from("stores")
                 .insert([
                     {
-                        nome: nomeLoja,
-                        url: urlLoja,
-                        categoria: categoria,
-                        logo: logo ? URL.createObjectURL(logo) : "", // Enviar logo se existir
+                        storeName: storeName,
+                        storeUrl: storeUrl,
+                        storeCategoria: categoria,
+                        storeImage: imageUrl || "",
                     },
                 ]);
 
-            if (error) throw error;
+            if (error) {
+                console.error("Erro ao inserir dados:", error);
+                alert("Erro ao enviar os dados.");
+            } else {
+                console.log("Dados inseridos com sucesso:", data);
+            }
+
 
             console.log("Dados enviados com sucesso:", data);
-
-            // Redirecionar para a página create-store-final
             router.push("/create-store-final");
         } catch (error) {
             console.error("Erro ao enviar dados para o Supabase:", error);
@@ -48,7 +91,7 @@ const CreateStore = () => {
             <Card className="w-full max-w-md p-4">
                 <CardHeader className="text-center">
                     <h2 className="text-2xl font-bold">Crie sua loja</h2>
-                    <p className="text-sm text-slate-600">Alcance novos clientes e organize seus produtos..</p>
+                    <p className="text-sm text-slate-600">Alcance novos clientes e organize seus produtos.</p>
                 </CardHeader>
                 <CardContent>
                     <form onSubmit={handleSubmit} className="space-y-4">
@@ -59,8 +102,8 @@ const CreateStore = () => {
                             <Input
                                 id="nomedaloja"
                                 type="text"
-                                value={nomeLoja}
-                                onChange={(e) => setNomeLoja(e.target.value)}
+                                value={storeName}
+                                onChange={(e) => SetstoreName(e.target.value)}
                                 placeholder="Leptrum store"
                                 className="mt-1"
                             />
@@ -73,12 +116,13 @@ const CreateStore = () => {
                             <Input
                                 id="urldaloja"
                                 type="text"
-                                value={urlLoja}
-                                onChange={(e) => setUrlLoja(e.target.value)}
+                                value={storeUrl}
+                                onChange={(e) => SetstoreUrl(e.target.value)}
                                 placeholder="leptrum.com/nome-da-sua-loja"
                                 className="mt-1"
                             />
                         </div>
+
                         <div>
                             <label htmlFor="categoria" className="block text-sm mb-2 font-medium text-slate-800">
                                 Categoria
@@ -92,14 +136,19 @@ const CreateStore = () => {
                                 className="mt-1"
                             />
                         </div>
+
                         <div className="grid w-full max-w-sm items-center gap-1.5">
                             <Label htmlFor="picture">Logo da loja</Label>
                             <Input
                                 id="picture"
                                 type="file"
-                                onChange={(e) => setLogo(e.target.files[0])}
+                                onChange={(e) => {
+                                    const file = e.target.files?.[0];
+                                    if (file) setLogo(file);
+                                }}
                             />
                         </div>
+
                         <Button type="submit" className="w-full bg-indigo-700 mt-4">
                             Próximo passo
                         </Button>
