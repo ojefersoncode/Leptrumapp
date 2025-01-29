@@ -67,7 +67,7 @@ const Login = () => {
                 required
               />
             </div>
-            {error && <p className="text-sm text-red-600">{error}</p>}
+            {error && <p className="text-sm text-red-700">{error}</p>}
             <Button type="submit" className="w-full bg-indigo-600 mt-4">
               Entrar
             </Button>
