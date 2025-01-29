@@ -17,7 +17,7 @@ const CreateStore = () => {
 
     type SupabaseStorageResponse = {
         data: { publicUrl: string };
-        error?: any; // Tornando 'error' opcional
+        error?: any;
     };
 
     const uploadImage = async (file: File | null) => {
@@ -58,7 +58,7 @@ const CreateStore = () => {
             // Enviar a imagem
             const imageUrl = logo ? await uploadImage(logo) : "";
 
-            // Enviar os dados para a  tabela "stores"
+            // Enviar os dados para a tabela "stores"
             const { data, error } = await supabase
                 .from("stores")
                 .insert([
