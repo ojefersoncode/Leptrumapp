@@ -36,20 +36,20 @@ const Page = () => {
           </div>
         </header>
         <main className="flex-1 flex flex-col items-center justify-center relative z-10">
-          <h2 className="text-4xl text-slate-950 md:text-5xl font-bold">Construa seu catálogo</h2>
-          <h3 className="text-4xl md:text-5xl font-bold text-indigo-600 mt-2">Com poucos cliques.</h3>
+          <h2 className="text-3xl text-slate-950 md:text-5xl font-bold">Construa seu catálogo</h2>
+          <h3 className="text-3xl md:text-5xl font-bold text-indigo-600 mt-2">Com poucos cliques.</h3>
           <p className="text-black font-sans max-w-2xl mt-4">
             A Leptrum é a plataforma ideal para empreendedores e afiliados que desejam organizar seus produtos e links de forma eficiente.
             Com uma dashboard avançada e análises impulsionadas por IA, ajudamos você a otimizar sua estratégia e impulsionar seu negócio. 🚀
           </p>
           <div className="flex flex-wrap justify-center items-center mt-6 mx-4 gap-4">
             <Button
-              className="bg-indigo-700 text-slate-50 px-6 py-3 text-lg font-bold hover:bg-indigo-600 hover:text-slate-200">
+              className="bg-indigo-700 text-slate-50 px-6 py-3 text-lg font-semibold hover:bg-indigo-600 hover:text-slate-200">
               Comece Gratuitamente
             </Button>
             <Button
               variant="outline"
-              className="border-indigo-700 bg-slate-200 text-indigo-700 hover:text-indigo-800 hover:bg-slate-50">
+              className="border-indigo-700 bg-slate-200 text-indigo-700 text-lg font-semibold hover:text-indigo-800 hover:bg-slate-50">
               Acessar Minha Conta
             </Button>
           </div>
