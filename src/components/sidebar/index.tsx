@@ -27,7 +27,7 @@ import { Input } from "../ui/input";
 
 export function Sidebar() {
     return (
-        <div className="flex w-full flex-col bg-indigo-950">
+        <div className="flex w-full flex-col bg-black">
 
             <div className="flex w-full flex-col sm:gap-4 sm:py-4">
                 <header className="sticky top-0 z-30 flex h-16 px-4 items-center 
@@ -36,50 +36,50 @@ export function Sidebar() {
                     <div className="flex w-full items-center bg-transparent gap-3">
                         <Sheet>
                             <SheetTrigger asChild>
-                                <button className="bg-indigo-950 text-slate-50">
+                                <button className="bg-black text-slate-50">
                                     <Menu />
                                     <span className="sr-only">Menu</span>
                                 </button>
                             </SheetTrigger>
 
-                            <SheetContent side={"left"} className="sm:max-w-x text-slate-50 border-none bg-indigo-950">
+                            <SheetContent
+                                side={"left"}
+                                className="sm:max-w-x text-slate-50 border-none bg-black">
                                 <DialogTitle>
                                     <VisuallyHidden>Leptrum</VisuallyHidden>
 
                                 </DialogTitle>
                                 <nav className="grid gap-5 text-lg  font-medium">
 
-                                    <div className="flex items-center gap-4">
+                                    <div className="flex items-center mx-2">
                                         <Link
                                             href="#"
-                                            className="flex h-10 w-10 bg-primary rounded-xl text-lg 
-                                        items-center justify-center text-slate-50 md:text-base"
+                                            className="flex text-lg 
+                                        items-center justify-center text-indigo-100 md:text-base"
                                             prefetch={false} >
-                                            <ShoppingBag className="h-5 w-5 transition-all" />
                                             <span className="sr-only">Logo</span>
                                         </Link>
-                                        <h1 className="text-slate-200">Menu</h1>
+                                        <h1 className="text-indigo-50">Menu</h1>
                                     </div>
 
                                     <div>
 
-                                        <div className="flex items-center text-slate-50 text-sm px-2.5 mb-4">
-                                            <h1>Nome Da Loja</h1>
+                                        <div className="flex items-center text-indigo-100 px-2.5 mb-4">
+                                            <h1 className="font-bold text-lg">Nome Da Loja</h1>
                                         </div>
 
-                                        <div className="flex mb-2 items-center px-2.5 text-slate-200 gap-2 whitespace-nowrap flex-shrink-0">
+                                        <div className="flex mb-1 items-center px-2.5 text-indigo-50 gap-2 whitespace-nowrap flex-shrink-0">
                                             <MapPin className="h-4 w-4" />
-                                            <span className="font-semibold text-sm">Ponte Nova</span>
+                                            <span className="font-mono text-sm">Ponte Nova</span>
                                         </div>
                                         <hr className="bg-slate-600 opacity-50 mt-3" />
                                     </div>
 
 
-
                                     <Link
                                         href="#"
                                         className="flex items-center gap-4 px-2.5 
-                                    text-slate-50 hover:text-slate-400"
+                                    text-slate-50 hover:text-indigo-600"
                                         prefetch={false} >
                                         <Home className="h-5 w-5 transition-all" />
                                         Home
@@ -87,7 +87,7 @@ export function Sidebar() {
                                     <Link
                                         href="#"
                                         className="flex items-center gap-4 px-2.5 
-                                    text-slate-50 hover:text-slate-400"
+                                    text-slate-50 hover:text-indigo-600"
                                         prefetch={false} >
                                         <Store className="h-5 w-5 transition-all" />
                                         Lojas
@@ -95,7 +95,7 @@ export function Sidebar() {
                                     <Link
                                         href="#"
                                         className="flex items-center gap-4 px-2.5 
-                                    text-slate-50 hover:text-slate-400"
+                                    text-slate-50 hover:text-indigo-600"
                                         prefetch={false} >
                                         <ShoppingBag className="h-5 w-5 transition-all" />
                                         Quero vender
@@ -103,7 +103,7 @@ export function Sidebar() {
                                     <Link
                                         href="#"
                                         className="flex items-center gap-4 px-2.5
-                                     text-slate-50 hover:text-slate-400"
+                                     text-slate-50 hover:text-indigo-600"
                                         prefetch={false} >
                                         <ChartLine className="h-5 w-5 transition-all" />
                                         Dashboard
@@ -111,7 +111,7 @@ export function Sidebar() {
                                     <Link
                                         href="#"
                                         className="flex items-center gap-4 px-2.5 
-                                    text-slate-50 hover:text-slate-400"
+                                    text-slate-50 hover:text-indigo-600"
                                         prefetch={false} >
                                         <Settings className="h-5 w-5 transition-all" />
                                         Configurações
@@ -122,7 +122,9 @@ export function Sidebar() {
                     </div>
 
                     <div className="flex items-center justify-center">
-                        <h1 className="text-xl font-bold text-slate-50">Leptrum</h1>
+                        <h1 className="text-2xl font-bold flex items-center">
+                            <span className="text-indigo-600">Lep</span> <span className="text-indigo-100">trum</span>
+                        </h1>
                     </div>
 
 
@@ -135,7 +137,7 @@ export function Sidebar() {
                                     <Search className="w-7 h-7 text-white" />
                                 </Button>
                             </DialogTrigger>
-                            <DialogContent className="sm:max-w-[425px] bg-indigo-950 text-white">
+                            <DialogContent className="sm:max-w-[425px] bg-indigo-700 text-white">
                                 <DialogHeader>
                                     <DialogTitle className="text-lg font-bold">
                                         Buscar lojas

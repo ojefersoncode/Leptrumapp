@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@radix-ui/react-label";
 import { useRouter } from "next/navigation";
 import { supabase } from "@/lib/supabaseClient";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 
 const CreateStore = () => {
     const router = useRouter();
@@ -14,11 +15,7 @@ const CreateStore = () => {
     const [storeUrl, SetstoreUrl] = useState("");
     const [categoria, setCategoria] = useState("");
     const [logo, setLogo] = useState<File | null>(null);
-
-    type SupabaseStorageResponse = {
-        data: { publicUrl: string };
-        error?: any;
-    };
+    const [alertMessage, setAlertMessage] = useState("");
 
     const uploadImage = async (file: File | null) => {
         if (!file) return null;
@@ -27,113 +24,95 @@ const CreateStore = () => {
         const fileName = `${Math.random()}.${fileExt}`;
         const filePath = `${fileName}`;
 
-        // Upload da imagem para o Supabase Storage
-        const { data, error } = await supabase.storage
-            .from("storeLogos")
-            .upload(filePath, file);
+        const { data, error } = await supabase.storage.from("storeLogos").upload(filePath, file);
 
         if (error) {
-            console.error("Erro ao fazer upload:", error.message || error);
+            setAlertMessage("Erro ao fazer upload da imagem.");
             return null;
         }
 
-        // Obter a URL pública
-        const { data: publicUrlData, error: urlError }: SupabaseStorageResponse = supabase
-            .storage
-            .from("storeLogos")
-            .getPublicUrl(filePath);
-
-        if (urlError) {
-            console.error("Erro ao obter a URL pública:", urlError.message || urlError);
-            return null;
-        }
-
+        const { data: publicUrlData } = supabase.storage.from("storeLogos").getPublicUrl(filePath);
         return publicUrlData?.publicUrl || null;
     };
 
     const handleSubmit = async (event: { preventDefault: () => void }) => {
         event.preventDefault();
 
-        try {
-            // Enviar a imagem
-            const imageUrl = logo ? await uploadImage(logo) : "";
+        if (!storeName || !storeUrl || !categoria) {
+            setAlertMessage("Preencha todos os campos obrigatórios.");
+            return;
+        }
 
-            // Enviar os dados para a tabela "stores"
-            const { data, error } = await supabase
-                .from("stores")
-                .insert([
-                    {
-                        storeName: storeName,
-                        storeUrl: storeUrl,
-                        storeCategoria: categoria,
-                        storeImage: imageUrl || "",
-                    },
-                ]);
+        try {
+            const imageUrl = logo ? await uploadImage(logo) : "";
+            const { data, error } = await supabase.from("stores").insert([
+                {
+                    storeName,
+                    storeUrl,
+                    storeCategoria: categoria,
+                    storeImage: imageUrl,
+                },
+            ]);
 
             if (error) {
-                console.error("Erro ao inserir dados:", error);
-                alert("Erro ao enviar os dados.");
-            } else {
-                console.log("Dados inseridos com sucesso:", data);
+                setAlertMessage("Erro ao inserir dados no banco.");
+                return;
             }
 
-
-            console.log("Dados enviados com sucesso:", data);
             router.push("/create-store-final");
         } catch (error) {
-            console.error("Erro ao enviar dados para o Supabase:", error);
-            alert("Ocorreu um erro ao enviar os dados.");
+            setAlertMessage("Erro inesperado ao processar a solicitação.");
         }
     };
 
     return (
         <div className="flex items-center min-h-screen justify-center content-center">
-            <Card className="w-full max-w-md p-4">
+            <div className="absolute top-0 left-0 right-0 bottom-0 
+        bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)]
+         bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]" />
+            <Card className="w-full max-w-md p-4 relative z-10">
                 <CardHeader className="text-center">
                     <h2 className="text-2xl font-bold">Crie sua loja</h2>
                     <p className="text-sm text-slate-600">Alcance novos clientes e organize seus produtos.</p>
                 </CardHeader>
                 <CardContent>
+                    {alertMessage && (
+                        <Alert variant="destructive" className="mb-4">
+                            <AlertTitle>Erro</AlertTitle>
+                            <AlertDescription>{alertMessage}</AlertDescription>
+                        </Alert>
+                    )}
                     <form onSubmit={handleSubmit} className="space-y-4">
                         <div>
-                            <label htmlFor="nomedaloja" className="block text-sm mb-2 font-medium text-slate-800">
-                                Nome da loja
-                            </label>
+                            <Label htmlFor="nomedaloja">Nome da loja</Label>
                             <Input
                                 id="nomedaloja"
                                 type="text"
                                 value={storeName}
                                 onChange={(e) => SetstoreName(e.target.value)}
                                 placeholder="Leptrum store"
-                                className="mt-1"
                             />
                         </div>
 
                         <div>
-                            <label htmlFor="urldaloja" className="block text-sm mb-2 font-medium text-slate-800">
-                                Url da loja
-                            </label>
+                            <Label htmlFor="urldaloja">Url da loja</Label>
                             <Input
                                 id="urldaloja"
                                 type="text"
                                 value={storeUrl}
                                 onChange={(e) => SetstoreUrl(e.target.value)}
                                 placeholder="leptrum.com/nome-da-sua-loja"
-                                className="mt-1"
                             />
                         </div>
 
                         <div>
-                            <label htmlFor="categoria" className="block text-sm mb-2 font-medium text-slate-800">
-                                Categoria
-                            </label>
+                            <Label htmlFor="categoria">Categoria</Label>
                             <Input
                                 id="categoria"
                                 type="text"
                                 value={categoria}
                                 onChange={(e) => setCategoria(e.target.value)}
                                 placeholder="Moda"
-                                className="mt-1"
                             />
                         </div>
 

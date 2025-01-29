@@ -43,8 +43,15 @@ const Page = () => {
             Com uma dashboard avançada e análises impulsionadas por IA, ajudamos você a otimizar sua estratégia e impulsionar seu negócio. 🚀
           </p>
           <div className="mt-6 flex space-x-4">
-            <Button className="bg-indigo-700 text-slate-50 px-6 py-3 text-lg font-bold hover:bg-indigo-600 hover:text-slate-200">Comece Gratuitamente</Button>
-            <Button variant="outline" className="border-indigo-700 bg-slate-200 text-indigo-700 hover:text-indigo-800 hover:bg-slate-50">Acessar Minha Conta</Button>
+            <Button
+              className="bg-indigo-700 text-slate-50 px-6 py-3 text-lg font-bold hover:bg-indigo-600 hover:text-slate-200">
+              Comece Gratuitamente
+            </Button>
+            <Button
+              variant="outline"
+              className="border-indigo-700 bg-slate-200 text-indigo-700 hover:text-indigo-800 hover:bg-slate-50">
+              Acessar Minha Conta
+            </Button>
           </div>
         </main>
         <footer className="w-full py-6 text-slate-950 text-base text-center">

@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState } from "react";
 import ProductSkeleton from "@/components/ProductSkeleton";
-import { Card, CardHeader, CardContent, CardFooter } from "@/components/ui/card";
 import { MapPin } from "lucide-react";
 import { Sidebar } from "@/components/sidebar";
 
@@ -43,25 +42,26 @@ const Home = () => {
     <div>
 
       <Sidebar />
-      <div className="w-full mx-auto bg-slate-300 p-4">
+
+      <div className="w-full mx-auto bg-indigo-100 p-4">
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {products.map((product) => (
-            <Card key={product.id} className="w-full bg-slate-50">
-              <CardHeader>
+            <div key={product.id} className="w-full bg-slate-50 p-2">
+              <div>
                 <img
                   src={product.image}
                   alt={product.title}
                   className="w-full h-48 object-contain p-4"
                 />
-              </CardHeader>
-              <CardContent>
+              </div>
+              <div className="mx-4 my-2">
                 <h3 className="text-base font-semibold line-clamp-2">{product.title}</h3>
-              </CardContent>
-              <CardFooter className="flex items-center gap-2">
+              </div>
+              <div className="flex items-center mx-4 my-2 gap-2">
                 <MapPin className="h-4 w-4 text-slate-800" />
                 <span className="text-sm text-slate-800">Sua localização</span>
-              </CardFooter>
-            </Card>
+              </div>
+            </div>
           ))}
         </div>
       </div>
