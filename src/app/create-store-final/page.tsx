@@ -18,6 +18,29 @@ const CreateStore = () => {
     const [numero, setNumero] = useState("");
     const [error, setError] = useState("");
 
+    // Função para buscar dados do CEP na API ViaCEP
+    const buscarEndereco = async (cep: string) => {
+        if (cep.length !== 8) return; // O CEP deve ter 8 dígitos
+
+        try {
+            const response = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
+            const data = await response.json();
+
+            if (data.erro) {
+                setError("CEP não encontrado.");
+                return;
+            }
+
+            setCidade(data.localidade);
+            setEstado(data.uf);
+            setRua(data.logradouro);
+            setError(""); // Limpa erro caso encontre o endereço
+        } catch (error) {
+            console.error("Erro ao buscar CEP:", error);
+            setError("Erro ao buscar CEP.");
+        }
+    };
+
     const handleSubmit = async (event: { preventDefault: () => void; }) => {
         event.preventDefault();
 
@@ -67,7 +90,18 @@ const CreateStore = () => {
                     <form onSubmit={handleSubmit} className="space-y-4">
                         <div>
                             <label htmlFor="cep" className="block text-sm mb-2 font-medium text-slate-800">CEP</label>
-                            <Input id="cep" type="text" value={cep} onChange={(e) => setCep(e.target.value)} placeholder="00000-000" className="mt-1" />
+                            <Input 
+                                id="cep" 
+                                type="text" 
+                                value={cep} 
+                                onChange={(e) => {
+                                    const newCep = e.target.value.replace(/\D/g, ""); // Remove caracteres não numéricos
+                                    setCep(newCep);
+                                    if (newCep.length === 8) buscarEndereco(newCep);
+                                }} 
+                                placeholder="00000-000" 
+                                className="mt-1" 
+                            />
                         </div>
                         <div>
                             <label htmlFor="cidade" className="block text-sm mb-2 font-medium text-slate-800">Cidade</label>
