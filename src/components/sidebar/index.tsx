@@ -138,13 +138,13 @@ export function Sidebar() {
                   <Search className="w-7 h-7 text-white" />
                 </Button>
               </DialogTrigger>
-              <DialogContent className="flex flex-col max-md:max-w-full max-md:min-h-screen bg-indigo-100 text-black">
+              <DialogContent className="flex flex-col max-md:max-w-full max-md:h-screen bg-indigo-100 text-black">
                 <DialogHeader>
                   <DialogTitle className="text-lg text-black font-bold">
                     Buscar Produtos
                   </DialogTitle>
                 </DialogHeader>
-                <div className="flex flex-col gap-4 mt-2">
+                <div className="flex flex-col gap-4 mt-4">
                   <div className="flex gap-4">
                     <Input
                       type="search"
@@ -156,23 +156,20 @@ export function Sidebar() {
                     </Button>
                   </div>
 
-                  <div className="p-4 text-black rounded">
+                  <div className="text-black rounded">
                     <div className="flex justify-between mx-auto">
                       <h1 className="font-bold text-lg">Filtro de busca</h1>
                       <ListFilter className="w-7 h-7" />
                     </div>
-                    <div className="flex gap-4 my-4">
-                      <a className="flex text-base rounded text-indigo-50 bg-indigo-700 px-2 py-1">
+                    <div className="flex flex-wrap gap-4 my-4">
+                      <a className="flex flex-nowrap text-base  rounded text-indigo-50 bg-indigo-700 px-2 py-1">
                         Usado
                       </a>
-                      <a className="flex text-base rounded text-indigo-50 bg-indigo-700 px-2 py-1">
+                      <a className="flex flex-nowrap text-base rounded text-indigo-50 bg-indigo-700 px-2 py-1">
                         Novo
                       </a>
-                      <a className="flex text-base rounded text-indigo-50 bg-indigo-700 px-2 py-1">
-                        Mais perto
-                      </a>
-                      <a className="flex text-base rounded text-indigo-50 bg-indigo-700 px-2 py-1">
-                        Mais longe
+                      <a className="flex flex-nowrap text-base rounded text-indigo-50 bg-indigo-700 px-2 py-1">
+                        Promoção
                       </a>
                     </div>
                   </div>
