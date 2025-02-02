@@ -138,7 +138,7 @@ export function Sidebar() {
                   <Search className="w-7 h-7 text-white" />
                 </Button>
               </DialogTrigger>
-              <DialogContent className="flex flex-col max-md:max-w-full max-md:h-screen bg-indigo-100 text-black">
+              <DialogContent className="flex flex-col max-md:max-w-full max-md:h-full bg-indigo-100 text-black">
                 <DialogHeader>
                   <DialogTitle className="text-lg text-black font-bold">
                     Buscar Produtos
