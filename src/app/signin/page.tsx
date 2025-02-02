@@ -47,7 +47,7 @@ const Signin = () => {
         bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)]
          bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"
       />
-      <div className="w-full bg-slate-50 max-md:h-screen rounded md:max-w-md p-4 relative z-10">
+      <div className="w-full bg-slate-50 rounded md:max-w-md p-4 relative z-10">
         <CardHeader className="text-center">
           <h2 className="text-2xl font-bold">Cadastre-se</h2>
           <p className="text-sm text-gray-500">

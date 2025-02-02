@@ -162,13 +162,13 @@ export function Sidebar() {
                       <ListFilter className="w-7 h-7" />
                     </div>
                     <div className="flex flex-wrap gap-4 my-4">
-                      <a className="flex flex-nowrap text-base  rounded text-indigo-50 bg-indigo-700 px-2 py-1">
-                        Usado
+                      <a className="flex flex-nowrap text-sm  rounded text-indigo-50 bg-indigo-700 px-3 py-2">
+                        Usado 
                       </a>
-                      <a className="flex flex-nowrap text-base rounded text-indigo-50 bg-indigo-700 px-2 py-1">
+                      <a className="flex flex-nowrap text-sm rounded text-indigo-50 bg-indigo-700 px-3 py-2">
                         Novo
                       </a>
-                      <a className="flex flex-nowrap text-base rounded text-indigo-50 bg-indigo-700 px-2 py-1">
+                      <a className="flex flex-nowrap text-sm rounded text-indigo-50 bg-indigo-700 px-3 py-2">
                         Promoção
                       </a>
                     </div>
