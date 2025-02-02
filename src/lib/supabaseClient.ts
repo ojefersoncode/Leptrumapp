@@ -8,5 +8,11 @@ if (!supabaseUrl || !supabaseKey) {
   throw new Error("As variáveis de ambiente NEXT_PUBLIC_SUPABASE_URL e NEXT_PUBLIC_SUPABASE_ANON_KEY não estão definidas.");
 }
 
-// Criar o cliente do Supabase
-export const supabase = createClient(supabaseUrl, supabaseKey);
+
+export const supabase = createClient(supabaseUrl, supabaseKey, {
+  auth: {
+    persistSession: true, // Mantém a sessão ativa
+    autoRefreshToken: true, // Atualiza o token automaticamente
+    detectSessionInUrl: true, // Verifica se a sessão está no URL
+  },
+});
