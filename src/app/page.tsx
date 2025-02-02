@@ -11,7 +11,7 @@ const Page = () => {
 
   return (
     <>
-      <div className="min-h-screen w-full bg-indigo-100 text-white flex flex-col items-center justify-center px-6 text-center relative">
+      <div className="h-screen w-full bg-indigo-100 text-white flex flex-col items-center justify-center px-6 text-center relative">
         <div
           className="absolute w-full top-0 left-0 right-0 bottom-0 
         bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)]
