@@ -162,16 +162,16 @@ export function Sidebar() {
                       <ListFilter className="w-7 h-7" />
                     </div>
                     <div className="flex gap-4 my-4">
-                      <a className="text-base rounded text-indigo-50 bg-indigo-700 px-2 py-1">
+                      <a className="flex text-base rounded text-indigo-50 bg-indigo-700 px-2 py-1">
                         Usado
                       </a>
-                      <a className="text-base rounded text-indigo-50 bg-indigo-700 px-2 py-1">
+                      <a className="flex text-base rounded text-indigo-50 bg-indigo-700 px-2 py-1">
                         Novo
                       </a>
-                      <a className="text-base rounded text-indigo-50 bg-indigo-700 px-2 py-1">
+                      <a className="flex text-base rounded text-indigo-50 bg-indigo-700 px-2 py-1">
                         Mais perto
                       </a>
-                      <a className="text-base rounded text-indigo-50 bg-indigo-700 px-2 py-1">
+                      <a className="flex text-base rounded text-indigo-50 bg-indigo-700 px-2 py-1">
                         Mais longe
                       </a>
                     </div>
