@@ -46,7 +46,7 @@ const Home = () => {
       <div className="w-full mx-auto bg-indigo-100 p-2">
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
           {products.map((product) => (
-            <div key={product.id} className="w-full bg-slate-50 py-2 p-3">
+            <div key={product.id} className="w-full bg-slate-50 py-2 p-1">
               <div>
                 <img
                   src={product.image}
