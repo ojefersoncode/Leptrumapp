@@ -44,9 +44,9 @@ const Home = () => {
       <Sidebar />
 
       <div className="w-full mx-auto bg-indigo-100 p-2">
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
           {products.map((product) => (
-            <div key={product.id} className="w-full bg-slate-50">
+            <div key={product.id} className="w-full bg-slate-50 py-2 p-3">
               <div>
                 <img
                   src={product.image}
@@ -57,7 +57,7 @@ const Home = () => {
               <div className="mx-4 my-2">
                 <h3 className="text-sm font-semibold line-clamp-2">{product.title}</h3>
               </div>
-              <div className="flex items-center mx-4 my-2 gap-1">
+              <div className="flex items-center mx-3 my-2 gap-1">
                 <MapPin className="h-4 w-4 text-slate-800" />
                 <span className="text-xs text-slate-800">Sua localização</span>
               </div>
