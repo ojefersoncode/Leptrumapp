@@ -19,31 +19,29 @@ const Details = () => {
   return (
     <div>
       <Sidebar />
-      <Card className="w-full h-screen">
+      <Card className="flex flex-wrap w-full">
         <CardHeader className="flex w-full items-center">
-          <Carousel className="flex w-full max-w-lg max-sm:max-w-sm">
+          <Carousel className="flex">
             <CarouselContent className="flex w-full items-center">
               {images.map((src, index) => (
                 <CarouselItem
-                  className="flex-shrink-0 md:basis-1/2 lg:basis-1/3 w-full mx-2"
+                  className="flex-shrink-0 md:basis-1/2 lg:basis-1/3 mx-2"
                   key={index}
                 >
                   <img
-                    className="h-48 w-full object-contain"
+                    className="h-56 w-full object-contain"
                     src={src}
                     alt={`Drone ${index + 1}`}
                   />
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
           </Carousel>
         </CardHeader>
 
-        <CardContent>
-          <div>
-            <h1>Nome do produto</h1>
+        <CardContent className="flex justify-center items-center">
+          <div className="m-4">
+            <h1 className="text-xl font-semibold">Nome do produto</h1>
             <span>Descrição do produto</span>
           </div>
         </CardContent>
