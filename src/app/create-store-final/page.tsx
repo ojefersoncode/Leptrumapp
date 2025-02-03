@@ -18,6 +18,28 @@ const CreateStore = () => {
   const [numero, setNumero] = useState("");
   const [error, setError] = useState("");
 
+  // Função para buscar o endereço pelo CEP
+  const buscarEndereco = async (cep: string) => {
+    if (cep.length === 8) { // Valida se o CEP tem 8 dígitos
+      try {
+        const response = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
+        const data = await response.json();
+
+        if (data.erro) {
+          setError("CEP não encontrado.");
+        } else {
+          setCidade(data.localidade);
+          setEstado(data.uf);
+          setRua(data.logradouro);
+          setError("");
+        }
+      } catch (error) {
+        console.error("Erro ao buscar CEP:", error);
+        setError("Erro ao buscar o CEP.");
+      }
+    }
+  };
+
   const handleSubmit = async (event: { preventDefault: () => void }) => {
     event.preventDefault();
 
@@ -80,9 +102,14 @@ const CreateStore = () => {
                 id="cep"
                 type="text"
                 value={cep}
-                onChange={(e) => setCep(e.target.value)}
+                onChange={(e) => {
+                  const novoCep = e.target.value.replace(/\D/g, ""); // Remove caracteres não numéricos
+                  setCep(novoCep);
+                  if (novoCep.length === 8) buscarEndereco(novoCep);
+                }}
                 placeholder="00000-000"
                 className="mt-1"
+                maxLength={8}
               />
             </div>
             <div>
@@ -115,6 +142,7 @@ const CreateStore = () => {
                 onChange={(e) => setEstado(e.target.value)}
                 placeholder="SP"
                 className="mt-1"
+                maxLength={2}
               />
             </div>
             <div>
