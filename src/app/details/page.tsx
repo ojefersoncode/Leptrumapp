@@ -21,15 +21,15 @@ const Details = () => {
       <Sidebar />
       <Card className="flex flex-wrap w-full">
         <CardHeader className="flex w-full items-center">
-          <Carousel className="flex">
+          <Carousel className="flex justify-center items-center">
             <CarouselContent className="flex w-full items-center">
               {images.map((src, index) => (
                 <CarouselItem
-                  className="flex-shrink-0 md:basis-1/2 lg:basis-1/3 mx-2"
+                  className="flex-shrink-0 md:basis-1/2 lg:basis-1/3"
                   key={index}
                 >
                   <img
-                    className="h-56 w-full object-contain"
+                    className="h-60 w-full object-contain"
                     src={src}
                     alt={`Drone ${index + 1}`}
                   />
@@ -40,9 +40,9 @@ const Details = () => {
         </CardHeader>
 
         <CardContent className="flex justify-center items-center">
-          <div className="m-4">
-            <h1 className="text-xl font-semibold">Nome do produto</h1>
-            <span>Descrição do produto</span>
+          <div className="m-2">
+            <h1 className="text-2xl max-md:text-xl font-semibold">Nome do produto</h1>
+            <span className="text-xl max-md:text-base">Descrição do produto</span>
           </div>
         </CardContent>
       </Card>
