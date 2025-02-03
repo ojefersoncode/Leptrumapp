@@ -21,10 +21,10 @@ const Details = () => {
   return (
     <div>
       <Sidebar />
-      <Card className="flex flex-wrap w-full rounded-none">
+      <Card className="flex items-center flex-wrap w-full rounded-none">
         <CardHeader className="flex w-full items-center">
           <Carousel className="flex justify-center items-center">
-            <CarouselContent className="flex w-full items-center">
+            <CarouselContent className="flex w-full justify-center items-center">
               {images.map((src, index) => (
                 <CarouselItem
                   className="flex-shrink-0 md:basis-1/2 lg:basis-1/3"
@@ -41,15 +41,17 @@ const Details = () => {
           </Carousel>
         </CardHeader>
 
-        <CardContent className="flex justify-center items-center">
-          <div>
-            <h1 className="text-2xl max-md:text-xl font-semibold">
+        <CardContent className="w-full justify-center items-center">
+          <div className="flex w-full max-sm:justify-center">
+            <h1 className="text-3xl max-md:text-2xl mx-4 font-bold">
               Nome do produto
             </h1>
-            <div className="flex w-full justify-center items-center gap-4 my-3">
+          </div>
+          <div className=" w-full mt-3 items-center">
+            <div className="flex w-full max-sm:justify-center items-center gap-4 mx-4 my-5">
               <Button
                 variant="outline"
-                className="border-indigo-700 bg-indigo-50 text-indigo-700 text-lg font-semibold hover:text-indigo-800 hover:bg-indigo-100"
+                className="font-semibold border-indigo-700 bg-indigo-50 text-indigo-700 text-lg hover:text-indigo-800 hover:bg-indigo-100"
               >
                 <h1>Eu quero</h1>
               </Button>
@@ -61,24 +63,22 @@ const Details = () => {
               </Button>
             </div>
 
-            <div>
-              <div className="flex flex-wrap gap-7">
-                <div>
-                  <h1 className="text-base font-semibold">Cidade</h1>
-                  <span className="text-xs">Ponte Nova</span>
-                </div>
-                <div>
-                  <h1 className="text-base font-semibold">Estado</h1>
-                  <span className="text-xs">Novo</span>
-                </div>
-                <div>
-                  <h1 className="text-base font-semibold">Estoque</h1>
-                  <span className="text-xs">10</span>
-                </div>
-                <div>
-                  <h1 className="text-base font-semibold">Frete</h1>
-                  <span className="text-xs">Gratis</span>
-                </div>
+            <div className="flex flex-wrap justify-center items-center  my-4 gap-7">
+              <div>
+                <h1 className="text-xl font-semibold">Cidade</h1>
+                <span className="text-base">Ponte Nova</span>
+              </div>
+              <div>
+                <h1 className="text-xl font-semibold">Estado</h1>
+                <span className="text-base">Novo</span>
+              </div>
+              <div>
+                <h1 className="text-xl font-semibold">Estoque</h1>
+                <span className="text-base">10</span>
+              </div>
+              <div>
+                <h1 className="text-xl font-semibold">Frete</h1>
+                <span className="text-base">Gratis</span>
               </div>
             </div>
           </div>
