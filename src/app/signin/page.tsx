@@ -41,7 +41,7 @@ const Signin = () => {
   };
 
   return (
-    <div className="flex items-center h-screen justify-center content-center">
+    <div className="flex items-center min-h-screen justify-center content-center">
       <div
         className="absolute top-0 left-0 right-0 bottom-0 
         bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)]
