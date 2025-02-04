@@ -82,10 +82,6 @@ const Details = () => {
             <span>Ponte Nova</span>
           </div>
           <div>
-            <h1 className="text-xl font-semibold">Estado</h1>
-            <span>Novo</span>
-          </div>
-          <div>
             <h1 className="text-xl font-semibold">Estoque</h1>
             <span>10</span>
           </div>
