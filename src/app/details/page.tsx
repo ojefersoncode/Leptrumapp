@@ -70,10 +70,10 @@ const Details = () => {
                     variant="outline"
                     className="border-indigo-700 p-4 text-indigo-700"
                   >
-                    <h1 className="mx-2">Comprar</h1>
+                    <h1 className="mx-2 text-base text-indigo-700">Comprar</h1>
                   </Button>
                   <Button className="bg-indigo-700 p-4 hover:bg-indigo-600">
-                    <h1 className="mx-2">Compartilhar</h1>
+                    <h1 className="mx-2 text-base">Compartilhar</h1>
                   </Button>
                   <Button className="bg-indigo-50 hover:bg-indigo-50">
                     <Heart className="text-indigo-700" />
