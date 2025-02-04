@@ -46,7 +46,7 @@ const Details = () => {
           <CardContent className="basis-full md:basis-1/2 justify-center items-center flex flex-col">
             <div className="flex w-full md:justify-center md:items-center flex-col">
               <div>
-                <div className="flex items-center gap-2 py-1">
+                <div className="flex items-center gap-2">
                   <Verified className="text-green-600 w-4 h-4" />
                   <h1 className="text-green-700 font-semibold text-sm">
                     Loja Verificada!
