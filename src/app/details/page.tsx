@@ -72,7 +72,7 @@ const Details = () => {
         </Card>
       </div>
 
-      <Card className="bg-white basis-full p-8">
+      <Card className="bg-white basis-full py-2 px-8">
         <div>
           <h1 className="text-2xl">Descrição do produto</h1>
         </div>
