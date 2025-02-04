@@ -21,8 +21,8 @@ const Details = () => {
     <div className="flex flex-col min-h-screen bg-white">
       <Sidebar />
 
-      <div className="flex-grow flex ">
-        <div className="flex flex-col md:flex-row w-full p-4 gap-4">
+      <div className="flex-grow flex border-b-2 shadow-md">
+        <div className="flex flex-col md:flex-row w-full p-2">
           <div className="basis-full md:basis-1/2 flex items-center justify-center">
             <Carousel className="w-full max-w-sm">
               <CarouselContent>
@@ -77,7 +77,7 @@ const Details = () => {
         </div>
       </div>
 
-      <div className="flex bg-white pb-4 px-12">
+      <div className="flex bg-white pb-4 px-10">
         <div>
           <div>
             <h1 className="text-2xl">Descrição do produto</h1>
