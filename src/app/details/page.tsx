@@ -72,7 +72,10 @@ const Details = () => {
         </Card>
       </div>
 
-      <div className="mx-7 p-4">
+      <Card className="bg-white basis-full p-8">
+        <div>
+          <h1 className="text-2xl">Descrição do produto</h1>
+        </div>
         <div className="flex flex-wrap gap-7 mt-5">
           <div>
             <h1 className="text-xl font-semibold">Cidade</h1>
@@ -91,7 +94,7 @@ const Details = () => {
             <span>Gratis</span>
           </div>
         </div>
-      </div>
+      </Card>
     </div>
   );
 };
