@@ -70,7 +70,7 @@ const Details = () => {
                     variant="outline"
                     className="border-indigo-700 p-4 text-indigo-700"
                   >
-                    Eu quero
+                    Comprar
                   </Button>
                   <Button className="bg-indigo-700 p-4 hover:bg-indigo-600">
                     Compartilhar
