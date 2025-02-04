@@ -9,6 +9,7 @@ import {
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Accessibility, Heart, Verified } from "lucide-react";
+import Description from "@/components/Descrption";
 
 const Details = () => {
   const images = [
@@ -84,27 +85,7 @@ const Details = () => {
         </div>
       </div>
 
-      <div className="flex bg-white pb-4 px-10">
-        <div>
-          <div>
-            <h1 className="text-2xl">Descrição do produto</h1>
-          </div>
-          <div className="flex flex-wrap gap-7 mt-5">
-            <div>
-              <h1 className="text-xl font-semibold">Cidade</h1>
-              <span>Ponte Nova</span>
-            </div>
-            <div>
-              <h1 className="text-xl font-semibold">Estoque</h1>
-              <span>10</span>
-            </div>
-            <div>
-              <h1 className="text-xl font-semibold">Frete</h1>
-              <span>Gratis</span>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Description />
 
       <footer className="w-full bg-white py-2 text-slate-950 text-base text-center mt-auto">
         © 2025 Leptrum. Todos os direitos reservados.
