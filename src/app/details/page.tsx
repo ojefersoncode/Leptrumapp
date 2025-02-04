@@ -55,7 +55,7 @@ const Details = () => {
                 <h1 className="text-3xl max-md:text-2xl font-bold">
                   Nome do produto
                 </h1>
-                <h1 className="line-through mt-2">De R$:294,00</h1>
+                <h1 className="line-through mt-1">De R$:294,00</h1>
                 <div className="flex items-center">
                   <h1 className="text-2xl text-green-600 font-bold">
                     R$:267,90
