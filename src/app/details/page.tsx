@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Heart } from "lucide-react";
+import { Accessibility, Heart, Verified } from "lucide-react";
 
 const Details = () => {
   const images = [
@@ -21,7 +21,8 @@ const Details = () => {
     <div className="flex flex-col min-h-screen bg-white">
       <Sidebar />
 
-      <div className="flex-grow flex border-b-2 shadow-md">
+      {/* Mobile first */}
+      <div className="flex-grow flex">
         <div className="flex flex-col md:flex-row w-full p-2">
           <div className="basis-full md:basis-1/2 flex items-center justify-center">
             <Carousel className="w-full max-w-sm">
@@ -44,6 +45,12 @@ const Details = () => {
           <CardContent className="basis-full md:basis-1/2 justify-center items-center flex flex-col">
             <div className="flex w-full md:justify-center md:items-center flex-col">
               <div>
+                <div className="flex items-center gap-2 py-1">
+                  <Verified className="text-green-600 w-4 h-4" />
+                  <h1 className="text-green-700 font-semibold text-sm">
+                    Loja Verificada!
+                  </h1>
+                </div>
                 <h1 className="text-3xl max-md:text-2xl font-bold">
                   Nome do produto
                 </h1>
