@@ -6,7 +6,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Heart } from "lucide-react";
@@ -19,18 +18,18 @@ const Details = () => {
   ];
 
   return (
-    <div className="bg-white h-dvh">
+    <div className="flex flex-col min-h-screen bg-white">
       <Sidebar />
 
-      <div className="flex bg-white justify-center items-center">
-        <Card className="flex bg-white flex-col md:flex-row w-full rounded-none p-4 gap-6">
-          <div className="basis-full md:basis-1/2 flex justify-center">
-            <Carousel className="w-full mt-7 max-w-sm">
+      <div className="flex-grow flex ">
+        <div className="flex flex-col md:flex-row w-full p-4 gap-4">
+          <div className="basis-full md:basis-1/2 flex items-center justify-center">
+            <Carousel className="w-full max-w-sm">
               <CarouselContent>
                 {images.map((src, index) => (
                   <CarouselItem key={index} className="w-full">
                     <img
-                      className="h-60 w-full object-contain"
+                      className="h-72 w-full object-contain"
                       src={src}
                       alt={`Drone ${index + 1}`}
                     />
@@ -38,59 +37,71 @@ const Details = () => {
                 ))}
               </CarouselContent>
               <CarouselPrevious className="max-sm:hidden" />
-              <CarouselNext className="max-sm:hidden"  />
+              <CarouselNext className="max-sm:hidden" />
             </Carousel>
           </div>
 
-          <CardContent className="basis-full justify-center items-center mt-7 md:basis-1/2">
-            <h1 className="text-3xl max-md:text-2xl font-bold">
-              Nome do produto
-            </h1>
+          <CardContent className="basis-full md:basis-1/2 justify-center items-center flex flex-col">
+            <div className="flex w-full md:justify-center md:items-center flex-col">
+              <div>
+                <h1 className="text-3xl max-md:text-2xl font-bold">
+                  Nome do produto
+                </h1>
+                <h1 className="line-through mt-2">De R$:294,00</h1>
+                <div className="flex items-center">
+                  <h1 className="text-2xl text-green-600 font-bold">
+                    R$:267,90
+                  </h1>
+                  <h2 className="text-lg text-green-600 font-semibold mt-1 ml-2">
+                    No pix
+                  </h2>
+                </div>
 
-            <h1 className="line-through mt-3">De R$:294,00</h1>
-
-            <div className="flex items-center mt-2">
-              <h1 className="text-2xl font-semibold">R$:267,90</h1>
-              <h2 className="text-lg text-green-600 ml-3">10% OFF</h2>
-            </div>
-
-            <div className="mt-5 flex gap-4">
-              <Button
-                variant="outline"
-                className="border-indigo-700 text-indigo-700"
-              >
-                Eu quero
-              </Button>
-              <Button className="bg-indigo-700 hover:bg-indigo-600">
-                Compartilhar
-              </Button>
-              <Button className="bg-indigo-50 hover:bg-indigo-50">
-                <Heart className="text-indigo-700" />
-              </Button>
+                <div className="mt-5 flex gap-4">
+                  <Button
+                    variant="outline"
+                    className="border-indigo-700 p-4 text-indigo-700"
+                  >
+                    Eu quero
+                  </Button>
+                  <Button className="bg-indigo-700 p-4 hover:bg-indigo-600">
+                    Compartilhar
+                  </Button>
+                  <Button className="bg-indigo-50 hover:bg-indigo-50">
+                    <Heart className="text-indigo-700" />
+                  </Button>
+                </div>
+              </div>
             </div>
           </CardContent>
-        </Card>
+        </div>
       </div>
 
-      <Card className="bg-white basis-full py-2 px-8">
+      <div className="flex bg-white pb-4 px-12">
         <div>
-          <h1 className="text-2xl">Descrição do produto</h1>
+          <div>
+            <h1 className="text-2xl">Descrição do produto</h1>
+          </div>
+          <div className="flex flex-wrap gap-7 mt-5">
+            <div>
+              <h1 className="text-xl font-semibold">Cidade</h1>
+              <span>Ponte Nova</span>
+            </div>
+            <div>
+              <h1 className="text-xl font-semibold">Estoque</h1>
+              <span>10</span>
+            </div>
+            <div>
+              <h1 className="text-xl font-semibold">Frete</h1>
+              <span>Gratis</span>
+            </div>
+          </div>
         </div>
-        <div className="flex flex-wrap gap-7 mt-5">
-          <div>
-            <h1 className="text-xl font-semibold">Cidade</h1>
-            <span>Ponte Nova</span>
-          </div>
-          <div>
-            <h1 className="text-xl font-semibold">Estoque</h1>
-            <span>10</span>
-          </div>
-          <div>
-            <h1 className="text-xl font-semibold">Frete</h1>
-            <span>Gratis</span>
-          </div>
-        </div>
-      </Card>
+      </div>
+
+      <footer className="w-full bg-white py-2 text-slate-950 text-base text-center mt-auto">
+        © 2025 Leptrum. Todos os direitos reservados.
+      </footer>
     </div>
   );
 };
