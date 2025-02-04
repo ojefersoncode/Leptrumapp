@@ -13,9 +13,9 @@ export default function Description() {
             {/* Primeira coluna - Informações principais */}
             <div className="flex md:items-center md:justify-center">
               <div className="flex flex-col gap-2">
-                <div className="flex items-center gap-4">
-                  <h1 className="text-xl font-semibold">Cidade</h1>
+                <div className="flex items-center gap-2">
                   <MapPinHouse />
+                  <h1 className="text-xl font-semibold">Cidade</h1>
                 </div>
                 <span>Ponte Nova</span>
               </div>
@@ -24,9 +24,9 @@ export default function Description() {
             {/* Segunda coluna - Informações principais */}
             <div className="flex md:items-center md:justify-center">
               <div className="flex flex-col gap-2">
-                <div className="flex items-center gap-4">
-                  <h1 className="text-xl font-semibold">Estoque</h1>
+                <div className="flex items-center gap-2">
                   <Package />
+                  <h1 className="text-xl font-semibold">Estoque</h1>
                 </div>
                 <span>10</span>
               </div>
@@ -35,9 +35,9 @@ export default function Description() {
             {/* Terceira coluna - Informações principais */}
             <div className="flex md:items-center md:justify-center">
               <div className="flex flex-col gap-2">
-                <div className="flex items-center gap-4">
-                  <h1 className="text-xl font-semibold">Frete</h1>
+                <div className="flex items-center gap-2">
                   <Truck />
+                  <h1 className="text-xl font-semibold">Frete</h1>
                 </div>
                 <span>Grátis</span>
               </div>
@@ -69,7 +69,6 @@ export default function Description() {
                 />
               </div>
             </div>
-
           </div>
         </div>
       </div>
