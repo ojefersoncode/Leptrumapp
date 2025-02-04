@@ -19,7 +19,7 @@ const Details = () => {
   ];
 
   return (
-    <div className="bg-white">
+    <div className="bg-white h-dvh">
       <Sidebar />
 
       <div className="flex bg-white justify-center items-center">
