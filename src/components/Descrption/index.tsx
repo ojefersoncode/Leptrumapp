@@ -5,8 +5,8 @@ export default function Description() {
     <>
       <div className="flex bg-white pb-4 px-10">
         <div className="w-full">
-          <div className="my-4">
-            <h1 className="text-2xl font-semibold">Descrição do produto</h1>
+          <div className="my-2">
+            <h1 className="text-3xl font-bold">Detalhes do produto</h1>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 py-5">
@@ -45,7 +45,7 @@ export default function Description() {
 
             {/* Detalhes adicionais */}
             <div className="col-span-1 md:col-span-2">
-              <h1 className="text-xl font-semibold">Características</h1>
+              <h1 className="text-2xl my-4 font-semibold">Características</h1>
               <ul className="list-disc pl-5">
                 <li>Produto de alta qualidade</li>
                 <li>Disponível em várias cores</li>
@@ -55,7 +55,7 @@ export default function Description() {
 
             {/* Imagem do produto */}
             <div className="col-span-1 md:col-span-2">
-              <h1 className="text-xl font-semibold">Sugestoões</h1>
+              <h1 className="text-2xl font-semibold">Sugestões</h1>
               <div className="flex gap-4">
                 <img
                   src="https://via.placeholder.com/150"
