@@ -2,29 +2,30 @@
 
 import React, { useState, useEffect, FormEvent } from "react";
 import { useRouter } from "next/navigation";
-import { supabase } from "@/lib/supabaseClient";
+import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardHeader,
-  CardContent,
-  CardFooter,
-} from "@/components/ui/card";
+import { Card, CardHeader, CardContent, CardFooter } from "@/components/ui/card";
+import { setCookie } from "nookies";
 
 const Login = () => {
   const router = useRouter();
+  const supabase = createClientComponentClient();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
+  // 🚀 Verifica sessão ao carregar a página
   useEffect(() => {
-    const token = localStorage.getItem("sb:token");
-    if (token) {
-      router.push("/home");
-    }
-  }, [router]);
+    const checkSession = async () => {
+      const { data } = await supabase.auth.getSession();
+      if (data.session) {
+        router.push("/home");
+      }
+    };
+    checkSession();
+  }, [router, supabase]);
 
   const handleLogin = async (e: FormEvent) => {
     e.preventDefault();
@@ -37,55 +38,49 @@ const Login = () => {
         password,
       });
 
-      if (error) {
-        throw error;
-      }
+      if (error) throw error;
 
       if (data.session) {
         const token = data.session.access_token;
-        localStorage.setItem("sb:token", token);
-        setTimeout(() => {
-          router.push("/home");
-        }, 100);
+
+        // ✅ Salva token nos cookies para compatibilidade com Middleware
+        setCookie(null, "sb:token", token, {
+          maxAge: 60 * 60 * 24, // Expira em 1 dia
+          path: "/",
+          secure: process.env.NODE_ENV === "production",
+          sameSite: "Lax",
+        });
+
+        router.push("/home");
       } else {
         throw new Error("Sessão não encontrada.");
       }
     } catch (err) {
-      if (err instanceof Error) {
-        setError(err.message);
-      } else {
-        setError("Ocorreu um erro inesperado.");
-        console.error("Erro durante o login:", err);
-      }
+      setError(err instanceof Error ? err.message : "Ocorreu um erro inesperado.");
     } finally {
       setLoading(false);
     }
   };
 
   return (
-    <>
-      <div className="h-dvh bg-indigo-100 flex flex-col">
-        <div className="mx-4 my-1 bg-indigo-100">
-          <h1 className="text-2xl font-bold flex items-center">
-            <span className="text-indigo-600">Lep</span>
-            <span className="text-slate-900">trum</span>
-          </h1>
-        </div>
+    <div className="h-dvh bg-indigo-100 flex flex-col">
+      <div className="mx-4 my-1 bg-indigo-100">
+        <h1 className="text-2xl font-bold flex items-center">
+          <span className="text-indigo-600">Lep</span>
+          <span className="text-slate-900">trum</span>
+        </h1>
+      </div>
 
-        <div className="flex flex-grow justify-center items-center bg-indigo-100">
-          <div className="w-full md:max-w-md p-4">
+      <div className="flex flex-grow justify-center items-center bg-indigo-100">
+        <div className="w-full md:max-w-md p-4">
+          <Card>
             <CardHeader>
-              <h1 className="text-2xl font-semibold text-slate-700">
-                Bem-vindo de volta!
-              </h1>
+              <h1 className="text-2xl font-semibold text-slate-700">Bem-vindo de volta!</h1>
             </CardHeader>
             <CardContent>
               <form className="w-full space-y-4" onSubmit={handleLogin}>
                 <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-sm mb-2 font-medium text-gray-700"
-                  >
+                  <label htmlFor="email" className="block text-sm mb-2 font-medium text-gray-700">
                     Email
                   </label>
                   <Input
@@ -99,10 +94,7 @@ const Login = () => {
                   />
                 </div>
                 <div>
-                  <label
-                    htmlFor="password"
-                    className="block text-sm mb-2 font-medium text-gray-700"
-                  >
+                  <label htmlFor="password" className="block text-sm mb-2 font-medium text-gray-700">
                     Senha
                   </label>
                   <Input
@@ -116,11 +108,7 @@ const Login = () => {
                   />
                 </div>
                 {error && <p className="text-sm text-red-700">{error}</p>}
-                <Button
-                  type="submit"
-                  className="w-full bg-indigo-600 mt-4 p-4"
-                  disabled={loading}
-                >
+                <Button type="submit" className="w-full bg-indigo-600 mt-4 p-4" disabled={loading}>
                   {loading ? "Carregando..." : <h1 className="text-base">Entrar</h1>}
                 </Button>
               </form>
@@ -133,14 +121,14 @@ const Login = () => {
                 </a>
               </p>
             </CardFooter>
-          </div>
+          </Card>
         </div>
-
-        <footer className="w-full bg-indigo-100 py-2 text-slate-950 text-base text-center mt-auto">
-          © 2025 Leptrum. Todos os direitos reservados.
-        </footer>
       </div>
-    </>
+
+      <footer className="w-full bg-indigo-100 py-2 text-slate-950 text-base text-center mt-auto">
+        © 2025 Leptrum. Todos os direitos reservados.
+      </footer>
+    </div>
   );
 };
 
