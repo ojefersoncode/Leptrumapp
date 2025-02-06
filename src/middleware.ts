@@ -1,52 +1,43 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
-import { supabase } from "@/lib/supabaseClient";
+import { createClient } from "@supabase/supabase-js";
 
 export async function middleware(req: NextRequest) {
   const url = req.nextUrl.clone();
   const token = req.cookies.get("sb:token")?.value;
 
-  console.log("Middleware executado para:", url.pathname);
-  console.log("Token do cookie:", token);
+  console.log("🔹 Middleware iniciado");
+  console.log("🔹 Token encontrado:", token ? "Sim" : "Não");
 
-  // Verifica se o token existe e não está vazio
-  if (!token || token.trim() === "") {
-    console.log("Token não encontrado ou vazio, redirecionando para /login");
-    return NextResponse.redirect(
-      new URL("/login?unauthenticated=true", url.origin)
-    );
+  if (!token) {
+    console.log("⚠️ Token não encontrado! Redirecionando para login...");
+    return NextResponse.redirect(new URL("/login?unauthenticated=true", url.origin));
   }
 
+  const supabase = createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.SUPABASE_SERVICE_ROLE_KEY! // 🔹 Usando a role_key diretamente
+  );
+
   try {
-    // Verifique o token com o Supabase
     const { data, error } = await supabase.auth.getUser(token);
 
-    console.log("Dados do usuário (middleware):", data);
-    console.log("Erro ao buscar usuário:", error);
+    console.log("🔹 Dados do usuário:", data);
+    console.log("🔹 Erro:", error);
 
-    // Se houver erro ou o usuário não existir, redirecione para /login
-    if (error) {
-      console.error("Erro ao autenticar usuário:", error); // Log do erro específico
-      return NextResponse.redirect(
-        new URL("/login?unauthenticated=true", url.origin)
-      );
+    if (error || !data?.user) {
+      console.log("⚠️ Erro na autenticação! Redirecionando para login...");
+      return NextResponse.redirect(new URL("/login?unauthenticated=true", url.origin));
     }
 
-    if (!data?.user) {
-      console.log("Usuário não encontrado, redirecionando para /login");
-      return NextResponse.redirect(
-        new URL("/login?unauthenticated=true", url.origin)
-      );
-    }
-
-    // Se tudo estiver OK, permita o acesso
+    console.log("✅ Usuário autenticado!");
     return NextResponse.next();
   } catch (error) {
-    console.error("Erro no middleware:", error);
-    return NextResponse.redirect(new URL("/login?error=true", url.origin)); // Redireciona com erro genérico
+    console.error("❌ Erro no middleware:", error);
+    return NextResponse.redirect(new URL("/login?error=true", url.origin));
   }
 }
 
 export const config = {
-  matcher: ["/dashboard/:path*", "/home/:path*"], // Protege todas as rotas dentro de /dashboard
+  matcher: ["/dashboard/:path*", "/home/:path*"],
 };
