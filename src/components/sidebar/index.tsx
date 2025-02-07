@@ -16,6 +16,7 @@ import {
   ListFilter,
   Heater,
   Heart,
+  LogOut,
 } from "lucide-react";
 
 import {
@@ -44,82 +45,83 @@ export function Sidebar() {
               </SheetTrigger>
 
               <SheetContent
-                side={"left"}
-                className="sm:max-w-x text-slate-50 border-none bg-black"
+                side="left"
+                className="sm:max-w-x text-slate-50 border-none bg-black flex flex-col justify-between h-full"
               >
-                <DialogTitle>
-                  <VisuallyHidden>Leptrum</VisuallyHidden>
-                </DialogTitle>
-                <nav className="grid gap-5 text-lg  font-medium">
-                  <div className="flex items-center mx-2">
+                <div>
+                  <DialogTitle>
+                    <VisuallyHidden>Leptrum</VisuallyHidden>
+                  </DialogTitle>
+
+                  <nav className="grid gap-5 text-lg font-medium">
+                    <div className="flex items-center mx-2">
+                      <Link
+                        href="#"
+                        className="flex text-lg items-center justify-center text-indigo-100 md:text-base"
+                        prefetch={false}
+                      >
+                        <span className="sr-only">Logo</span>
+                      </Link>
+                      <h1 className="text-indigo-50">Menu</h1>
+                    </div>
+
+                    <div>
+                      <div className="flex items-center text-indigo-100 px-2.5 mb-2">
+                        <h1 className="font-bold text-lg">Leptrum store</h1>
+                      </div>
+
+                      <div className="flex mb-1 items-center px-2.5 text-indigo-50 gap-1 whitespace-nowrap flex-shrink-0">
+                        <MapPin className="h-4 w-4" />
+                        <span className="font-poppins text-sm">Ponte Nova</span>
+                      </div>
+                      <hr className="bg-slate-600 opacity-50 mt-3" />
+                    </div>
+
                     <Link
                       href="#"
-                      className="flex text-lg items-center justify-center text-indigo-100 md:text-base"
-                      prefetch={false}
+                      className="flex items-center gap-4 px-2.5 text-slate-50 hover:text-indigo-600"
                     >
-                      <span className="sr-only">Logo</span>
+                      <Home className="h-5 w-5 transition-all" />
+                      Home
                     </Link>
-                    <h1 className="text-indigo-50">Menu</h1>
-                  </div>
+                    <Link
+                      href="#"
+                      className="flex items-center gap-4 px-2.5 text-slate-50 hover:text-indigo-600"
+                    >
+                      <Store className="h-5 w-5 transition-all" />
+                      Lojas
+                    </Link>
+                    <Link
+                      href="#"
+                      className="flex items-center gap-4 px-2.5 text-slate-50 hover:text-indigo-600"
+                    >
+                      <Heart className="h-5 w-5 transition-all" />
+                      Salvos
+                    </Link>
+                    <Link
+                      href="/dashboard/${userId}"
+                      className="flex items-center gap-4 px-2.5 text-slate-50 hover:text-indigo-600"
+                    >
+                      <ChartLine className="h-5 w-5 transition-all" />
+                      Dashboard
+                    </Link>
+                    <Link
+                      href="#"
+                      className="flex items-center gap-4 px-2.5 text-slate-50 hover:text-indigo-600"
+                    >
+                      <Settings className="h-5 w-5 transition-all" />
+                      Configurações
+                    </Link>
+                  </nav>
+                </div>
 
-                  <div>
-                    <div className="flex items-center text-indigo-100 px-2.5 mb-2">
-                      <h1 className="font-bold text-lg">Nome Da Loja</h1>
-                    </div>
-
-                    <div className="flex mb-1 items-center px-2.5 text-indigo-50 gap-1 whitespace-nowrap flex-shrink-0">
-                      <MapPin className="h-4 w-4" />
-                      <span className="font-poppins text-sm">Ponte Nova</span>
-                    </div>
-                    <hr className="bg-slate-600 opacity-50 mt-3" />
-                  </div>
-
-                  <Link
-                    href="#"
-                    className="flex items-center gap-4 px-2.5 
-                                    text-slate-50 hover:text-indigo-600"
-                    prefetch={false}
-                  >
-                    <Home className="h-5 w-5 transition-all" />
-                    Home
-                  </Link>
-                  <Link
-                    href="#"
-                    className="flex items-center gap-4 px-2.5 
-                                    text-slate-50 hover:text-indigo-600"
-                    prefetch={false}
-                  >
-                    <Store className="h-5 w-5 transition-all" />
-                    Lojas
-                  </Link>
-                  <Link
-                    href="#"
-                    className="flex items-center gap-4 px-2.5 
-                                    text-slate-50 hover:text-indigo-600"
-                    prefetch={false}
-                  >
-                    <Heart className="h-5 w-5 transition-all" />
-                    Salvos
-                  </Link>
-                  <Link
-                    href="/dashboard/${userId}"
-                    className="flex items-center gap-4 px-2.5
-                                     text-slate-50 hover:text-indigo-600"
-                    prefetch={false}
-                  >
-                    <ChartLine className="h-5 w-5 transition-all" />
-                    Dashboard
-                  </Link>
-                  <Link
-                    href="#"
-                    className="flex items-center gap-4 px-2.5 
-                                    text-slate-50 hover:text-indigo-600"
-                    prefetch={false}
-                  >
-                    <Settings className="h-5 w-5 transition-all" />
-                    Configurações
-                  </Link>
-                </nav>
+                <Link
+                  href="#"
+                  className="flex items-center font-bold text-xl gap-4 px-2.5 text-slate-50 hover:text-indigo-600 mt-auto"
+                >
+                  <LogOut className="h-5 w-5 transition-all" />
+                  Sair
+                </Link>
               </SheetContent>
             </Sheet>
           </div>
