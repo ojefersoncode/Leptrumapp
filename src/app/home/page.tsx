@@ -57,9 +57,9 @@ const Home = () => {
               <div className="mx-4 my-2">
                 <h3 className="text-sm font-semibold line-clamp-2">{product.title}</h3>
               </div>
-              <div className="flex items-center mx-3 my-2 gap-1">
+              <div className="flex items-center mx-4 my-3 gap-0.5">
                 <MapPin className="h-4 w-4 text-slate-800" />
-                <span className="text-xs text-slate-800">Sua localização</span>
+                <span className="text-xs font-sans text-slate-800">Sua localização</span>
               </div>
             </div>
           ))}

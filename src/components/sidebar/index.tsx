@@ -14,6 +14,8 @@ import {
   MapPin,
   ChartLine,
   ListFilter,
+  Heater,
+  Heart,
 } from "lucide-react";
 
 import {
@@ -52,8 +54,7 @@ export function Sidebar() {
                   <div className="flex items-center mx-2">
                     <Link
                       href="#"
-                      className="flex text-lg 
-                                        items-center justify-center text-indigo-100 md:text-base"
+                      className="flex text-lg items-center justify-center text-indigo-100 md:text-base"
                       prefetch={false}
                     >
                       <span className="sr-only">Logo</span>
@@ -62,13 +63,13 @@ export function Sidebar() {
                   </div>
 
                   <div>
-                    <div className="flex items-center text-indigo-100 px-2.5 mb-4">
+                    <div className="flex items-center text-indigo-100 px-2.5 mb-2">
                       <h1 className="font-bold text-lg">Nome Da Loja</h1>
                     </div>
 
-                    <div className="flex mb-1 items-center px-2.5 text-indigo-50 gap-2 whitespace-nowrap flex-shrink-0">
+                    <div className="flex mb-1 items-center px-2.5 text-indigo-50 gap-1 whitespace-nowrap flex-shrink-0">
                       <MapPin className="h-4 w-4" />
-                      <span className="font-mono text-sm">Ponte Nova</span>
+                      <span className="font-poppins text-sm">Ponte Nova</span>
                     </div>
                     <hr className="bg-slate-600 opacity-50 mt-3" />
                   </div>
@@ -97,8 +98,8 @@ export function Sidebar() {
                                     text-slate-50 hover:text-indigo-600"
                     prefetch={false}
                   >
-                    <ShoppingBag className="h-5 w-5 transition-all" />
-                    Quero vender
+                    <Heart className="h-5 w-5 transition-all" />
+                    Salvos
                   </Link>
                   <Link
                     href="/dashboard/${userId}"
@@ -152,7 +153,7 @@ export function Sidebar() {
                       className="w-full px-4 py-2 rounded bg-indigo-50 border border-nonefocus:outline-none"
                     />
                     <Button>
-                        <Search className="w-7 h-7" />
+                      <Search className="w-7 h-7" />
                     </Button>
                   </div>
 
@@ -163,7 +164,7 @@ export function Sidebar() {
                     </div>
                     <div className="flex flex-wrap gap-4 my-4">
                       <a className="flex flex-nowrap text-sm  rounded text-indigo-50 bg-indigo-700 px-3 py-2">
-                        Usado 
+                        Usado
                       </a>
                       <a className="flex flex-nowrap text-sm rounded text-indigo-50 bg-indigo-700 px-3 py-2">
                         Novo
