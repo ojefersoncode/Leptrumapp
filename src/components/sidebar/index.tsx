@@ -1,6 +1,8 @@
 "use client";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { supabase } from "../../lib/supabaseClient";
+import { useRouter } from "next/router";
 import { Dialog } from "@radix-ui/react-dialog";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -27,7 +29,11 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "../ui/input";
 
+
+
+
 export function Sidebar() {
+  
   return (
     <div className="flex w-full flex-col bg-black">
       <div className="flex w-full flex-col sm:gap-4 sm:py-4">
