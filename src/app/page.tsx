@@ -50,18 +50,18 @@ const Page = () => {
             eficiência. Conte com nossa dashboard avançada e análises de IA para
             otimizar estratégias e crescer seu negócio. 🚀
           </p>
-          <div className="flex items-center justify-center m-4 mt-6 gap-4">
+          <div className="flex items-center justify-center mt-6 gap-4">
             <ShimmerButton 
             onClick={handleResgisterClick}
             className="shadow-2xl">
               <span className="whitespace-pre-wrap text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
-                Começe Gratuitamente
+                COMEÇAR AGORA
               </span>
             </ShimmerButton>
 
             <ShinyButton
             onClick={handleLoginClick}
-            >Acessar Minha Conta</ShinyButton>
+            >Acessar conta</ShinyButton>
           </div>
 
           <div className="flex justify-center mt-10 items-center">
