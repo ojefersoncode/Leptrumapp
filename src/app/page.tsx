@@ -50,7 +50,7 @@ const Page = () => {
             eficiência. Conte com nossa dashboard avançada e análises de IA para
             otimizar estratégias e crescer seu negócio. 🚀
           </p>
-          <div className="flex flex-wrap items-center justify-center mt-6 gap-4">
+          <div className="flex items-center justify-center m-4 mt-6 gap-4">
             <ShimmerButton 
             onClick={handleResgisterClick}
             className="shadow-2xl">
