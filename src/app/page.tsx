@@ -41,7 +41,7 @@ const Page = () => {
             </RippleButton>
           </div>
         </header>
-        <main className="flex-1 flex flex-col mt-20 mb-1 items-center justify-center">
+        <main className="flex-1 flex flex-col max-md:mt-16 mt-20 items-center justify-center">
           <h1 className="text-3xl md:text-5xl max-md:text-start font-bold text-center">
             Construa seu catálogo com poucos cliques.
           </h1>
@@ -64,7 +64,7 @@ const Page = () => {
             >Acessar conta</ShinyButton>
           </div>
 
-          <div className="flex justify-center mt-10 items-center">
+          <div className="flex justify-center mt-7 items-center">
             <HeroVideoDialogDemo />
           </div>
         </main>
