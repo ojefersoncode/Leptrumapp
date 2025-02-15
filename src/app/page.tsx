@@ -47,8 +47,8 @@ const Page = () => {
           </h1>
           <p className="flex items-center justify-center text-lg max-md:text-start text-center font-sans max-w-3xl mt-4">
             A Leptrum é a plataforma ideal para organizar produtos com
-            eficiência. Conte com nossa dashboard avançada e análises de IA para
-            otimizar estratégias e crescer seu negócio. 🚀
+            eficiência. Conte com nosco para
+            otimizar estratégias e impulsionar seu negócio. 🚀
           </p>
           <div className="flex items-center justify-start mt-6 gap-4">
             <ShimmerButton 
