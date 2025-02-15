@@ -27,6 +27,7 @@
     "cookies-next": "^5.1.0",
     "embla-carousel-react": "^8.5.2",
     "lucide-react": "^0.454.0",
+    "motion": "^12.4.3",
     "next": "15.0.2",
     "nookies": "^2.5.2",
     "react": "^18.3.1",
