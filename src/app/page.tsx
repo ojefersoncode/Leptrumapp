@@ -41,7 +41,7 @@ const Page = () => {
             </RippleButton>
           </div>
         </header>
-        <main className="flex-1 flex flex-col max-md:mt-16 mt-20 items-center justify-center">
+        <main className="flex-1 flex flex-col max-md:mt-10 mt-20 items-center justify-center">
           <h1 className="text-3xl md:text-5xl max-md:text-start font-bold text-center">
             Construa seu catálogo com poucos cliques.
           </h1>
