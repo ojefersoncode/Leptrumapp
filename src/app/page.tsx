@@ -20,7 +20,6 @@ const Page = () => {
   return (
     <>
       <div className="min-h-screen w-full bg-indigo-950 text-white flex flex-col items-center justify-center px-6 text-center">
-      <Meteors />
         <header className="w-full mx-4 flex justify-between items-center py-4">
           <h1 className="text-2xl font-bold flex items-center">Leptrum</h1>
           <nav className="hidden md:flex space-x-6 font-semibold">
@@ -40,7 +39,8 @@ const Page = () => {
             </RippleButton>
           </div>
         </header>
-        <main className="flex-1 flex flex-col mt-10 items-center justify-center">
+        <Meteors />
+        <main className="flex-1 flex flex-col items-center">
           <h1 className="text-3xl font-bold text-center">
             Organize seus produtos online e aumente suas vendas em poucos dias.
           </h1>
