@@ -1,20 +1,15 @@
 "use client";
 import { RippleButton } from "@/components/magicui/ripple-button";
 import { useRouter } from "next/navigation";
-import { ShimmerButton } from "@/components/magicui/shimmer-button";
-import { ShinyButton } from "@/components/magicui/shiny-button";
 import { HeroVideoDialogDemo } from "@/components/HeroVideo";
-import { Meteors } from "@/components/magicui/meteors";
+import { AnimatedListDemo } from "@/components/Animatednotifications";
+import { MeteorHero } from "@/components/meteors";
 
 const Page = () => {
   const router = useRouter();
 
   const handleLoginClick = () => {
     router.push("/login");
-  };
-
-  const handleResgisterClick = () => {
-    router.push("/signin");
   };
 
   return (
@@ -39,34 +34,31 @@ const Page = () => {
             </RippleButton>
           </div>
         </header>
-        <Meteors />
-        <main className="flex-1 flex flex-col items-center">
-          <h1 className="text-3xl font-bold text-center">
-            Organize seus produtos online e aumente suas vendas em poucos dias.
-          </h1>
-          <p className="flex items-center justify-center text-base text-center font-sans max-w-3xl mt-4">
-            Com a Leptrum, você cria seu catálogo online, gerencia tudo com
-            facilidade e utiliza o poder da AI para levar seu negócio a um novo
-            nível. 🚀
-          </p>
-          <div className="flex items-center justify-start mt-6 gap-4">
-            <ShimmerButton
-              onClick={handleResgisterClick}
-              className="shadow-2xl"
-            >
-              <span className="whitespace-pre-wrap text-sm leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10">
-                COMEÇAR AGORA
-              </span>
-            </ShimmerButton>
 
-            <ShinyButton 
-            onClick={handleLoginClick}>Acessar conta</ShinyButton>
-          </div>
-
-          <div className="flex justify-center mt-7 items-center">
+        <main>
+          <MeteorHero />
+          <div className="flex justify-center my-10 items-center">
             <HeroVideoDialogDemo />
           </div>
         </main>
+
+        <section className="flex flex-wrap w-full justify-around items-center gap-7">
+          <div className="flex flex-col justify-center items-center">
+            <h1 className="text-4xl font-semibold">
+              Tenha mais resultados em poucos dias
+            </h1>
+            <p className="text-center max-w-md mt-7">
+              analise suas metricas e crie novas estrategias para destacar seus
+              produtos, alem de melhorar a perfomaçe dos seus anuncios
+              direiciando para a pagina d0 seu produto, economize tempo e
+              esforço para gerenciar seu negocio.
+            </p>
+          </div>
+
+          <div className="flex justify-end">
+            <AnimatedListDemo />
+          </div>
+        </section>
 
         <footer className="w-full py-2 text-base text-center">
           © 2025 Leptrum. Todos os direitos reservados.
