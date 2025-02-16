@@ -43,7 +43,7 @@ const Page = () => {
         </header>
         <main className="flex-1 flex flex-col mt-10 items-center justify-center">
           <h1 className="text-3xl font-bold text-center">
-            Crie seu catálogo de produtos online e almente ainda mais suas vendas.
+             Crje seu catálogo online e veja suas vendas decolarem.
           </h1>
           <p className="flex items-center justify-center text-lg text-center font-sans max-w-3xl mt-4">
             A Leptrum é a plataforma ideal para organizar seus produtos com
