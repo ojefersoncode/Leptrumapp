@@ -42,11 +42,11 @@ const Page = () => {
           </div>
         </header>
         <main className="flex-1 flex flex-col mt-10 items-center justify-center">
-          <h1 className="text-2xl font-bold text-center">
-             Crje seu catálogo online e veja suas vendas decolarem.
+          <h1 className="text-3xl font-bold text-center">
+             Crie seu catálogo de produtos online e veja suas vendas decolarem em poucos dias
           </h1>
           <p className="flex items-center justify-center text-base text-center font-sans max-w-3xl mt-4">
-            A Leptrum e uma plataforma ideal para organizar seus produtos e impulsionar seu negócio. 🚀
+            A Leptrum e uma plataforma ideal para organizar seus produtos e impulsionar seu negócio com uma dashboard avançada e recursos de AI. 🚀
           </p>
           <div className="flex items-center justify-start mt-6 gap-4">
             <ShimmerButton 
