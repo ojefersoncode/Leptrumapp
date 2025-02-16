@@ -42,10 +42,10 @@ const Page = () => {
           </div>
         </header>
         <main className="flex-1 flex flex-col mt-10 items-center justify-center">
-          <h1 className="text-3xl max-md:text-start font-bold text-center">
-            Construa seu catálogo com poucos cliques.
+          <h1 className="text-3xl font-bold text-center">
+            Crie seu catálogo de produtos online e almente ainda mais suas vendas.
           </h1>
-          <p className="flex items-center justify-center text-lg max-md:text-start text-center font-sans max-w-3xl mt-4">
+          <p className="flex items-center justify-center text-lg text-center font-sans max-w-3xl mt-4">
             A Leptrum é a plataforma ideal para organizar seus produtos com
             eficiência. Conte conosco para
             otimizar suas estratégias e impulsionar seu negócio. 🚀
