@@ -46,7 +46,7 @@ const Page = () => {
              Organize seus produtos online e aumente suas vendas em poucos dias.
           </h1>
           <p className="flex items-center justify-center text-base text-center font-sans max-w-3xl mt-4">
-            "Com a Leptrum, você cria seu catálogo online, gerencia tudo com facilidade e utiliza o poder da AI para levar seu negócio a um novo nível.  🚀
+            Com a Leptrum, você cria seu catálogo online, gerencia tudo com facilidade e utiliza o poder da AI para levar seu negócio a um novo nível.  🚀
           </p>
           <div className="flex items-center justify-start mt-6 gap-4">
             <ShimmerButton 
