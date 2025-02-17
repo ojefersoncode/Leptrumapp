@@ -3,7 +3,7 @@ import { SparklesText } from "@/components/magicui/sparkles-text";
 export function AnimatedTittle() {
   return (
     <SparklesText
-      className="text-5xl"
+      className="text-5xl max-sm:text-4xl"
       text="Organize seus produtos online com poucos cliques."
     />
   );
@@ -17,7 +17,6 @@ export function AnimatedTittleSection2() {
     />
   );
 }
-
 
 export function AnimatedTittleSection1() {
   return (

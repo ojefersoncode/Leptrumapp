@@ -50,7 +50,7 @@ const Page = () => {
         <section className="flex flex-wrap w-full justify-around items-center my-7 gap-7">
           <div className="flex flex-col justify-center items-center">
           <AnimatedTittleSection1 />
-            <p className="text-center text-xl max-w-xl mt-7">
+            <p className="text-center text-xl font-semibold max-w-lg px-4 mt-7">
               analise suas metricas e crie novas estrategias para destacar seus
               produtos, alem de melhorar a perfomaçe dos seus anuncios
               direiciando para a pagina d0 seu produto, economize tempo e

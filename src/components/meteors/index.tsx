@@ -26,15 +26,15 @@ export function MeteorHero() {
         </span>
         <AnimatedBadAge />
         <AnimatedTittle />
-        <p className="flex items-center justify-center text-xl text-center font-semibold max-w-3xl mt-4">
+        <p className="flex items-center justify-center text-xl text-center font-semibold max-w-3xl mt-6">
           Com a Leptrum, você cria seu catálogo online, gerencia tudo com
           facilidade e utiliza o poder da AI para levar seu negócio a um novo
-          nível. 🚀
+          nível.
         </p>
         
         <div className="flex items-center justify-start mt-6 gap-4">
-          <ShimmerButton onClick={handleResgisterClick} className="shadow-2xl">
-            <span className="whitespace-pre-wrap text-sm leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10">
+          <ShimmerButton onClick={handleResgisterClick} className="shadow-2xl py-4 px-6">
+            <span className="whitespace-pre-wrap text-xs leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10">
               COMEÇAR AGORA
             </span>
           </ShimmerButton>
@@ -43,7 +43,7 @@ export function MeteorHero() {
         </div>
       </div>
 
-      <div className="flex justify-center my-4 items-center">
+      <div className="flex justify-center mb-6 items-center">
         <HeroVideoDialogDemo />
       </div>
     </>
