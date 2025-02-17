@@ -2,8 +2,11 @@
 import { RippleButton } from "@/components/magicui/ripple-button";
 import { useRouter } from "next/navigation";
 import { HeroVideoDialogDemo } from "@/components/HeroVideo";
-import { AnimatedListDemo } from "@/components/Animatednotifications";
+import { AnimatedListDemo } from "@/components/Animated-notifications";
 import { MeteorHero } from "@/components/meteors";
+import { AnimatedWidget } from "@/components/Animated-widget";
+import { AnimatedTittleSection1, AnimatedTittleSection2 } from "@/components/animate-tittle";
+import { AnimatedCard } from "@/components/animated-card";
 
 const Page = () => {
   const router = useRouter();
@@ -37,17 +40,17 @@ const Page = () => {
 
         <main>
           <MeteorHero />
-          <div className="flex justify-center my-10 items-center">
-            <HeroVideoDialogDemo />
-          </div>
         </main>
 
-        <section className="flex flex-wrap w-full justify-around items-center gap-7">
+
+        <div className="flex w-full my-7">
+          <AnimatedCard />
+        </div>
+
+        <section className="flex flex-wrap w-full justify-around items-center my-7 gap-7">
           <div className="flex flex-col justify-center items-center">
-            <h1 className="text-4xl font-semibold">
-              Tenha mais resultados em poucos dias
-            </h1>
-            <p className="text-center max-w-md mt-7">
+          <AnimatedTittleSection1 />
+            <p className="text-center text-xl max-w-xl mt-7">
               analise suas metricas e crie novas estrategias para destacar seus
               produtos, alem de melhorar a perfomaçe dos seus anuncios
               direiciando para a pagina d0 seu produto, economize tempo e
@@ -57,6 +60,16 @@ const Page = () => {
 
           <div className="flex justify-end">
             <AnimatedListDemo />
+          </div>
+        </section>
+
+        <section className="flex flex-col w-full mt-6 mb-4">
+          <div>
+            <AnimatedTittleSection2 />
+          </div>
+
+          <div className="flex w-full">
+            <AnimatedWidget />
           </div>
         </section>
 
