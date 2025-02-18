@@ -7,6 +7,7 @@ import { MeteorHero } from "@/components/meteors";
 import { AnimatedWidget } from "@/components/Animated-widget";
 import { AnimatedTittleSection1, AnimatedTittleSection2 } from "@/components/animate-tittle";
 import { AnimatedCard } from "@/components/animated-card";
+import { ShimmerButton } from "@/components/magicui/shimmer-button";
 
 const Page = () => {
   const router = useRouter();
@@ -17,24 +18,26 @@ const Page = () => {
 
   return (
     <>
-      <div className="min-h-screen w-full bg-[#0A0000] text-white flex flex-col items-center justify-center px-6 text-center">
-        <header className="w-full fixed top-0 z-10 bg-red-700 px-4 flex justify-between items-center py-2">
-          <h1 className="text-2xl font-bold flex items-center">Leptrum</h1>
+      <div className="min-h-screen w-full mx-auto bg-black text-white flex flex-col items-center justify-center px-6 text-center">
+        <header className="w-full fixed top-0 z-10 bg-white bg-opacity-90 rounded mx-2 my-2 px-4 flex justify-between items-center py-2">
+          <h1 className="text-2xl text-red-700 font-bold flex items-center">Leptrum</h1>
           <nav className="hidden md:flex space-x-6 font-semibold">
-            <a href="#" className="hover:text-indigo-400">
+            <a href="#" className="text-red-700 hover:text-red-400">
               Início
             </a>
-            <a href="#" className="hover:text-indigo-400">
+            <a href="#" className="text-red-700 hover:text-red-400">
               Sobre
             </a>
-            <a href="#" className="hover:text-indigo-400">
+            <a href="#" className="text-red-700 hover:text-red-400">
               Preços
             </a>
           </nav>
           <div className="flex items-center space-x-4">
-            <RippleButton onClick={handleLoginClick} rippleColor="#ADD8E6">
+          <ShimmerButton onClick={handleLoginClick} className="shadow-2xl py-3 px-6">
+            <span className="whitespace-pre-wrap text-xs leading-none tracking-tight text-white">
               Entrar
-            </RippleButton>
+            </span>
+          </ShimmerButton>
           </div>
         </header>
 
@@ -50,7 +53,7 @@ const Page = () => {
         <section className="flex flex-wrap w-full justify-around items-center my-7 gap-7">
           <div className="flex flex-col justify-center items-center">
           <AnimatedTittleSection1 />
-            <p className="text-center text-xl text-yellow-50 font-semibold max-w-lg px-4 mt-7">
+            <p className="text-center text-lg text-yellow-50 font-semibold max-w-lg px-4 mt-7">
               analise suas metricas e crie novas estrategias para destacar seus
               produtos, alem de melhorar a perfomaçe dos seus anuncios
               direiciando para a pagina d0 seu produto, economize tempo e

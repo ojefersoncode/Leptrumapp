@@ -59,7 +59,7 @@ export const RippleButton = React.forwardRef<
     return (
       <button
         className={cn(
-          "relative flex cursor-pointer items-center justify-center overflow-hidden rounded-md bg-background px-4 py-1 text-center text-primary",
+          " cursor-pointer border-red-700 items-center justify-center rounded-md bg-background px-4 py-1 text-center text-red-700",
           className,
         )}
         onClick={handleClick}

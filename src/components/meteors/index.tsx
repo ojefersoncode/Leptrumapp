@@ -26,7 +26,7 @@ export function MeteorHero() {
         </span>
         <AnimatedBadAge />
         <AnimatedTittle />
-        <p className="flex items-center justify-center text-yellow-50 text-xl text-center font-semibold max-w-3xl mt-6">
+        <p className="flex items-center justify-center text-yellow-50 text-lg text-center font-semibold max-w-3xl mt-6">
           Com a Leptrum, você cria seu catálogo online, gerencia tudo com
           facilidade e utiliza o poder da AI para levar seu negócio a um novo
           nível.
