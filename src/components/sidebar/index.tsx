@@ -31,11 +31,11 @@ import { Input } from "../ui/input";
 
 export function Sidebar() {
   return (
-    <div className="flex w-full flex-col bg-white bg-opacity-90">
+    <div className="flex w-full flex-col bg-gray-800 bg-opacity-90 max-md:p-2">
       <div className="flex w-full flex-col sm:gap-4 sm:py-4">
         <header
           className="sticky top-0 z-30 flex  px-4 items-center 
-                 gap-4 sm:static sm:h-auto sm:border-0 bg-white"
+                 gap-4 sm:static sm:h-auto sm:border-0"
         >
           <div className="flex w-full items-center bg-transparent gap-3">
             <Sheet>
@@ -48,7 +48,7 @@ export function Sidebar() {
 
               <SheetContent
                 side="left"
-                className="sm:max-w-x text-slate-50 border-none bg-black flex flex-col justify-between h-full"
+                className="sm:max-w-x text-slate-50 border-none bg-gray-800 flex flex-col justify-between h-full"
               >
                 <div>
                   <DialogTitle>
@@ -68,7 +68,7 @@ export function Sidebar() {
                     </div>
 
                     <div>
-                      <div className="flex items-center text-red-700 px-2.5 mb-2">
+                      <div className="flex items-center text-red-600 px-2.5 mb-2">
                         <h1 className="font-bold text-lg">Leptrum store</h1>
                       </div>
 
@@ -129,7 +129,7 @@ export function Sidebar() {
 
           <div className="flex items-center justify-center">
             <h1 className="text-2xl font-bold flex items-center">
-              <span className="text-red-700">Leptrum</span>
+              <span className="text-red-600">Leptrum</span>
             </h1>
           </div>
 
@@ -138,7 +138,7 @@ export function Sidebar() {
             <Dialog>
               <DialogTrigger asChild>
                 <Button className="p-4 bg-transparent hover:bg-transparent px-2">
-                  <Search className="size-8 text-red-700" />
+                  <Search className="size-8 text-red-600" />
                 </Button>
               </DialogTrigger>
               <DialogContent className="flex flex-col max-md:max-w-full max-md:h-full bg-indigo-100 text-black">
@@ -165,13 +165,13 @@ export function Sidebar() {
                       <ListFilter className="w-7 h-7" />
                     </div>
                     <div className="flex flex-wrap gap-4 my-4">
-                      <a className="flex flex-nowrap text-sm  rounded text-indigo-50 bg-red-700 px-3 py-2">
+                      <a className="flex flex-nowrap text-sm  rounded text-indigo-50 bg-red-600 px-3 py-2">
                         Usado
                       </a>
-                      <a className="flex flex-nowrap text-sm rounded text-indigo-50 bg-red-700 px-3 py-2">
+                      <a className="flex flex-nowrap text-sm rounded text-indigo-50 bg-red-600 px-3 py-2">
                         Novo
                       </a>
-                      <a className="flex flex-nowrap text-sm rounded text-indigo-50 bg-red-700 px-3 py-2">
+                      <a className="flex flex-nowrap text-sm rounded text-indigo-50 bg-red-600 px-3 py-2">
                         Promoção
                       </a>
                     </div>

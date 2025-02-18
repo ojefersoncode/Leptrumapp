@@ -3,15 +3,15 @@ import { MapPinHouse, Package, Truck } from "lucide-react";
 export default function Description() {
   return (
     <>
-      <div className="flex bg-white pb-4 px-10">
-        <div className="w-full">
-          <div className="my-2">
-            <h1 className="text-3xl font-bold">Detalhes do produto</h1>
+      <div className="flex w-full bg-gray-800 py-4 rounded-2xl">
+        <div className="flex flex-col w-full">
+          <div className="py-4 px-6">
+            <h1 className="text-3xl text-gray-300 font-bold">Detalhes do produto</h1>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 py-5">
+          <div className="grid flex-col w-full grid-cols-1 md:grid-cols-3 px-10 bg-gray-800 text-gray-200 gap-4 py-5">
             {/* Primeira coluna - Informações principais */}
-            <div className="flex md:items-center md:justify-center">
+            <div className="flex w-full md:items-center md:justify-center">
               <div className="flex flex-col gap-2">
                 <div className="flex items-center gap-2">
                   <MapPinHouse />

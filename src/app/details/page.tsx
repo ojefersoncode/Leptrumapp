@@ -19,11 +19,11 @@ const Details = () => {
   ];
 
   return (
-    <div className="flex flex-col min-h-screen bg-white">
+    <div className="flex flex-col min-h-screen bg-gray-900">
       <Sidebar />
 
       {/* Mobile first */}
-      <div className="flex-grow flex">
+      <div className="flex-grow flex w-full pt-4 pb-1">
         <div className="flex flex-col md:flex-row w-full p-4">
           <div className="basis-full md:basis-1/2 flex items-center justify-center">
             <Carousel className="w-full max-w-sm">
@@ -43,24 +43,24 @@ const Details = () => {
             </Carousel>
           </div>
 
-          <CardContent className="flex justify-center items-center flex flex-col">
-            <div className="flex w-full justify-center items-center flex-col">
+          <CardContent className="flex justify-center items-center flex-col ">
+            <div className="flex w-full justify-center items-center my-6 flex-col">
               <div>
-                <div className="flex justify-start items-start gap-1">
-                  <Verified className="text-green-600 w-5 h-5" />
-                  <h1 className="text-green-700 font-poppins font-semibold text-sm">
+                <div className="flex justify-start my-1 items-start gap-1">
+                  <Verified className="text-gray-400 size-5" />
+                  <h1 className="text-gray-400 font-poppins font-semibold text-sm">
                     Loja Verificada
                   </h1>
                 </div>
-                <h1 className="text-5xl max-md:text-4xl font-bold">
+                <h1 className="text-5xl text-gray-100 max-md:text-4xl font-bold">
                   Nome do produto
                 </h1>
-                <h1 className="line-through">De R$:294,00</h1>
+                <h1 className="">De R$:294,00</h1>
                 <div className="flex items-center">
                   <h1 className="text-2xl text-green-600 font-bold">
                     R$:267,90
                   </h1>
-                  <h2 className="text-lg text-green-600 font-semibold ml-1">
+                  <h2 className="text-base text-green-600 font-semibold ml-0.5">
                     No pix
                   </h2>
                 </div>
@@ -88,7 +88,7 @@ const Details = () => {
 
       <Description />
 
-      <footer className="w-full bg-white py-2 text-slate-950 text-base text-center mt-auto">
+      <footer className="w-full bg-gray-900 py-2 text-gray-200 text-base text-center mt-auto">
         © 2025 Leptrum. Todos os direitos reservados.
       </footer>
     </div>
