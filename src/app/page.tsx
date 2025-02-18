@@ -3,7 +3,7 @@ import { RippleButton } from "@/components/magicui/ripple-button";
 import { useRouter } from "next/navigation";
 import { HeroVideoDialogDemo } from "@/components/HeroVideo";
 import { AnimatedListDemo } from "@/components/Animated-notifications";
-import { MeteorHero } from "@/components/meteors";
+import { Hero } from "@/components/hero";
 import { AnimatedWidget } from "@/components/Animated-widget";
 import { AnimatedTittleSection1, AnimatedTittleSection2 } from "@/components/animate-tittle";
 import { AnimatedCard } from "@/components/animated-card";
@@ -42,7 +42,7 @@ const Page = () => {
         </header>
 
         <main>
-          <MeteorHero />
+          <Hero />
         </main>
 
 
@@ -66,12 +66,12 @@ const Page = () => {
           </div>
         </section>
 
-        <section className="flex flex-col w-full mt-6 mb-4">
-          <div>
+        <section className="flex flex-col w-full my-6 md:my-16">
+          <div className="my-4">
             <AnimatedTittleSection2 />
           </div>
 
-          <div className="flex w-full">
+          <div className="flex my-4 w-full">
             <AnimatedWidget />
           </div>
         </section>

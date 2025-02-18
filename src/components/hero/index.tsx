@@ -6,7 +6,7 @@ import { ShinyButton } from "@/components/magicui/shiny-button";
 import { AnimatedTittle } from "../animate-tittle";
 import { AnimatedBadAge } from "../animated-badage";
 
-export function MeteorHero() {
+export function Hero() {
   const router = useRouter();
 
   const handleLoginClick = () => {
