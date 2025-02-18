@@ -19,11 +19,7 @@ export function MeteorHero() {
 
   return (
     <>
-      <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden">
-        <Meteors number={40} />
-        <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b bg-clip-text text-center leading-none text-transparent dark:from-white dark:to-slate-900/10">
-          Meteors
-        </span>
+      <div className="relative flex h-[600px] w-full flex-col items-center justify-center overflow-hidden">
         <AnimatedBadAge />
         <AnimatedTittle />
         <p className="flex items-center justify-center text-yellow-50 text-lg text-center font-semibold max-w-3xl mt-6">

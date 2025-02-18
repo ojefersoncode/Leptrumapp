@@ -63,24 +63,23 @@ const Login = () => {
   };
 
   return (
-    <div className="h-dvh bg-indigo-100 flex flex-col">
-      <div className="mx-4 my-1 bg-indigo-100">
+    <div className="h-dvh bg-black flex flex-col">
+      <div className="mx-4 my-1">
         <h1 className="text-2xl font-bold flex items-center">
-          <span className="text-indigo-600">Lep</span>
-          <span className="text-slate-900">trum</span>
+          <span className="text-red-700">Leptrum</span>
         </h1>
       </div>
 
-      <div className="flex flex-grow justify-center items-center bg-indigo-100">
+      <div className="flex flex-grow justify-center items-center bg-black">
         <div className="w-full md:max-w-md p-4">
           <Card>
             <CardHeader>
-              <h1 className="text-2xl font-semibold text-slate-700">Bem-vindo de volta!</h1>
+              <h1 className="text-2xl font-semibold text-slate-800">Bem-vindo de volta!</h1>
             </CardHeader>
             <CardContent>
               <form className="w-full space-y-4" onSubmit={handleLogin}>
                 <div>
-                  <label htmlFor="email" className="block text-sm mb-2 font-medium text-gray-700">
+                  <label htmlFor="email" className="block text-sm mb-2 font-medium text-gray-800">
                     Email
                   </label>
                   <Input
@@ -108,7 +107,7 @@ const Login = () => {
                   />
                 </div>
                 {error && <p className="text-sm text-red-700">{error}</p>}
-                <Button type="submit" className="w-full bg-indigo-600 mt-4 p-4" disabled={loading}>
+                <Button type="submit" className="w-full bg-red-700 mt-4 p-4" disabled={loading}>
                   {loading ? "Carregando..." : <h1 className="text-base">Entrar</h1>}
                 </Button>
               </form>
@@ -116,7 +115,7 @@ const Login = () => {
             <CardFooter className="text-center">
               <p className="text-sm text-slate-800">
                 Não tem uma conta?{" "}
-                <a href="/signin" className="text-indigo-600 hover:underline">
+                <a href="/signin" className="text-red-700 hover:underline">
                   Registre-se
                 </a>
               </p>
@@ -125,7 +124,7 @@ const Login = () => {
         </div>
       </div>
 
-      <footer className="w-full bg-indigo-100 py-2 text-slate-950 text-base text-center mt-auto">
+      <footer className="w-full py-2 text-yellow-50 text-base text-center mt-auto">
         © 2025 Leptrum. Todos os direitos reservados.
       </footer>
     </div>

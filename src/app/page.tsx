@@ -19,7 +19,7 @@ const Page = () => {
   return (
     <>
       <div className="min-h-screen w-full mx-auto bg-black text-white flex flex-col items-center justify-center px-6 text-center">
-        <header className="w-full fixed top-0 z-10 bg-white bg-opacity-90 rounded mx-2 my-2 px-4 flex justify-between items-center py-2">
+        <header className="w-full fixed top-0 z-10 bg-white bg-opacity-90 px-4 flex justify-between items-center py-2">
           <h1 className="text-2xl text-red-700 font-bold flex items-center">Leptrum</h1>
           <nav className="hidden md:flex space-x-6 font-semibold">
             <a href="#" className="text-red-700 hover:text-red-400">
