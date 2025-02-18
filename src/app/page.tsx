@@ -17,8 +17,8 @@ const Page = () => {
 
   return (
     <>
-      <div className="min-h-screen w-full bg-indigo-950 text-white flex flex-col items-center justify-center px-6 text-center">
-        <header className="w-full mx-4 flex justify-between items-center py-4">
+      <div className="min-h-screen w-full bg-[#0A0000] text-white flex flex-col items-center justify-center px-6 text-center">
+        <header className="w-full fixed top-0 z-10 bg-red-700 px-4 flex justify-between items-center py-2">
           <h1 className="text-2xl font-bold flex items-center">Leptrum</h1>
           <nav className="hidden md:flex space-x-6 font-semibold">
             <a href="#" className="hover:text-indigo-400">
@@ -50,7 +50,7 @@ const Page = () => {
         <section className="flex flex-wrap w-full justify-around items-center my-7 gap-7">
           <div className="flex flex-col justify-center items-center">
           <AnimatedTittleSection1 />
-            <p className="text-center text-xl font-semibold max-w-lg px-4 mt-7">
+            <p className="text-center text-xl text-yellow-50 font-semibold max-w-lg px-4 mt-7">
               analise suas metricas e crie novas estrategias para destacar seus
               produtos, alem de melhorar a perfomaçe dos seus anuncios
               direiciando para a pagina d0 seu produto, economize tempo e
