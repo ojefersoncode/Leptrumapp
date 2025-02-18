@@ -63,14 +63,14 @@ const Login = () => {
   };
 
   return (
-    <div className="h-dvh bg-black flex flex-col">
+    <div className="h-dvh bg-gray-900 flex flex-col">
       <div className="mx-4 my-1">
         <h1 className="text-2xl font-bold flex items-center">
           <span className="text-red-700">Leptrum</span>
         </h1>
       </div>
 
-      <div className="flex flex-grow justify-center items-center bg-black">
+      <div className="flex flex-grow justify-center items-center bg-gray-900">
         <div className="w-full md:max-w-md p-4">
           <Card>
             <CardHeader>

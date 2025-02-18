@@ -7,37 +7,37 @@ const reviews = [
     name: "Dashboard avançada",
     body: "Controle seus produtos e estoques.",
     icon: BarChart2,
-    backgroundColor: "bg-red-700", // Cor de fundo
+    backgroundColor: "bg-gray-600", // Cor de fundo
   },
   {
     name: "Análise de AI",
     body: "Aumente suas vendas com nossa AI de marketing digital.",
     icon: Cpu,
-    backgroundColor: "bg-red-700", // Cor de fundo
+    backgroundColor: "bg-gray-600", // Cor de fundo
   },
   {
     name: "Criar campanhas",
     body: "Crie anúncios para Facebook Ads de forma fácil.",
     icon: Target,
-    backgroundColor: "bg-red-700", // Cor de fundo
+    backgroundColor: "bg-gray-600", // Cor de fundo
   },
   {
     name: "Campanha para MVP",
     body: "Ajudamos você a divulgar seus produtos mais vendidos.",
     icon: Star,
-    backgroundColor: "bg-red-700", // Cor de fundo
+    backgroundColor: "bg-gray-600", // Cor de fundo
   },
   {
     name: "Melhor organização",
     body: "Organize tudo com poucos cliques e de forma amigável.",
     icon: Layout,
-    backgroundColor: "bg-red-700", // Cor de fundo
+    backgroundColor: "bg-gray-600", // Cor de fundo
   },
   {
     name: "Conecte seus apps",
     body: "Conecte seu Facebook, Instagram e WhatsApp e controle seu fluxo de forma simples.",
     icon: MessageCircle,
-    backgroundColor: "bg-red-700", // Cor de fundo
+    backgroundColor: "bg-gray-600", // Cor de fundo
   },
 ];
 
@@ -66,14 +66,14 @@ const ReviewCard = ({
     >
       <div className="flex flex-row items-center gap-2">
         {/* Renderizando o ícone */}
-        <Icon className="w-8 h-8 text-yellow-50" />
+        <Icon className="w-8 h-8 text-red-600" />
         <div className="flex flex-col">
-          <figcaption className="text-sm font-medium text-yellow-50">
+          <figcaption className="text-sm font-medium text-white">
             {name}
           </figcaption>
         </div>
       </div>
-      <blockquote className="mt-3 text-start text-sm text-yellow-50">{body}</blockquote>
+      <blockquote className="mt-3 text-start text-sm text-gray-300">{body}</blockquote>
     </figure>
   );
 };

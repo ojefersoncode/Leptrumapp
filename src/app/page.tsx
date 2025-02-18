@@ -21,7 +21,7 @@ const Page = () => {
 
   return (
     <>
-      <div className="min-h-screen w-full mx-auto bg-black text-white flex flex-col items-center justify-center px-6 text-center">
+      <div className="min-h-screen w-full mx-auto bg-gray-900  text-white flex flex-col items-center justify-center px-6 text-center">
         <header className="w-full fixed top-0 z-10 bg-white bg-opacity-90 px-4 flex justify-between items-center py-2">
           <h1 className="text-2xl text-red-700 font-bold flex items-center">
             Leptrum
