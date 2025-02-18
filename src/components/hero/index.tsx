@@ -29,7 +29,7 @@ export function Hero() {
         </p>
         
         <div className="flex items-center justify-start mt-6 gap-4">
-          <ShimmerButton onClick={handleResgisterClick} className="shadow-2xl py-4 px-6">
+          <ShimmerButton onClick={handleResgisterClick} className="shadow-2xl py-4 px-7">
             <span className="whitespace-pre-wrap text-xs leading-none tracking-tight text-white">
               COMEÇAR AGORA
             </span>
