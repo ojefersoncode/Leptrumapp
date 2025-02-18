@@ -73,7 +73,7 @@ const Page = () => {
           </div>
         </section>
 
-        <section className="flex flex-wrap w-full gap-5 justify-around items-center my-6 md:my-16">
+        <section className="flex flex-wrap w-full gap-12 justify-around items-center my-7 md:my-16">
           <AnimatedWidget />
           <AnimatedTittleSection2 />
         </section>

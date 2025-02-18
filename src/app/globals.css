@@ -68,7 +68,7 @@ body {
   }
 
   body {
-    @apply bg-indigo-900 text-foreground;
+    @apply bg-black text-foreground;
   }
 
   :root {
