@@ -29,11 +29,7 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "../ui/input";
 
-
-
-
 export function Sidebar() {
-  
   return (
     <div className="flex w-full flex-col bg-black">
       <div className="flex w-full flex-col sm:gap-4 sm:py-4">
@@ -72,48 +68,47 @@ export function Sidebar() {
                     </div>
 
                     <div>
-                      <div className="flex items-center text-indigo-100 px-2.5 mb-2">
+                      <div className="flex items-center text-red-700 px-2.5 mb-2">
                         <h1 className="font-bold text-lg">Leptrum store</h1>
                       </div>
 
-                      <div className="flex mb-1 items-center px-2.5 text-indigo-50 gap-1 whitespace-nowrap flex-shrink-0">
-                        <MapPin className="h-4 w-4" />
+                      <div className="flex items-center px-2.5 text-indigo-50 gap-1 whitespace-nowrap flex-shrink-0">
+                        <MapPin className="size-4" />
                         <span className="font-poppins text-sm">Ponte Nova</span>
                       </div>
-                      <hr className="bg-slate-600 opacity-50 mt-3" />
                     </div>
-
+                    <hr className="bg-slate-600 opacity-50" />
                     <Link
                       href="#"
-                      className="flex items-center gap-4 px-2.5 text-slate-50 hover:text-indigo-600"
+                      className="flex items-center gap-4 px-2.5 text-slate-50 hover:text-red-600"
                     >
                       <Home className="h-5 w-5 transition-all" />
                       Home
                     </Link>
                     <Link
                       href="#"
-                      className="flex items-center gap-4 px-2.5 text-slate-50 hover:text-indigo-600"
+                      className="flex items-center gap-4 px-2.5 text-slate-50 hover:text-red-600"
                     >
                       <Store className="h-5 w-5 transition-all" />
                       Lojas
                     </Link>
                     <Link
                       href="#"
-                      className="flex items-center gap-4 px-2.5 text-slate-50 hover:text-indigo-600"
+                      className="flex items-center gap-4 px-2.5 text-slate-50 hover:text-red-600"
                     >
                       <Heart className="h-5 w-5 transition-all" />
                       Salvos
                     </Link>
                     <Link
                       href="/dashboard/${userId}"
-                      className="flex items-center gap-4 px-2.5 text-slate-50 hover:text-indigo-600"
+                      className="flex items-center gap-4 px-2.5 text-slate-50 hover:text-red-600"
                     >
                       <ChartLine className="h-5 w-5 transition-all" />
                       Dashboard
                     </Link>
                     <Link
                       href="#"
-                      className="flex items-center gap-4 px-2.5 text-slate-50 hover:text-indigo-600"
+                      className="flex items-center gap-4 px-2.5 text-slate-50 hover:text-red-600"
                     >
                       <Settings className="h-5 w-5 transition-all" />
                       Configurações
@@ -123,7 +118,7 @@ export function Sidebar() {
 
                 <Link
                   href="#"
-                  className="flex items-center font-bold text-xl gap-4 px-2.5 text-slate-50 hover:text-indigo-600 mt-auto"
+                  className="flex items-center font-bold text-xl gap-4 px-2.5 text-slate-50 hover:text-red-600 mt-auto"
                 >
                   <LogOut className="h-5 w-5 transition-all" />
                   Sair
@@ -134,8 +129,7 @@ export function Sidebar() {
 
           <div className="flex items-center justify-center">
             <h1 className="text-2xl font-bold flex items-center">
-              <span className="text-indigo-600">Lep</span>{" "}
-              <span className="text-indigo-100">trum</span>
+              <span className="text-red-700">Leptrum</span>
             </h1>
           </div>
 
@@ -171,13 +165,13 @@ export function Sidebar() {
                       <ListFilter className="w-7 h-7" />
                     </div>
                     <div className="flex flex-wrap gap-4 my-4">
-                      <a className="flex flex-nowrap text-sm  rounded text-indigo-50 bg-indigo-700 px-3 py-2">
+                      <a className="flex flex-nowrap text-sm  rounded text-indigo-50 bg-red-700 px-3 py-2">
                         Usado
                       </a>
-                      <a className="flex flex-nowrap text-sm rounded text-indigo-50 bg-indigo-700 px-3 py-2">
+                      <a className="flex flex-nowrap text-sm rounded text-indigo-50 bg-red-700 px-3 py-2">
                         Novo
                       </a>
-                      <a className="flex flex-nowrap text-sm rounded text-indigo-50 bg-indigo-700 px-3 py-2">
+                      <a className="flex flex-nowrap text-sm rounded text-indigo-50 bg-red-700 px-3 py-2">
                         Promoção
                       </a>
                     </div>

@@ -33,7 +33,7 @@ export const useAuth = () => {
 
       } catch (error) {
         console.error("Erro ao obter sessão (catch):", error);
-        setError("Erro ao verificar autenticação."); // Mensagem de erro genérica
+        setError("Erro ao verificar autenticação."); 
       } finally {
         setLoading(false);
       }
@@ -42,5 +42,5 @@ export const useAuth = () => {
     fetchSession();
   }, [router]);
 
-  return { session, loading, error }; // Retorna o erro também
+  return { session, loading, error }; 
 };

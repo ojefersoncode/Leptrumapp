@@ -61,22 +61,21 @@ const Signin = () => {
   };
 
   return (
-    <div className="h-dvh bg-indigo-100 flex flex-col">
-      <div className="mx-4 my-1 bg-indigo-100">
+    <div className="h-dvh bg-black flex flex-col">
+      <div className="mx-4 my-1">
         <h1 className="text-2xl font-bold flex items-center">
-          <span className="text-indigo-600">Lep</span>
-          <span className="text-slate-900">trum</span>
+          <span className="text-red-700">Leptrum</span>
         </h1>
       </div>
 
-      <div className="flex flex-grow justify-center items-center bg-indigo-100">
+      <div className="flex flex-grow justify-center items-center bg-black">
         <div className="w-full md:max-w-md p-4">
           <Card>
             <CardHeader className="text-center">
-              <h2 className="text-2xl font-semibold text-slate-700">
-                Criar Conta
+              <h2 className="text-2xl font-semibold text-slate-800">
+                Crie sua Conta
               </h2>
-              <p className="text-sm text-gray-500">
+              <p className="text-sm text-gray-700">
                 Cadastre-se para acessar nossa plataforma.
               </p>
             </CardHeader>
@@ -116,7 +115,7 @@ const Signin = () => {
                     {error}
                   </div>
                 )}
-                <Button type="submit" className="w-full bg-indigo-600 mt-4 p-4" disabled={loading}>
+                <Button type="submit" className="w-full bg-red-700 mt-4 p-4" disabled={loading}>
                   {loading ? "Criando conta..." : "Criar conta"}
                 </Button>
               </form>
@@ -124,7 +123,7 @@ const Signin = () => {
             <CardFooter className="text-center">
               <p className="text-sm text-slate-800">
                 Já tem uma conta?{" "}
-                <a href="/login" className="text-indigo-600 hover:underline">
+                <a href="/login" className="text-red-700 hover:underline">
                   Entrar
                 </a>
               </p>
@@ -133,7 +132,7 @@ const Signin = () => {
         </div>
       </div>
 
-      <footer className="w-full bg-indigo-100 py-2 text-slate-950 text-base text-center mt-auto">
+      <footer className="w-fullpy-2 text-yellow-50 text-base text-center mt-auto">
         © 2025 Leptrum. Todos os direitos reservados.
       </footer>
     </div>
