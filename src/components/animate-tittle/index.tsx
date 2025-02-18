@@ -9,20 +9,20 @@ export function AnimatedTittle() {
   );
 }
 
-export function AnimatedTittleSection2() {
+export function AnimatedTittleSection1() {
   return (
     <SparklesText
-      className="text-5xl max-sm:text-2xl"
-      text="Conecte todos seus apps em apenas um serviço"
+      className="text-5xl max-sm:text-3xl text-red-600"
+      text="Tenha mais resultados em poucos dias"
     />
   );
 }
 
-export function AnimatedTittleSection1() {
+export function AnimatedTittleSection2() {
   return (
     <SparklesText
-      className="text-5xl max-sm:text-2xl text-red-600"
-      text="Tenha mais resultados em poucos dias"
+      className="text-5xl max-sm:text-3xl max-w-lg"
+      text="Conecte todos seus apps em apenas um serviço"
     />
   );
 }

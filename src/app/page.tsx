@@ -5,7 +5,10 @@ import { HeroVideoDialogDemo } from "@/components/HeroVideo";
 import { AnimatedListDemo } from "@/components/Animated-notifications";
 import { Hero } from "@/components/hero";
 import { AnimatedWidget } from "@/components/Animated-widget";
-import { AnimatedTittleSection1, AnimatedTittleSection2 } from "@/components/animate-tittle";
+import {
+  AnimatedTittleSection1,
+  AnimatedTittleSection2,
+} from "@/components/animate-tittle";
 import { AnimatedCard } from "@/components/animated-card";
 import { ShimmerButton } from "@/components/magicui/shimmer-button";
 
@@ -20,7 +23,9 @@ const Page = () => {
     <>
       <div className="min-h-screen w-full mx-auto bg-black text-white flex flex-col items-center justify-center px-6 text-center">
         <header className="w-full fixed top-0 z-10 bg-white bg-opacity-90 px-4 flex justify-between items-center py-2">
-          <h1 className="text-2xl text-red-700 font-bold flex items-center">Leptrum</h1>
+          <h1 className="text-2xl text-red-700 font-bold flex items-center">
+            Leptrum
+          </h1>
           <nav className="hidden md:flex space-x-6 font-semibold">
             <a href="#" className="text-red-700 hover:text-red-400">
               Início
@@ -33,11 +38,14 @@ const Page = () => {
             </a>
           </nav>
           <div className="flex items-center space-x-4">
-          <ShimmerButton onClick={handleLoginClick} className="shadow-2xl py-3 px-6">
-            <span className="whitespace-pre-wrap text-xs leading-none tracking-tight text-white">
-              Entrar
-            </span>
-          </ShimmerButton>
+            <ShimmerButton
+              onClick={handleLoginClick}
+              className="shadow-2xl py-3 px-6"
+            >
+              <span className="whitespace-pre-wrap text-xs leading-none tracking-tight text-white">
+                Entrar
+              </span>
+            </ShimmerButton>
           </div>
         </header>
 
@@ -45,14 +53,13 @@ const Page = () => {
           <Hero />
         </main>
 
-
         <div className="flex w-full my-7">
           <AnimatedCard />
         </div>
 
         <section className="flex flex-wrap w-full justify-around items-center my-7 gap-7">
           <div className="flex flex-col justify-center items-center">
-          <AnimatedTittleSection1 />
+            <AnimatedTittleSection1 />
             <p className="text-center text-lg text-yellow-50 font-semibold max-w-lg px-4 mt-7">
               analise suas metricas e crie novas estrategias para destacar seus
               produtos, alem de melhorar a perfomaçe dos seus anuncios
@@ -66,14 +73,9 @@ const Page = () => {
           </div>
         </section>
 
-        <section className="flex flex-col w-full my-6 md:my-16">
-          <div className="my-4">
-            <AnimatedTittleSection2 />
-          </div>
-
-          <div className="flex my-4 w-full">
-            <AnimatedWidget />
-          </div>
+        <section className="flex flex-wrap w-full gap-5 justify-around items-center my-6 md:my-16">
+          <AnimatedWidget />
+          <AnimatedTittleSection2 />
         </section>
 
         <footer className="w-full py-2 text-base text-center">

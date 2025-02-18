@@ -36,10 +36,10 @@ export function AnimatedWidget() {
 
   return (
     <div
-      className="relative flex h-[300px] w-full items-center justify-center overflow-hidden p-2 mx-1"
+      className="relative flex h-[300px] w-full max-w-xl items-center justify-center overflow-hidden p-2 mx-1"
       ref={containerRef}
     >
-      <div className="flex size-full max-h-[300px] max-w-lg flex-col items-stretch justify-between gap-10">
+      <div className="flex size-full max-h-[300px] max-w-xl flex-col items-stretch justify-between gap-10">
         <div className="flex flex-row items-center justify-between">
           <Circle ref={div1Ref}>
             <Icons.googleDrive />
