@@ -31,16 +31,16 @@ import { Input } from "../ui/input";
 
 export function Sidebar() {
   return (
-    <div className="flex w-full flex-col bg-black">
+    <div className="flex w-full flex-col bg-white bg-opacity-90">
       <div className="flex w-full flex-col sm:gap-4 sm:py-4">
         <header
-          className="sticky top-0 z-30 flex h-16 px-4 items-center 
-                 gap-4 sm:static sm:h-auto sm:border-0 bg-transparent"
+          className="sticky top-0 z-30 flex  px-4 items-center 
+                 gap-4 sm:static sm:h-auto sm:border-0 bg-white"
         >
           <div className="flex w-full items-center bg-transparent gap-3">
             <Sheet>
               <SheetTrigger asChild>
-                <button className="bg-black text-slate-50">
+                <button className=" text-red-700">
                   <Menu />
                   <span className="sr-only">Menu</span>
                 </button>
@@ -138,7 +138,7 @@ export function Sidebar() {
             <Dialog>
               <DialogTrigger asChild>
                 <Button className="p-4 bg-transparent hover:bg-transparent px-2">
-                  <Search className="w-7 h-7 text-white" />
+                  <Search className="size-8 text-red-700" />
                 </Button>
               </DialogTrigger>
               <DialogContent className="flex flex-col max-md:max-w-full max-md:h-full bg-indigo-100 text-black">

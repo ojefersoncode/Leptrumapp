@@ -28,7 +28,7 @@ export default function Description() {
                   <Package />
                   <h1 className="text-xl font-semibold">Estoque</h1>
                 </div>
-                <span>10</span>
+                <span>10 items</span>
               </div>
             </div>
 
