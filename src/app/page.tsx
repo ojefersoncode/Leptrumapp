@@ -21,19 +21,19 @@ const Page = () => {
 
   return (
     <>
-      <div className="min-h-screen w-full mx-auto bg-gray-900  text-white flex flex-col items-center justify-center px-6 text-center">
-        <header className="w-full fixed top-0 z-10 bg-white bg-opacity-90 px-4 flex justify-between items-center py-2">
-          <h1 className="text-2xl text-red-700 font-bold flex items-center">
+      <div className="min-h-screen w-full mx-auto bg-gray-900 text-white flex flex-col items-center justify-center px-6 text-center">
+        <header className="w-full fixed top-0 z-10 bg-gray-800 bg-opacity-90 px-6 flex justify-between items-center py-4">
+          <h1 className="text-2xl text-red-600 font-bold flex items-center">
             Leptrum
           </h1>
           <nav className="hidden md:flex space-x-6 font-semibold">
-            <a href="#" className="text-red-700 hover:text-red-400">
+            <a href="#" className="text-red-50 hover:text-red-600">
               Início
             </a>
-            <a href="#" className="text-red-700 hover:text-red-400">
+            <a href="#" className="text-red-50 hover:text-red-600">
               Sobre
             </a>
-            <a href="#" className="text-red-700 hover:text-red-400">
+            <a href="#" className="text-red-50 hover:text-red-600">
               Preços
             </a>
           </nav>
