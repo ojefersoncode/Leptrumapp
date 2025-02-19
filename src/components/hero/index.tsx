@@ -19,17 +19,20 @@ export function Hero() {
 
   return (
     <>
-      <div className="relative flex h-[600px] w-full flex-col items-center justify-center overflow-hidden">
+      <div className="flex w-full h-[500px] flex-col items-center justify-center">
         <AnimatedBadAge />
         <AnimatedTittle />
-        <p className="flex items-center justify-center text-yellow-50 text-lg text-center font-semibold max-w-3xl mt-6">
+        <p className="flex items-center justify-center text-red-50 text-xl max-md:text-lg text-center font-semibold max-w-3xl mt-5">
           Com a Leptrum, você cria seu catálogo online, gerencia tudo com
           facilidade e utiliza o poder da AI para levar seu negócio a um novo
           nível.
         </p>
-        
-        <div className="flex items-center justify-start mt-6 gap-4">
-          <ShimmerButton onClick={handleResgisterClick} className="shadow-2xl py-4 px-7">
+
+        <div className="flex items-center justify-start mt-5 gap-4">
+          <ShimmerButton
+            onClick={handleResgisterClick}
+            className="shadow-2xl py-4 px-7"
+          >
             <span className="whitespace-pre-wrap text-xs leading-none tracking-tight text-white">
               COMEÇAR AGORA
             </span>
@@ -38,8 +41,7 @@ export function Hero() {
           <ShinyButton onClick={handleLoginClick}>Acessar conta</ShinyButton>
         </div>
       </div>
-
-      <div className="flex justify-center mb-6 items-center">
+      <div className="flex w-full justify-center items-center px-4">
         <HeroVideoDialogDemo />
       </div>
     </>

@@ -2,7 +2,7 @@ import HeroVideoDialog from "@/components/magicui/hero-video-dialog";
 
 export function HeroVideoDialogDemo() {
   return (
-    <div className="relative ">
+    <div className="relative">
       <HeroVideoDialog
         className="block dark:hidden"
         animationStyle="from-center"
