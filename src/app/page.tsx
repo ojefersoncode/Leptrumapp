@@ -20,9 +20,12 @@ const Page = () => {
     <>
       <div className="min-h-screen w-full mx-auto bg-gray-900 text-white flex flex-col items-center justify-center text-center">
         <header className="w-full fixed top-0 z-20 bg-gray-800 bg-opacity-90 px-6 flex justify-between items-center py-4">
-          <h1 className="text-2xl text-red-600 font-bold flex items-center">
-            Leptrum
-          </h1>
+          <div className="flex gap-2 text-2xl font-bold items-center">
+            <img className="size-10" src="/logo/Leptrum.png" alt="logo" />
+            <div className="flex">
+              <h1 className="text-red-600">Lep</h1> <h1 className="text-red-50">trum</h1>
+            </div>
+          </div>
           <nav className="hidden md:flex space-x-6 font-semibold">
             <a href="#" className="text-red-50 hover:text-red-600">
               Início
