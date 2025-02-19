@@ -14,7 +14,7 @@ interface Item {
 let notifications = [
   {
     name: "Payment received",
-    description: "Magic UI",
+    description: "Leptrum",
     time: "15m ago",
 
     icon: "💸",
@@ -22,21 +22,21 @@ let notifications = [
   },
   {
     name: "User signed up",
-    description: "Magic UI",
+    description: "Leptrum",
     time: "10m ago",
     icon: "👤",
     color: "#FFB800",
   },
   {
     name: "New message",
-    description: "Magic UI",
+    description: "Leptrum",
     time: "5m ago",
     icon: "💬",
     color: "#FF3D71",
   },
   {
     name: "New event",
-    description: "Magic UI",
+    description: "Leptrum",
     time: "2m ago",
     icon: "🗞️",
     color: "#1E86FF",
@@ -73,7 +73,7 @@ const Notification = ({ name, description, icon, color, time }: Item) => {
             <span className="mx-1">·</span>
             <span className="text-xs text-gray-500">{time}</span>
           </figcaption>
-          <p className="text-sm font-normal dark:text-white/60">
+          <p className="text-sm text-start font-normal dark:text-white/60">
             {description}
           </p>
         </div>
