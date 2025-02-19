@@ -5,10 +5,7 @@ import { HeroVideoDialogDemo } from "@/components/HeroVideo";
 import { AnimatedListDemo } from "@/components/Animated-notifications";
 import { Hero } from "@/components/hero";
 import { AnimatedWidget } from "@/components/Animated-widget";
-import {
-  AnimatedTittleSection1,
-  AnimatedTittleSection2,
-} from "@/components/animate-tittle";
+import { AnimatedTittleSection2 } from "@/components/animate-tittle";
 import { AnimatedCard } from "@/components/animated-card";
 import { ShimmerButton } from "@/components/magicui/shimmer-button";
 import { Footer } from "@/components/footer";
