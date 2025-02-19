@@ -4,10 +4,10 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 
 const inter = Inter({ subsets: ["latin"] });
- 
+
 export const metadata: Metadata = {
   title: "Leptrum",
-  description: "Catalogo de produtos",
+  description: "Catálogo de produtos",
 };
 
 export default function RootLayout({
@@ -17,9 +17,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
+      <head>
+        <link rel="icon" href="/logo/leptrum.png" />
+      </head>
       <body
         className={cn(
-          "min-h-screen bg-slate-300 font-sans antialiased",
+          "min-h-screen bg-gray-900 font-sans antialiased",
           inter.className
         )}
       >
