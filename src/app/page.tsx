@@ -1,7 +1,6 @@
 "use client";
-import { RippleButton } from "@/components/magicui/ripple-button";
+import { Ripple } from "@/components/magicui/ripple";
 import { useRouter } from "next/navigation";
-import { HeroVideoDialogDemo } from "@/components/HeroVideo";
 import { AnimatedListDemo } from "@/components/Animated-notifications";
 import { Hero } from "@/components/hero";
 import { AnimatedWidget } from "@/components/Animated-widget";
@@ -20,7 +19,7 @@ const Page = () => {
   return (
     <>
       <div className="min-h-screen w-full mx-auto bg-gray-900 text-white flex flex-col items-center justify-center text-center">
-        <header className="w-full fixed top-0 z-10 bg-gray-800 bg-opacity-90 px-6 flex justify-between items-center py-4">
+        <header className="w-full fixed top-0 z-20 bg-gray-800 bg-opacity-90 px-6 flex justify-between items-center py-4">
           <h1 className="text-2xl text-red-600 font-bold flex items-center">
             Leptrum
           </h1>
@@ -47,8 +46,11 @@ const Page = () => {
           </div>
         </header>
 
-        <main className="px-6 mb-7 max-md:mt-10">
-          <Hero />
+        <main className="px-6 mb-7 max-md:mt-10 overflow-hidden">
+          <div className="flex relative z-10 flex-col w-auto overflow-hidden">
+            <Ripple /> 
+            <Hero />
+          </div>
         </main>
 
         <div className="flex w-full lg:my-14">

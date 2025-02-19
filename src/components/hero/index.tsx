@@ -4,6 +4,7 @@ import { ShimmerButton } from "@/components/magicui/shimmer-button";
 import { ShinyButton } from "@/components/magicui/shiny-button";
 import { AnimatedTittle } from "../animate-tittle";
 import { AnimatedBadAge } from "../animated-badage";
+import { Ripple } from "../magicui/ripple";
 
 export function Hero() {
   const router = useRouter();
@@ -18,7 +19,8 @@ export function Hero() {
 
   return (
     <>
-      <div className="flex w-full h-[500px] flex-col items-center justify-center">
+      <div className="flex relative z-10 w-full h-[500px] flex-col items-center justify-center">
+        
         <AnimatedBadAge />
         <AnimatedTittle />
         <p className="flex items-center justify-center font-semibold text-red-50 text-xl max-md:text-lg text-center max-w-3xl mt-5">
@@ -40,7 +42,7 @@ export function Hero() {
           <ShinyButton onClick={handleLoginClick}>Acessar conta</ShinyButton>
         </div>
       </div>
-      <div className="flex w-full justify-center items-center px-4">
+      <div className="flex w-full justify-center items-center px-6">
         <HeroVideoDialogDemo />
       </div>
     </>
