@@ -9,12 +9,17 @@ import {
 
 export function Footer() {
   return (
-    <footer className="w-full text-center p-4 rounded-tl-2xl bg-gray-800 bg-opacity-60">
-      <div className="flex justify-start pt-4 pb-7 px-4">
-        <h1 className="text-3xl font-bold">Leptrum</h1>
+    <footer className="w-full text-center rounded-t-2xl bg-gray-800 bg-opacity-60">
+      <div className="flex w-full gap-2 text-2xl font-bold items-center justify-center py-4">
+      <img className="size-10" src="/logo/Leptrum.png" alt="logo" />
+            <div className="flex">
+              <h1 className="text-red-500">Lep</h1> <h1 className="text-red-50">trum</h1>
+            </div>
       </div>
 
-      <div className="grid grid-cols-4 max-md:grid-cols-2 w-full gap-6 justify-around">
+      <hr className="w-full border-gray-700 mb-4" />
+
+      <div className="grid grid-cols-4 max-md:grid-cols-2 mt-5 w-full gap-6 justify-around">
         <div className="flex flex-col justify-top items-center cursor-pointer gap-3">
           <p className="text-xl font-semibold text-red-600">Ajuda e suporte</p>
           <span>Ajuda para criar conta</span>

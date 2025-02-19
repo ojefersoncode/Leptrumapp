@@ -7,10 +7,10 @@ export function AnimatedBadAge() {
     <div className="flex my-4 items-center justify-center">
       <div
         className={cn(
-          "group rounded-full border border-red-100 border-solid-0.5 bg-red-800 text-base text-white hover:cursor-pointer hover:bg-red-500"
+          "group rounded-full border border-white border-solid-0.5 bg-gray-700 text-base hover:cursor-pointer hover:bg-gray-600"
         )}
       >
-        <AnimatedShinyText className="inline-flex text-white items-center justify-center px-3 py-2 transition ease-out
+        <AnimatedShinyText className="inline-flex text-white items-center justify-center px-4 py-2 transition ease-out
           hover:text-red-100 hover:duration-300">
           <span className="flex gap-2 font-sans text-xs items-center justify-center">
             <Globe className="ml-1 size-4" />
