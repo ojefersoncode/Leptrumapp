@@ -60,7 +60,7 @@ const Page = () => {
           <AnimatedCard />
         </div>
 
-        <section className="flex flex-wrap w-full justify-around items-center my-7 px-6 gap-7">
+        <section className="flex flex-wrap w-full justify-around items-center mt-7 px-6 gap-7">
           <div className="flex flex-col justify-center items-center">
             <h1 className="text-4xl font-extrabold max-sm:text-3xl text-gray-400">
               Tenha mais resultados em poucos dias
@@ -78,7 +78,7 @@ const Page = () => {
           </div>
         </section>
 
-        <section className="flex w-full my-16">
+        <section className="flex w-full mb-6">
           <div className="flex flex-wrap w-full justify-around items-center rounded-xl bg-gray-800 gap-12 mx-6 p-6">
             <AnimatedWidget />
             <AnimatedTittleSection2 />

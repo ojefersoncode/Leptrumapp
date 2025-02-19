@@ -9,7 +9,7 @@ import {
 
 export function Footer() {
   return (
-    <footer className="w-full text-center p-4 bg-gray-800 bg-opacity-60">
+    <footer className="w-full text-center p-4 rounded-tl-2xl bg-gray-800 bg-opacity-60">
       <div className="flex justify-start pt-4 pb-7 px-4">
         <h1 className="text-3xl font-bold">Leptrum</h1>
       </div>
