@@ -46,7 +46,7 @@ const Page = () => {
           </div>
         </header>
 
-        <main className="px-6 mb-7 max-md:mt-10 overflow-hidden">
+        <main className="mb-7 max-md:mt-10 overflow-hidden">
           <div className="flex relative z-10 flex-col w-auto overflow-hidden">
             <Ripple /> 
             <Hero />
