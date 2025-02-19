@@ -73,7 +73,7 @@ const ReviewCard = ({
           </figcaption>
         </div>
       </div>
-      <blockquote className="mt-3 text-start text-sm text-gray-300">{body}</blockquote>
+      <blockquote className="mt-3 text-start text-sm text-gray-200">{body}</blockquote>
     </figure>
   );
 };
