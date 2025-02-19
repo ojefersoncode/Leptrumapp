@@ -8,6 +8,7 @@ import { AnimatedTittleSection2 } from "@/components/animate-tittle";
 import { AnimatedCard } from "@/components/animated-card";
 import { ShimmerButton } from "@/components/magicui/shimmer-button";
 import { Footer } from "@/components/footer";
+import { AccordionDemo } from "@/components/accordion";
 
 const Page = () => {
   const router = useRouter();
@@ -49,7 +50,7 @@ const Page = () => {
           </div>
         </header>
 
-        <main className="mb-7 max-md:mt-10 overflow-hidden">
+        <main className="mb-7 max-md:mt-10 md:mt-12 overflow-hidden">
           <div className="flex relative z-10 flex-col w-auto overflow-hidden">
             <Ripple />
             <Hero />
@@ -79,11 +80,16 @@ const Page = () => {
         </section>
 
         <section className="flex w-full mb-6">
-          <div className="flex flex-wrap w-full justify-around items-center rounded-xl bg-gray-800 gap-7 mx-4 py-10 px-2">
+          <div className="flex flex-wrap w-full justify-around items-center rounded-xl bg-gray-800 gap-7 mx-6 py-10 px-2">
             <AnimatedWidget />
             <AnimatedTittleSection2 />
           </div>
         </section>
+
+
+        <div className="w-full px-7">
+          <AccordionDemo />
+        </div>
 
         <Footer />
       </div>
