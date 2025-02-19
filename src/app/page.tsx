@@ -48,7 +48,7 @@ const Page = () => {
 
         <main className="mb-7 max-md:mt-10 overflow-hidden">
           <div className="flex relative z-10 flex-col w-auto overflow-hidden">
-            <Ripple /> 
+            <Ripple />
             <Hero />
           </div>
         </main>
@@ -75,9 +75,11 @@ const Page = () => {
           </div>
         </section>
 
-        <section className="flex flex-wrap w-full gap-12 justify-around items-center px-4 my-7 md:my-16">
-          <AnimatedWidget />
-          <AnimatedTittleSection2 />
+        <section className="flex w-full my-16">
+          <div className="flex flex-wrap w-full justify-around items-center rounded-xl bg-gray-800 gap-12 mx-6 p-6">
+            <AnimatedWidget />
+            <AnimatedTittleSection2 />
+          </div>
         </section>
 
         <Footer />
