@@ -60,8 +60,10 @@ const Page = () => {
 
         <section className="flex flex-wrap w-full justify-around items-center my-7 px-6 gap-7">
           <div className="flex flex-col justify-center items-center">
-            <AnimatedTittleSection1 />
-            <p className="text-center text-lg text-yellow-50 font-semibold max-w-lg px-4 mt-7">
+            <h1 className="text-4xl font-extrabold max-sm:text-3xl text-gray-400">
+              Tenha mais resultados em poucos dias
+            </h1>
+            <p className="text-center text-lg md:text-xl text-yellow-50 font-semibold max-w-lg px-4 mt-7">
               analise suas metricas e crie novas estrategias para destacar seus
               produtos, alem de melhorar a perfomaçe dos seus anuncios
               direiciando para a pagina d0 seu produto, economize tempo e
@@ -79,9 +81,7 @@ const Page = () => {
           <AnimatedTittleSection2 />
         </section>
 
-
         <Footer />
-
       </div>
     </>
   );

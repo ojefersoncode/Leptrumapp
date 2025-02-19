@@ -1,4 +1,3 @@
-import { Meteors } from "@/components/magicui/meteors";
 import { useRouter } from "next/navigation";
 import { HeroVideoDialogDemo } from "@/components/HeroVideo";
 import { ShimmerButton } from "@/components/magicui/shimmer-button";
@@ -22,7 +21,7 @@ export function Hero() {
       <div className="flex w-full h-[500px] flex-col items-center justify-center">
         <AnimatedBadAge />
         <AnimatedTittle />
-        <p className="flex items-center justify-center text-red-50 text-xl max-md:text-lg text-center font-semibold max-w-3xl mt-5">
+        <p className="flex items-center justify-center font-semibold text-red-50 text-xl max-md:text-lg text-center max-w-3xl mt-5">
           Com a Leptrum, você cria seu catálogo online, gerencia tudo com
           facilidade e utiliza o poder da AI para levar seu negócio a um novo
           nível.
