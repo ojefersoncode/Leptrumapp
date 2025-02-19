@@ -11,6 +11,7 @@ import {
 } from "@/components/animate-tittle";
 import { AnimatedCard } from "@/components/animated-card";
 import { ShimmerButton } from "@/components/magicui/shimmer-button";
+import { Footer } from "@/components/footer";
 
 const Page = () => {
   const router = useRouter();
@@ -21,7 +22,7 @@ const Page = () => {
 
   return (
     <>
-      <div className="min-h-screen w-full mx-auto bg-gray-900 text-white flex flex-col items-center justify-center px-6 text-center">
+      <div className="min-h-screen w-full mx-auto bg-gray-900 text-white flex flex-col items-center justify-center text-center">
         <header className="w-full fixed top-0 z-10 bg-gray-800 bg-opacity-90 px-6 flex justify-between items-center py-4">
           <h1 className="text-2xl text-red-600 font-bold flex items-center">
             Leptrum
@@ -49,7 +50,7 @@ const Page = () => {
           </div>
         </header>
 
-        <main>
+        <main className="px-6">
           <Hero />
         </main>
 
@@ -57,7 +58,7 @@ const Page = () => {
           <AnimatedCard />
         </div>
 
-        <section className="flex flex-wrap w-full justify-around items-center my-7 gap-7">
+        <section className="flex flex-wrap w-full justify-around items-center my-7 px-6 gap-7">
           <div className="flex flex-col justify-center items-center">
             <AnimatedTittleSection1 />
             <p className="text-center text-lg text-yellow-50 font-semibold max-w-lg px-4 mt-7">
@@ -73,14 +74,14 @@ const Page = () => {
           </div>
         </section>
 
-        <section className="flex flex-wrap w-full gap-12 justify-around items-center my-7 md:my-16">
+        <section className="flex flex-wrap w-full gap-12 justify-around items-center px-4 my-7 md:my-16">
           <AnimatedWidget />
           <AnimatedTittleSection2 />
         </section>
 
-        <footer className="w-full py-2 text-base text-center">
-          © 2025 Leptrum. Todos os direitos reservados.
-        </footer>
+
+        <Footer />
+
       </div>
     </>
   );
