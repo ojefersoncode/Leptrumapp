@@ -19,7 +19,7 @@ export function Hero() {
 
   return (
     <>
-      <div className="flex relative z-10 w-full h-[500px] flex-col items-center justify-center">
+      <div className="flex relative z-10 px-6 w-full h-[500px] flex-col items-center justify-center">
         
         <AnimatedBadAge />
         <AnimatedTittle />
