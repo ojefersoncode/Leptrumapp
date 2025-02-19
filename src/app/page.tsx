@@ -61,7 +61,7 @@ const Page = () => {
         </div>
 
         <section className="flex flex-wrap w-full justify-around items-center mt-7 px-6 gap-7">
-          <div className="flex flex-col justify-center items-center">
+          <div className="flex flex-col justify-center items-center py-4">
             <h1 className="text-4xl font-extrabold max-sm:text-3xl text-gray-400">
               Tenha mais resultados em poucos dias
             </h1>
@@ -79,7 +79,7 @@ const Page = () => {
         </section>
 
         <section className="flex w-full mb-6">
-          <div className="flex flex-wrap w-full justify-around items-center rounded-xl bg-gray-800 gap-12 mx-6 p-6">
+          <div className="flex flex-wrap w-full justify-around items-center rounded-xl bg-gray-800 gap-7 mx-4 py-10 px-2">
             <AnimatedWidget />
             <AnimatedTittleSection2 />
           </div>

@@ -13,7 +13,7 @@ export function AnimatedTittle() {
 export function AnimatedTittleSection2() {
   return (
     <SparklesText
-      className="text-4xl max-sm:text-2xl max-w-xl justify-center items-center"
+      className="text-4xl max-sm:text-xl max-w-xl justify-center items-center"
       text="Conecte todos seus apps em apenas um serviço"
     />
   );
