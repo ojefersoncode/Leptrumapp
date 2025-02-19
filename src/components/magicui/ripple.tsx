@@ -45,7 +45,7 @@ export const Ripple = React.memo(function Ripple({
                 borderColor: `hsl(var(--foreground), ${borderOpacity / 100})`,
                 top: "50%",
                 left: "50%",
-                transform: "translate(-50%, -50%) scale(1)",
+                transform: "translate(-70%, -70%) scale(1)",
               } as CSSProperties
             }
           />
