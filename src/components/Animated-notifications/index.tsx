@@ -13,33 +13,32 @@ interface Item {
 
 let notifications = [
   {
-    name: "Payment received",
+    name: "Venda realizada",
     description: "Leptrum",
-    time: "15m ago",
-
+    time: "15m atrás",
     icon: "💸",
-    color: "#00C9A7",
+    color: "#BB0F10",
   },
   {
-    name: "User signed up",
+    name: "Venda realizada",
     description: "Leptrum",
-    time: "10m ago",
-    icon: "👤",
-    color: "#FFB800",
+    time: "1h atrás",
+    icon: "💸",
+    color: "#BB0F10",
   },
   {
-    name: "New message",
+    name: "Venda realizada",
     description: "Leptrum",
-    time: "5m ago",
-    icon: "💬",
-    color: "#FF3D71",
+    time: "5m atrás",
+    icon: "💸",
+    color: "#BB0F10",
   },
   {
-    name: "New event",
+    name: "Venda realizada",
     description: "Leptrum",
-    time: "2m ago",
-    icon: "🗞️",
-    color: "#1E86FF",
+    time: "2m atrás",
+    icon: "💸",
+    color: "#BB0F10",
   },
 ];
 
