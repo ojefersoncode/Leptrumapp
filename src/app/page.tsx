@@ -10,7 +10,7 @@ import { ShimmerButton } from "@/components/magicui/shimmer-button";
 import { Footer } from "@/components/footer";
 import { AccordionDemo } from "@/components/accordion";
 
-const Page = () => {
+const LandingPage = () => {
   const router = useRouter();
 
   const handleLoginClick = () => {
@@ -97,4 +97,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default LandingPage;

@@ -1,8 +1,6 @@
 "use client";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { supabase } from "../../lib/supabaseClient";
-import { useRouter } from "next/router";
 import { Dialog } from "@radix-ui/react-dialog";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -19,6 +17,7 @@ import {
   Heater,
   Heart,
   LogOut,
+  ShoppingCart,
 } from "lucide-react";
 
 import {
@@ -128,9 +127,13 @@ export function Sidebar() {
           </div>
 
           <div className="flex items-center justify-center">
-            <h1 className="text-2xl font-bold flex items-center">
-              <span className="text-red-600">Leptrum</span>
-            </h1>
+            <div className="flex w-full items-center justify-between gap-2 text-xl font-bold">
+              <img className="size-8" src="/logo/Leptrum.png" alt="logo" />
+              <div className="flex">
+                <h1 className="text-red-500">Lep</h1>{" "}
+                <h1 className="text-red-50">trum</h1>
+              </div>
+            </div>
           </div>
 
           <div className="flex w-full items-center justify-end gap-2">
@@ -138,12 +141,12 @@ export function Sidebar() {
             <Dialog>
               <DialogTrigger asChild>
                 <Button className="p-4 bg-transparent hover:bg-transparent px-2">
-                  <Search className="size-8 text-red-600" />
+                  <Search className="size-8 text-white" />
                 </Button>
               </DialogTrigger>
-              <DialogContent className="flex flex-col max-md:max-w-full max-md:h-full bg-indigo-100 text-black">
+              <DialogContent className="flex flex-col max-md:max-w-full max-md:h-full bg-gray-900 text-red-600">
                 <DialogHeader>
-                  <DialogTitle className="text-lg text-black font-bold">
+                  <DialogTitle className="text-lg text-red-600 font-bold">
                     Buscar Produtos
                   </DialogTitle>
                 </DialogHeader>
@@ -152,17 +155,21 @@ export function Sidebar() {
                     <Input
                       type="search"
                       placeholder="buscar..."
-                      className="w-full px-4 py-2 rounded bg-indigo-50 border border-nonefocus:outline-none"
+                      className="w-full px-4 py-2 rounded bg-gray-100 border border-nonefocus:outline-none"
                     />
                     <Button>
-                      <Search className="w-7 h-7" />
+                      <Search className="size-7" />
                     </Button>
                   </div>
 
                   <div className="text-black rounded">
                     <div className="flex justify-between mx-auto">
-                      <h1 className="font-bold text-lg">Filtro de busca</h1>
-                      <ListFilter className="w-7 h-7" />
+                      <h1 className="font-bold text-lg text-white">
+                        Filtro de busca
+                      </h1>
+                      <Button>
+                        <ListFilter className="size-7 text-white" />
+                      </Button>
                     </div>
                     <div className="flex flex-wrap gap-4 my-4">
                       <a className="flex flex-nowrap text-sm  rounded text-indigo-50 bg-red-600 px-3 py-2">
@@ -180,6 +187,10 @@ export function Sidebar() {
                 </div>
               </DialogContent>
             </Dialog>
+          </div>
+
+          <div>
+            <ShoppingCart className="size-5" />
           </div>
         </header>
       </div>
