@@ -50,11 +50,11 @@ const Page = () => {
           </div>
         </header>
 
-        <main className="px-6 max-md:my-10">
+        <main className="px-6 mb-7 max-md:mt-10">
           <Hero />
         </main>
 
-        <div className="flex w-full lg:my-10">
+        <div className="flex w-full lg:my-14">
           <AnimatedCard />
         </div>
 
