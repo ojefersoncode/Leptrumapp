@@ -43,7 +43,7 @@ const Home = () => {
 
       <Sidebar />
 
-      <div className="w-full mx-auto bg-slate-100 p-2">
+      <div className="w-full mx-auto bg-gray-300 p-2">
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
           {products.map((product) => (
             <div key={product.id} className="w-full bg-slate-50 py-2">
