@@ -16,8 +16,8 @@ const ProductSkeleton = () => (
         </div>
 
         <div className="flex w-full justify-between items-center mt-2">
-          <Skeleton className="h-3 w-[120px] max-md:w-[100px] " />
-          <Skeleton className="h-6 w-[30px] max-md:w-[30px] mx-12" />
+          <Skeleton className="h-3 w-[120px] max-md:w-[160px] " />
+          <Skeleton className="h-6 w-[30px] max-md:w-[30px] mx-5" />
         </div>
       </div>
     </div>
