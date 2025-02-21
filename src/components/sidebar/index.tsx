@@ -29,7 +29,7 @@ import { Input } from "../ui/input";
 
 export function Sidebar() {
   return (
-    <div className="flex w-full flex-col bg-gray-800 bg-opacity-90 max-md:p-2">
+    <div className="flex flex-col w-full bg-gray-800 bg-opacity-90 max-md:p-2">
       <div className="flex w-full flex-col sm:gap-4 sm:py-4">
         <header
           className="sticky top-0 z-30 flex  px-2 items-center 
