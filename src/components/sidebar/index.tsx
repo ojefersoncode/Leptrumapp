@@ -144,7 +144,7 @@ export function Sidebar() {
                   <Search className="size-8 text-white" />
                 </Button>
               </DialogTrigger>
-              <DialogContent className="flex flex-col max-md:max-w-full max-md:h-full bg-gray-900 text-red-600">
+              <DialogContent className="flex flex-col max-md:max-w-full max-md:h-full border-none bg-gray-900 text-red-600">
                 <DialogHeader>
                   <DialogTitle className="text-lg text-red-600 font-bold">
                     Buscar Produtos
