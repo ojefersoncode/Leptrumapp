@@ -190,7 +190,7 @@ export function Sidebar() {
           </div>
 
           <div>
-            <ShoppingCart className="size-5" />
+            <ShoppingCart className="size-5 text-white" />
           </div>
         </header>
       </div>
