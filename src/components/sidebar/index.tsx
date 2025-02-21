@@ -47,7 +47,7 @@ export function Sidebar() {
 
               <SheetContent
                 side="left"
-                className="sm:max-w-x text-slate-50 border-none bg-gray-800 flex flex-col justify-between h-full"
+                className="sm:max-w-x text-slate-50 outline-none border-none bg-gray-800 flex flex-col justify-between h-full"
               >
                 <div>
                   <DialogTitle>
