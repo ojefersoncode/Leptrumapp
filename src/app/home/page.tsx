@@ -60,13 +60,13 @@ const Home = () => {
                   Sua localização
                 </span>
               </div>
-              <div className="mx-4 mt-2 ">
+              <div className="mx-4 mt-0.5">
                 <h1 className="text-sm font-semibold line-clamp-2">
                   {product.title}
                 </h1>
               </div>
 
-              <div className="flex w-full justify-between items-center mb-2 px-2">
+              <div className="flex w-full justify-between items-center mb-3 px-2">
                 <h2 className="font-semibold mx-2 text-xl">
                   R$:{product.price}
                 </h2>
