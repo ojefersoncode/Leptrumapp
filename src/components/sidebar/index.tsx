@@ -139,8 +139,8 @@ export function Sidebar() {
             {/* Dialog search*/}
             <Dialog>
               <DialogTrigger asChild>
-                <Button className="p-4 bg-transparent hover:bg-transparent text-white hover:text-red-600 px-2">
-                  <Search className="size-8" />
+                <Button className="bg-transparent hover:bg-transparent text-white hover:text-red-600 px-1">
+                  <Search className="size-7" />
                 </Button>
               </DialogTrigger>
               <DialogContent className="flex flex-col max-md:max-w-full max-md:h-full border-none bg-gray-900 text-red-600">
