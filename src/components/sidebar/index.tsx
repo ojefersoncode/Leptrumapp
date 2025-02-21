@@ -33,7 +33,7 @@ export function Sidebar() {
     <div className="flex w-full flex-col bg-gray-800 bg-opacity-90 max-md:p-2">
       <div className="flex w-full flex-col sm:gap-4 sm:py-4">
         <header
-          className="sticky top-0 z-30 flex  px-4 items-center 
+          className="sticky top-0 z-30 flex  px-2 items-center 
                  gap-4 sm:static sm:h-auto sm:border-0"
         >
           <div className="flex w-full items-center bg-transparent gap-3">
@@ -47,7 +47,7 @@ export function Sidebar() {
 
               <SheetContent
                 side="left"
-                className="sm:max-w-x text-slate-50 border-none bg-gray-800 flex flex-col justify-between h-full"
+                className="sm:max-w-x text-slate-50 outline-none border-none bg-gray-800 flex flex-col justify-between h-full"
               >
                 <div>
                   <DialogTitle>
@@ -144,9 +144,9 @@ export function Sidebar() {
                   <Search className="size-8 text-white" />
                 </Button>
               </DialogTrigger>
-              <DialogContent className="flex flex-col max-md:max-w-full max-md:h-full bg-gray-900 text-red-600">
+              <DialogContent className="flex flex-col max-md:max-w-full max-md:h-full border-none bg-gray-900 text-red-600">
                 <DialogHeader>
-                  <DialogTitle className="text-lg text-red-600 font-bold">
+                  <DialogTitle className="text-xl text-red-600 font-bold">
                     Buscar Produtos
                   </DialogTitle>
                 </DialogHeader>
@@ -155,10 +155,10 @@ export function Sidebar() {
                     <Input
                       type="search"
                       placeholder="buscar..."
-                      className="w-full px-4 py-2 rounded bg-gray-100 border border-nonefocus:outline-none"
+                      className="w-full px-4 py-2 rounded text-black font-semibold bg-gray-100 border border-nonefocus:outline-none"
                     />
-                    <Button>
-                      <Search className="size-7" />
+                    <Button className="bg-gray-800 hover:bg-gray-700">
+                      <Search className="size-7 p-" />
                     </Button>
                   </div>
 
@@ -167,11 +167,11 @@ export function Sidebar() {
                       <h1 className="font-bold text-lg text-white">
                         Filtro de busca
                       </h1>
-                      <Button>
+                      <Button className="transition-all fade-in-15 hover:bg-gray-800">
                         <ListFilter className="size-7 text-white" />
                       </Button>
                     </div>
-                    <div className="flex flex-wrap gap-4 my-4">
+                    <div className="flex flex-wrap gap-4">
                       <a className="flex flex-nowrap text-sm  rounded text-indigo-50 bg-red-600 px-3 py-2">
                         Usado
                       </a>
@@ -183,14 +183,30 @@ export function Sidebar() {
                       </a>
                     </div>
                   </div>
-                  <div></div>
+                  <hr className="w-full mt-2 text-gray-900" />
+
+                  <div className="text-white">
+                    <div className="mb-1">
+                      <span>Sugestões de busca...</span>
+                    </div>
+                    <div className="mb-1">
+                      <span>Sugestões de busca...</span>
+                    </div>
+                    <div className="mb-1">
+                      <span>Sugestões de busca...</span>
+                    </div>
+                    <div className="mb-1">
+                      <span>Sugestões de busca...</span>
+                    </div>
+                    
+                  </div>
                 </div>
               </DialogContent>
             </Dialog>
           </div>
 
           <div>
-            <ShoppingCart className="size-5" />
+            <ShoppingCart className="size-5 text-white" />
           </div>
         </header>
       </div>
