@@ -33,21 +33,20 @@ const Home = () => {
           ))}
         </div>
       </div>
-
     );
   }
 
   return (
-
-
     <div>
-
       <Sidebar />
 
       <div className="w-full mx-auto bg-gray-300 p-2">
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
           {products.map((product) => (
-            <div key={product.id} className="w-full rounded-lg bg-slate-50 py-2">
+            <div
+              key={product.id}
+              className="w-full rounded-lg bg-slate-50 py-2"
+            >
               <div>
                 <img
                   src={product.image}
@@ -57,23 +56,29 @@ const Home = () => {
               </div>
               <div className="flex items-center mx-4 my-3 gap-0.5">
                 <MapPin className="h-4 w-4 text-slate-800" />
-                <span className="text-xs font-sans text-slate-800">Sua localização</span>
+                <span className="text-xs font-sans text-slate-800">
+                  Sua localização
+                </span>
               </div>
               <div className="mx-4 mt-2 ">
-                <h1 className="text-sm font-semibold line-clamp-2">{product.title}</h1>
+                <h1 className="text-sm font-semibold line-clamp-2">
+                  {product.title}
+                </h1>
               </div>
 
               <div className="flex w-full justify-between items-center mb-2 px-2">
-                <h2 className="font-semibold px-2 text-xl">R$:{product.price}</h2>
-                <Button className="bg-gray-900 hover:bg-gray-800" > <ShoppingCart /> </Button>
+                <h2 className="font-semibold mx-2 text-xl">
+                  R$:{product.price}
+                </h2>
+                <Button className="bg-gray-900 h-8 w-8 mx-2 px-3 py-0 hover:bg-gray-800">
+                  <ShoppingCart className="w-3 h-3" />
+                </Button>
               </div>
             </div>
           ))}
         </div>
       </div>
     </div>
-
-
   );
 };
 
