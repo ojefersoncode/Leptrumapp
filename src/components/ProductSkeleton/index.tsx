@@ -2,7 +2,7 @@ import React from "react";
 import { Skeleton } from "@/components/ui/skeleton";
 
 const ProductSkeleton = () => (
-  <div className="flex w-full flex-col space-y-3 m-2">
+  <div className="flex w-full items-center flex-col space-y-3 m-2">
     <Skeleton className="h-[200px] m-4 w-[290px] max-md:w-[180px] rounded-md" />
     <div className="mx-4">
       <div className="space-y-3">

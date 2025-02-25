@@ -1,5 +1,5 @@
 // dashboard/[id]/page.tsx
-"use server";
+"use cliente";
 
 import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabaseClient";
