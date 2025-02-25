@@ -2,7 +2,7 @@ import { SparklesText } from "@/components/magicui/sparkles-text";
 
 export function AnimatedTittle() {
   return (
-    <h1 className="text-5xl max-sm:text-3xl font-extrabold justify-center items-center">
+    <h1 className="text-5xl max-sm:text-3xl max-w-5xl font-extrabold justify-center items-center">
       Ficou facil organizar seus produtos online,{" "}
       <span className="text-red-600">com apenas alguns cliques </span>
     </h1>
