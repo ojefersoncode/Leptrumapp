@@ -2,8 +2,8 @@ import React from "react";
 import { Skeleton } from "@/components/ui/skeleton";
 
 const ProductSkeleton = () => (
-  <div className="flex w-full flex-col items-center space-y-3 m-2">
-    <Skeleton className="h-[200px] w-[290px] max-md:w-[180px] rounded-md m-4" />
+  <div className="flex w-full flex-col items-center justify-center space-y-3">
+    <Skeleton className="h-[200px] w-[290px] max-md:w-[180px] rounded-md" />
     <div className="w-full px-4 space-y-3">
       <div className="flex gap-2">
         <Skeleton className="h-3 w-[20px] max-md:w-[20px]" />
