@@ -1,4 +1,5 @@
 "use client";
+import { useState } from "react";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Dialog } from "@radix-ui/react-dialog";
@@ -13,12 +14,10 @@ import {
   MapPin,
   ChartLine,
   ListFilter,
-  Heater,
   Heart,
   LogOut,
   ShoppingCart,
 } from "lucide-react";
-
 import {
   DialogTitle,
   DialogTrigger,
@@ -28,17 +27,19 @@ import {
 import { Input } from "../ui/input";
 
 export function Sidebar() {
+  const [showFilters, setShowFilters] = useState(false);
+
   return (
     <div className="flex flex-col w-full bg-gray-800 bg-opacity-90 max-md:p-2">
       <div className="flex w-full flex-col sm:gap-4 sm:py-4">
         <header
-          className="sticky top-0 z-30 flex  px-2 items-center 
+          className="sticky top-0 z-30 flex px-2 items-center 
                  gap-4 sm:static sm:h-auto sm:border-0"
         >
           <div className="flex w-full items-center bg-transparent gap-3">
             <Sheet>
               <SheetTrigger asChild>
-                <button className=" text-red-700">
+                <button className="text-red-700">
                   <Menu />
                   <span className="sr-only">Menu</span>
                 </button>
@@ -57,8 +58,7 @@ export function Sidebar() {
                     <div className="flex items-center mx-2">
                       <Link
                         href="#"
-                        className="flex text-lg items-center justify-center text-indigo-100 md:text-base"
-                        prefetch={false}
+                        className="flex text-lg items-center text-indigo-100"
                       >
                         <span className="sr-only">Logo</span>
                       </Link>
@@ -70,45 +70,46 @@ export function Sidebar() {
                         <h1 className="font-bold text-lg">Leptrum store</h1>
                       </div>
 
-                      <div className="flex items-center px-2.5 text-indigo-50 gap-1 whitespace-nowrap flex-shrink-0">
+                      <div className="flex items-center px-2.5 text-indigo-50 gap-1">
                         <MapPin className="size-4" />
-                        <span className="font-poppins text-sm">Ponte Nova</span>
+                        <span className="text-sm">Ponte Nova</span>
                       </div>
                     </div>
                     <hr className="bg-slate-600 opacity-50" />
+
                     <Link
                       href="#"
                       className="flex items-center gap-4 px-2.5 text-slate-50 hover:text-red-600"
                     >
-                      <Home className="h-5 w-5 transition-all" />
+                      <Home className="h-5 w-5" />
                       Home
                     </Link>
                     <Link
                       href="#"
                       className="flex items-center gap-4 px-2.5 text-slate-50 hover:text-red-600"
                     >
-                      <Store className="h-5 w-5 transition-all" />
+                      <Store className="h-5 w-5" />
                       Lojas
                     </Link>
                     <Link
                       href="#"
                       className="flex items-center gap-4 px-2.5 text-slate-50 hover:text-red-600"
                     >
-                      <Heart className="h-5 w-5 transition-all" />
+                      <Heart className="h-5 w-5" />
                       Salvos
                     </Link>
                     <Link
                       href="/dashboard/${userId}"
                       className="flex items-center gap-4 px-2.5 text-slate-50 hover:text-red-600"
                     >
-                      <ChartLine className="h-5 w-5 transition-all" />
+                      <ChartLine className="h-5 w-5" />
                       Dashboard
                     </Link>
                     <Link
                       href="#"
                       className="flex items-center gap-4 px-2.5 text-slate-50 hover:text-red-600"
                     >
-                      <Settings className="h-5 w-5 transition-all" />
+                      <Settings className="h-5 w-5" />
                       Configurações
                     </Link>
                   </nav>
@@ -118,7 +119,7 @@ export function Sidebar() {
                   href="#"
                   className="flex items-center font-bold text-xl gap-4 px-2.5 text-slate-50 hover:text-red-600 mt-auto"
                 >
-                  <LogOut className="h-5 w-5 transition-all" />
+                  <LogOut className="h-5 w-5" />
                   Sair
                 </Link>
               </SheetContent>
@@ -129,14 +130,14 @@ export function Sidebar() {
             <div className="flex w-full items-center justify-between gap-2 text-xl font-bold">
               <img className="size-8" src="/logo/Leptrum.png" alt="logo" />
               <div className="flex">
-                <h1 className="text-red-500">Lep</h1>{" "}
+                <h1 className="text-red-500">Lep</h1>
                 <h1 className="text-red-50">trum</h1>
               </div>
             </div>
           </div>
 
           <div className="flex w-full items-center justify-end gap-2">
-            {/* Dialog search*/}
+            {/* Dialog search */}
             <Dialog>
               <DialogTrigger asChild>
                 <Button className="bg-transparent hover:bg-transparent text-white hover:text-red-600 px-1">
@@ -153,51 +154,47 @@ export function Sidebar() {
                   <div className="flex gap-4">
                     <Input
                       type="search"
-                      placeholder="buscar..."
-                      className="w-full px-4 py-2 rounded text-black font-semibold bg-gray-100 border border-nonefocus:outline-none"
+                      placeholder="Buscar..."
+                      className="w-full px-4 py-2 rounded text-black font-semibold bg-gray-100 focus:outline-none"
                     />
                     <Button className="bg-gray-800 hover:bg-gray-700">
-                      <Search className="size-7 p-" />
+                      <Search className="size-7" />
                     </Button>
                   </div>
 
-                  <div className="text-black rounded">
-                    <div className="flex justify-between mx-auto">
-                      <h1 className="font-bold text-lg text-white">
-                        Filtro de busca
-                      </h1>
-                      <Button className="transition-all fade-in-15 hover:bg-gray-800">
-                        <ListFilter className="size-7 text-white" />
-                      </Button>
-                    </div>
-                    <div className="flex flex-wrap gap-4">
-                      <a className="flex flex-nowrap text-sm  rounded text-indigo-50 bg-red-600 px-3 py-2">
-                        Usado
-                      </a>
-                      <a className="flex flex-nowrap text-sm rounded text-indigo-50 bg-red-600 px-3 py-2">
-                        Novo
-                      </a>
-                      <a className="flex flex-nowrap text-sm rounded text-indigo-50 bg-red-600 px-3 py-2">
-                        Promoção
-                      </a>
-                    </div>
+                  <div className="flex w-full items-center justify-between mx-auto">
+                    <h1 className="font-bold text-lg text-white">
+                      Filtro de busca
+                    </h1>
+                    <Button
+                      onClick={() => setShowFilters(!showFilters)}
+                      className="hover:bg-gray-800"
+                    >
+                      <ListFilter className="size-7 text-white" />
+                    </Button>
                   </div>
-                  <hr className="w-full mt-2 text-gray-900" />
+
+                  {showFilters && (
+                    <div className="flex flex-wrap gap-4 transition-all duration-300">
+                      <span className="text-sm rounded bg-red-600 hover:bg-red-700 px-2 py-1 text-white cursor-pointer">
+                        Usado
+                      </span>
+                      <span className="text-sm rounded bg-red-600 hover:bg-red-700 px-2 py-1 text-white cursor-pointer">
+                        Novo
+                      </span>
+                      <span className="text-sm rounded bg-red-600 hover:bg-red-700 px-2 py-1 text-white cursor-pointer">
+                        Promoção
+                      </span>
+                    </div>
+                  )}
+
+                  <hr className="w-full text-gray-900" />
 
                   <div className="text-white">
-                    <div className="mb-1">
-                      <span>Sugestões de busca...</span>
-                    </div>
-                    <div className="mb-1">
-                      <span>Sugestões de busca...</span>
-                    </div>
-                    <div className="mb-1">
-                      <span>Sugestões de busca...</span>
-                    </div>
-                    <div className="mb-1">
-                      <span>Sugestões de busca...</span>
-                    </div>
-                    
+                    <span className="mb-1 block">Sugestões de busca...</span>
+                    <span className="mb-1 block">Sugestões de busca...</span>
+                    <span className="mb-1 block">Sugestões de busca...</span>
+                    <span className="mb-1 block">Sugestões de busca...</span>
                   </div>
                 </div>
               </DialogContent>
