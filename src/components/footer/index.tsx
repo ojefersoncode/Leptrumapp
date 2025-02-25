@@ -22,26 +22,26 @@ export function Footer() {
 
       <div className="grid grid-cols-4 max-md:grid-cols-2 mt-5 w-full gap-6 justify-around">
         <div className="flex flex-col justify-top items-center cursor-pointer gap-2">
-          <p className="text-xl font-semibold text-red-600">Ajuda e suporte</p>
+          <p className="text-xl font-semibold text-red-500">Ajuda e suporte</p>
           <span>Ajuda para criar conta</span>
           <span>Ajuda para criar loja</span>
           <span>Fui hackeado</span>
           <span>Perdi meu acesso</span>
         </div>
         <div className="flex flex-col justify-top items-center cursor-pointer gap-2">
-          <p className="text-xl font-semibold text-red-600">Sobre</p>
+          <p className="text-xl font-semibold text-red-500">Sobre</p>
           <span>Quem somos?</span>
           <span>Nossod objetivos</span>
           <span>Lojas parceiras</span>
           <span>Blog</span>
         </div>
         <div className="flex flex-col justify-top items-center cursor-pointer gap-2">
-          <p className="text-xl font-semibold text-red-600">Email </p>
+          <p className="text-xl font-semibold text-red-500">Email </p>
           <span>Contato@leptrum.com</span>
           <span>Suporte@leptrum.com</span>
         </div>
         <div className="flex flex-col justify-top items-center cursor-pointer gap-4">
-          <p className="text-xl font-semibold text-red-600"> Redes Sociais</p>
+          <p className="text-xl font-semibold text-red-500"> Redes Sociais</p>
           <div className="flex flex-col gap-4">
             <div className="flex gap-2">
               <Instagram className="size-6" />
