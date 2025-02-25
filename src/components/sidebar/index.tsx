@@ -177,15 +177,6 @@ export function Sidebar() {
                     <div className="mb-1">
                       <span>Sugestões de busca...</span>
                     </div>
-                    <div className="mb-1">
-                      <span>Sugestões de busca...</span>
-                    </div>
-                    <div className="mb-1">
-                      <span>Sugestões de busca...</span>
-                    </div>
-                    <div className="mb-1">
-                      <span>Sugestões de busca...</span>
-                    </div>
                   </div>
                 </div>
               </DialogContent>
