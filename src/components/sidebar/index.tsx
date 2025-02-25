@@ -147,7 +147,7 @@ export function Sidebar() {
                   </div>
 
                   <div className="text-black rounded">
-                    <div className="flex justify-between mx-auto">
+                    <div className="flex items-center justify-between mx-auto">
                       <h1 className="font-bold text-lg text-white">
                         Filtro de busca
                       </h1>
@@ -172,7 +172,7 @@ export function Sidebar() {
                       </div>
                     )}
                   </div>
-                  <hr className="w-full my-1 text-gray-900" />
+                  <hr className="w-full mb-1 text-gray-900" />
                   <div className="text-white">
                     <div className="mb-1">
                       <span>Sugestões de busca...</span>
