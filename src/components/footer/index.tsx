@@ -13,7 +13,7 @@ export function Footer() {
       <div className="flex w-full gap-2 text-2xl font-bold items-center justify-center py-4">
         <img className="size-10" src="/logo/Leptrum.png" alt="logo" />
         <div className="flex">
-          <h1 className="text-red-500">Lep</h1>{" "}
+          <h1 className="text-red-600">Lep</h1>{" "}
           <h1 className="text-red-50">trum</h1>
         </div>
       </div>
