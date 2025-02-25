@@ -67,7 +67,7 @@ const Home = () => {
               </div>
 
               <div className="flex w-full justify-between content-center items-center mb-1 mt-3 px-2">
-                <h2 className="font-semibold mx-2 text-2xl">
+                <h2 className="font-semibold mx-2 text-xl">
                   R$:{product.price}
                 </h2>
                 <Button className="flex justify-center items-center content-center bg-gray-900 h-8 w-8 mx-2 hover:bg-gray-800">
