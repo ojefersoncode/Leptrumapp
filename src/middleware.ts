@@ -14,13 +14,13 @@ export const createClient = (request: NextRequest) => {
         get(name: string) {
           return request.cookies.get(name)?.value;
         },
-        set(name: string, value: string, options: CookieOptions) {
-          request.cookies.set(name, value);
-          response.cookies.set(name, value, options);
+        set(name: string, value: string, options?: CookieOptions) {
+          request.cookies.set({ name, value, ...options });
+          response.cookies.set({ name, value, ...options });
         },
-        remove(name: string, options: CookieOptions) {
-          request.cookies.set(name, '', options);
-          response.cookies.set(name, '', options);
+        remove(name: string, options?: CookieOptions) {
+          request.cookies.set({ name, value: '', ...options });
+          response.cookies.set({ name, value: '', ...options });
         }
       }
     }
@@ -43,7 +43,6 @@ export const middleware = async (request: NextRequest) => {
   return response;
 };
 
-// Define os caminhos que o middleware deve monitorar
 export const config = {
-  matcher: ['/dashboard/:path*', '/profile/:path*'], // Altere conforme necessário
+  matcher: ['/dashboard/:path*', '/profile/:path*'],
 };
