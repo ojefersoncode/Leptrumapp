@@ -5,8 +5,13 @@ import { useRouter } from "next/navigation";
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Card, CardHeader, CardContent, CardFooter } from "@/components/ui/card";
-import { setCookie } from "nookies";
+import {
+  Card,
+  CardHeader,
+  CardContent,
+  CardFooter,
+} from "@/components/ui/card";
+import { setCookie, parseCookies } from "nookies"; // Importa parseCookies
 
 const Login = () => {
   const router = useRouter();
@@ -19,11 +24,22 @@ const Login = () => {
   // 🚀 Verifica sessão ao carregar a página
   useEffect(() => {
     const checkSession = async () => {
-      const { data } = await supabase.auth.getSession();
-      if (data.session) {
+      // Verifica o cookie diretamente
+      const cookies = parseCookies();
+      const token = cookies.token;
+
+      if (token) {
+        // Se o token estiver presente, redireciona para /home
         router.push("/home");
+      } else {
+        // Se não houver token, prossegue normalmente para a página de login
+        const { data } = await supabase.auth.getSession();
+        if (data.session) {
+          router.push("/home");
+        }
       }
     };
+
     checkSession();
   }, [router, supabase]);
 
@@ -44,11 +60,10 @@ const Login = () => {
         const token = data.session.access_token;
 
         // ✅ Salva token nos cookies para compatibilidade com Middleware
-        setCookie(null, "sb:token", token, {
-          maxAge: 60 * 60 * 24, // Expira em 1 dia
-          path: "/",
-          secure: process.env.NODE_ENV === "production",
-          sameSite: "Lax",
+        await fetch("/api/auth/set-cookie", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ token }),
         });
 
         router.push("/home");
@@ -56,7 +71,9 @@ const Login = () => {
         throw new Error("Sessão não encontrada.");
       }
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Ocorreu um erro inesperado.");
+      setError(
+        err instanceof Error ? err.message : "Ocorreu um erro inesperado."
+      );
     } finally {
       setLoading(false);
     }
@@ -74,12 +91,17 @@ const Login = () => {
         <div className="w-full md:max-w-md p-4">
           <Card>
             <CardHeader>
-              <h1 className="text-2xl font-semibold text-slate-800">Bem-vindo de volta!</h1>
+              <h1 className="text-2xl font-semibold text-slate-800">
+                Bem-vindo de volta!
+              </h1>
             </CardHeader>
             <CardContent>
               <form className="w-full space-y-4" onSubmit={handleLogin}>
                 <div>
-                  <label htmlFor="email" className="block text-sm mb-2 font-medium text-gray-800">
+                  <label
+                    htmlFor="email"
+                    className="block text-sm mb-2 font-medium text-gray-800"
+                  >
                     Email
                   </label>
                   <Input
@@ -93,7 +115,10 @@ const Login = () => {
                   />
                 </div>
                 <div>
-                  <label htmlFor="password" className="block text-sm mb-2 font-medium text-gray-700">
+                  <label
+                    htmlFor="password"
+                    className="block text-sm mb-2 font-medium text-gray-700"
+                  >
                     Senha
                   </label>
                   <Input
@@ -107,8 +132,16 @@ const Login = () => {
                   />
                 </div>
                 {error && <p className="text-sm text-red-700">{error}</p>}
-                <Button type="submit" className="w-full bg-red-700 mt-4 p-4" disabled={loading}>
-                  {loading ? "Carregando..." : <h1 className="text-base">Entrar</h1>}
+                <Button
+                  type="submit"
+                  className="w-full bg-red-700 mt-4 p-4"
+                  disabled={loading}
+                >
+                  {loading ? (
+                    "Carregando..."
+                  ) : (
+                    <h1 className="text-base">Entrar</h1>
+                  )}
                 </Button>
               </form>
             </CardContent>

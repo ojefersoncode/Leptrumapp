@@ -5,6 +5,7 @@ import ProductSkeleton from "@/components/ProductSkeleton";
 import { MapPin, ShoppingCart } from "lucide-react";
 import { Sidebar } from "@/components/sidebar";
 import { Button } from "@/components/ui/button";
+import { NavegationMobile } from "@/components/NavegationMobile";
 
 type Product = {
   id: number;
@@ -38,7 +39,10 @@ const Home = () => {
 
   return (
     <div>
-      <Sidebar />
+      <div>
+        <Sidebar />
+        <NavegationMobile />
+      </div>
 
       <div className="w-full mx-auto bg-gray-300 p-2">
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">

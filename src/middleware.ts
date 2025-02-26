@@ -1,48 +1,35 @@
-import { createServerClient, type CookieOptions } from '@supabase/ssr';
-import { type NextRequest, NextResponse } from 'next/server';
+import { NextResponse } from "next/server";
+import type { NextRequest } from "next/server";
+import { createMiddlewareClient } from "@supabase/auth-helpers-nextjs";
 
-export const createClient = (request: NextRequest) => {
-  let response = NextResponse.next({
-    request: { headers: request.headers }
-  });
+export async function middleware(req: NextRequest) {
+  console.log("🔹 Middleware iniciado");
 
-  const supabase = createServerClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
-    {
-      cookies: {
-        get(name: string) {
-          return request.cookies.get(name)?.value;
-        },
-        set(name: string, value: string, options?: CookieOptions) {
-          request.cookies.set({ name, value, ...options });
-          response.cookies.set({ name, value, ...options });
-        },
-        remove(name: string, options?: CookieOptions) {
-          request.cookies.set({ name, value: '', ...options });
-          response.cookies.set({ name, value: '', ...options });
-        }
-      }
+  const res = NextResponse.next();
+  const supabase = createMiddlewareClient({ req, res });
+
+  try {
+    // Obtém a sessão do usuário
+    const { data: { user }, error } = await supabase.auth.getUser();
+
+    if (error) {
+      console.error("⚠️ Erro ao obter usuário:", error);
+      return NextResponse.redirect(new URL("/login?error=auth", req.url));
     }
-  );
 
-  return { supabase, response };
-};
+    if (!user) {
+      console.log("⚠️ Usuário não autenticado!");
+      return NextResponse.redirect(new URL("/login?unauthenticated=true", req.url));
+    }
 
-export const middleware = async (request: NextRequest) => {
-  const { supabase, response } = createClient(request);
-
-  // Verifica se o usuário está autenticado
-  const { data, error } = await supabase.auth.getUser();
-
-  if (error || !data?.user) {
-    // Redireciona para login se não autenticado
-    return NextResponse.redirect(new URL('/login', request.url));
+    console.log("✅ Usuário autenticado!", user);
+    return res;
+  } catch (e) {
+    console.error("⚠️ Erro inesperado no middleware:", e);
+    return NextResponse.redirect(new URL("/login?error=unexpected", req.url));
   }
-
-  return response;
-};
+}
 
 export const config = {
-  matcher: ['/dashboard/:path*', '/profile/:path*'],
+  matcher: ["/dashboard/:path*", "/home/:path*"],
 };
