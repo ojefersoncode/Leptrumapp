@@ -114,7 +114,7 @@ export function NavegationMobile() {
           <Dialog>
             <DialogTrigger asChild>
               <Button className="bg-transparent hover:bg-transparent text-white hover:text-red-600 px-1">
-                <Search className="size-7" />
+                <Search className="size-10" />
               </Button>
             </DialogTrigger>
             <DialogContent className="flex flex-col max-md:max-w-full max-md:h-full border-none bg-gray-900 text-red-600">
@@ -174,7 +174,7 @@ export function NavegationMobile() {
           <Dialog>
             <DialogTrigger asChild>
               <Button className="bg-transparent hover:bg-transparent text-white hover:text-red-600 px-1">
-                <ShoppingCart className="size-5 text-white hover:text-red-600" />
+                <ShoppingCart className="size-10 text-white hover:text-red-600" />
               </Button>
             </DialogTrigger>
             <DialogContent className="flex flex-col max-md:max-w-full max-md:h-full border-none bg-gray-900 text-red-600">
