@@ -7,6 +7,7 @@ import { Sidebar } from "@/components/sidebar";
 import { NavegationMobile } from "@/components/NavegationMobile";
 import { HeaderMobile } from "@/components/HeaderMobile";
 import ButtonTop from "@/components/ButtonTop";
+import { Footer } from "@/components/footer";
 
 type Product = {
   id: number;
@@ -87,6 +88,10 @@ const Home = () => {
             </div>
           ))}
         </div>
+      </div>
+
+      <div>
+        <Footer />
       </div>
     </div>
   );
