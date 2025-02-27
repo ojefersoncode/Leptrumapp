@@ -37,7 +37,7 @@ export function NavegationMobile() {
           <div className="flex w-full items-center justify-between bg-transparent gap-3">
             <Sheet>
               <SheetTrigger asChild>
-                <button className="text-red-500 hover:text-red-600">
+                <button className="text-red-400 hover:text-red-600">
                   <Menu />
                   <span className="sr-only">Menu</span>
                 </button>
@@ -112,17 +112,17 @@ export function NavegationMobile() {
             </Sheet>
 
             <button className="bg-transparent hover:bg-transparent text-white hover:text-red-600 px-1">
-              <Heart className="text-red-500 hover:text-red-600" />
+              <Heart className="text-red-400 hover:text-red-600" />
             </button>
 
             <button className="bg-transparent hover:bg-transparent text-white hover:text-red-600 px-1">
-              <HomeIcon className="text-red-500 hover:text-red-600" />
+              <HomeIcon className="text-red-400 hover:text-red-600" />
             </button>
 
             <Dialog>
               <DialogTrigger asChild>
                 <button className="bg-transparent hover:bg-transparent text-white hover:text-red-600 px-1">
-                  <Search className="text-red-500 hover:text-red-600" />
+                  <Search className="text-red-400 hover:text-red-600" />
                 </button>
               </DialogTrigger>
               <DialogContent className="flex flex-col max-md:max-w-full max-md:h-full border-none bg-gray-900 text-red-600">
@@ -182,7 +182,7 @@ export function NavegationMobile() {
             <Dialog>
               <DialogTrigger asChild>
                 <button className="bg-transparent hover:bg-transparent text-white hover:text-red-600 px-1">
-                  <ShoppingCart className="text-red-500 hover:text-red-600" />
+                  <ShoppingCart className="text-red-400 hover:text-red-600" />
                 </button>
               </DialogTrigger>
               <DialogContent className="flex flex-col max-md:max-w-full max-md:h-full border-none bg-gray-900 text-red-600">
