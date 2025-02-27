@@ -65,7 +65,7 @@ const Home = () => {
                 <img
                   src={product.image}
                   alt={product.title}
-                  className="w-full h-48 object-contain p-2 max-md:p-3"
+                  className="w-full h-48 object-contain p-2"
                 />
               </div>
               <div className="flex items-center mx-4 mt-1 gap-0.5">
