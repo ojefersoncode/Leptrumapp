@@ -31,13 +31,13 @@ export function NavegationMobile() {
   const [showFilters, setShowFilters] = useState(false);
 
   return (
-    <div className="flex flex-col w-full md:hidden max-md:fixed z-10 max-md:bottom-0 bg-gray-900 max-md:p-2">
+    <div className="flex flex-col h-12 w-full md:hidden max-md:fixed z-10 max-md:bottom-0 bg-gray-200 max-md:p-2">
       <div className="flex w-full flex-col py-2">
         <header className="flex px-2 items-center w-full justify-center gap-4">
           <div className="flex w-full items-center justify-between bg-transparent gap-3">
             <Sheet>
               <SheetTrigger asChild>
-                <button className="text-red-400 hover:text-red-600">
+                <button className="text-gray-900 hover:text-gray-600">
                   <Menu />
                   <span className="sr-only">Menu</span>
                 </button>
@@ -112,17 +112,17 @@ export function NavegationMobile() {
             </Sheet>
 
             <button className="bg-transparent hover:bg-transparent text-white hover:text-red-600 px-1">
-              <Heart className="text-red-400 hover:text-red-600" />
+              <Heart className="text-gray-900 hover:text-gray-600" />
             </button>
 
             <button className="bg-transparent hover:bg-transparent text-white hover:text-red-600 px-1">
-              <HomeIcon className="text-red-400 hover:text-red-600" />
+              <HomeIcon className="text-gray-900 hover:text-gray-600" />
             </button>
 
             <Dialog>
               <DialogTrigger asChild>
                 <button className="bg-transparent hover:bg-transparent text-white hover:text-red-600 px-1">
-                  <Search className="text-red-400 hover:text-red-600" />
+                  <Search className="text-gray-900 hover:text-gray-600" />
                 </button>
               </DialogTrigger>
               <DialogContent className="flex flex-col max-md:max-w-full max-md:h-full border-none bg-gray-900 text-red-600">
@@ -182,7 +182,7 @@ export function NavegationMobile() {
             <Dialog>
               <DialogTrigger asChild>
                 <button className="bg-transparent hover:bg-transparent text-white hover:text-red-600 px-1">
-                  <ShoppingCart className="text-red-400 hover:text-red-600" />
+                  <ShoppingCart className="text-gray-900 hover:text-gray-600" />
                 </button>
               </DialogTrigger>
               <DialogContent className="flex flex-col max-md:max-w-full max-md:h-full border-none bg-gray-900 text-red-600">
