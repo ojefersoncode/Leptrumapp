@@ -12,7 +12,6 @@ const ProductSkeleton = () => (
       <Skeleton className="h-3 w-[290px] max-md:w-[170px] my-1" />
       <div className="flex w-full justify-between items-center gap-7 mt-2">
         <Skeleton className="h-3 w-[120px] max-md:w-[160px]" />
-        <Skeleton className="h-6 w-[40px] max-md:w-[40px] ml-10" />
       </div>
     </div>
   </div>
