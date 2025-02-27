@@ -11,7 +11,7 @@ export default function ButtonTop() {
         onClick={scrollToTop}
         className="relative p-3 bg-gray-900 text-white rounded-full shadow-lg hover:bg-red-500 transition"
       >
-        <ArrowUp className="size-7 " />
+        <ArrowUp className="size-7 max-md:size-5 " />
         <span className="absolute inset-0 rounded-full border-2 border-red-600 animate-spin-border"></span>
       </button>
       <style jsx>{`
