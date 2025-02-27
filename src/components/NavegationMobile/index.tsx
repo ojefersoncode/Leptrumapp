@@ -32,7 +32,7 @@ export function NavegationMobile() {
 
   return (
     <div className="flex flex-col w-full md:hidden max-md:fixed z-10 max-md:bottom-0 bg-red-600 max-md:p-2">
-      <div className="flex w-full flex-col py-2">
+      <div className="flex w-full flex-col py-1">
         <header className="flex px-2 items-center w-full justify-center gap-4">
           <div className="flex w-full items-center justify-between bg-transparent gap-3">
             <Sheet>
