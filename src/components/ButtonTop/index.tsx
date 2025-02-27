@@ -9,7 +9,7 @@ export default function ButtonTop() {
     <div className="fixed bottom-5 max-md:bottom-16 right-5">
       <button
         onClick={scrollToTop}
-        className="relative p-3 bg-gray-950 text-white rounded-full shadow-lg hover:bg-red-400 transition"
+        className="relative p-3 bg-gray-900 text-white rounded-full shadow-lg hover:bg-red-400 transition"
       >
         <ArrowUp className="size-7" />
         <span className="absolute inset-0 rounded-full border-2 border-transparent animate-spin-border"></span>
