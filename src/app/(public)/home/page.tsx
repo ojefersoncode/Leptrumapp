@@ -6,6 +6,7 @@ import { MapPin, ShoppingCart } from "lucide-react";
 import { Sidebar } from "@/components/sidebar";
 import { Button } from "@/components/ui/button";
 import { NavegationMobile } from "@/components/NavegationMobile";
+import { HeaderMobile } from "@/components/HeaderMobile";
 
 type Product = {
   id: number;
@@ -39,6 +40,10 @@ const Home = () => {
 
   return (
     <div>
+      <div>
+        <HeaderMobile />
+      </div>
+
       <div className="z-20">
         <Sidebar />
         <NavegationMobile />
