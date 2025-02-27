@@ -2,11 +2,11 @@
 
 import React, { useEffect, useState } from "react";
 import ProductSkeleton from "@/components/ProductSkeleton";
-import { MapPin, ShoppingCart } from "lucide-react";
+import { MapPin } from "lucide-react";
 import { Sidebar } from "@/components/sidebar";
-import { Button } from "@/components/ui/button";
 import { NavegationMobile } from "@/components/NavegationMobile";
 import { HeaderMobile } from "@/components/HeaderMobile";
+import ButtonTop from "@/components/ButtonTop";
 
 type Product = {
   id: number;
@@ -41,6 +41,10 @@ const Home = () => {
   return (
     <div>
       <div>
+        <ButtonTop />
+      </div>
+
+      <div>
         <HeaderMobile />
       </div>
 
@@ -49,7 +53,7 @@ const Home = () => {
         <NavegationMobile />
       </div>
 
-      <div className="w-full mx-auto bg-gray-300 p-2">
+      <div className="w-full mx-auto bg-gray-300 p-2 max-md:mb-14">
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
           {products.map((product) => (
             <div
@@ -63,25 +67,22 @@ const Home = () => {
                   className="w-full h-48 object-contain p-2"
                 />
               </div>
-              <div className="flex items-center mx-4 my-3 gap-0.5">
-                <MapPin className="h-4 w-4 text-slate-800" />
+              <div className="flex items-center mx-4 my-2 gap-0.5">
+                <MapPin className="size-4 text-slate-800" />
                 <span className="text-xs font-sans text-slate-800">
                   Sua localização
                 </span>
               </div>
               <div className="mx-4 mt-0.5">
-                <h1 className="text-sm font-semibold line-clamp-2">
+                <h1 className="text-base font-semibold line-clamp-2">
                   {product.title}
                 </h1>
               </div>
 
-              <div className="flex w-full justify-between content-center items-center mb-1 mt-3 px-2">
+              <div className="flex w-full justify-between content-center items-center mb-1 px-2">
                 <h2 className="font-semibold mx-2 text-xl">
                   R$:{product.price}
                 </h2>
-                <Button className="flex justify-center items-center content-center bg-gray-900 h-8 w-8 mx-2 hover:bg-gray-800">
-                  <ShoppingCart className="w-3 h-3" />
-                </Button>
               </div>
             </div>
           ))}
