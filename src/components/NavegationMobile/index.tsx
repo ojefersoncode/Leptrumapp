@@ -112,17 +112,17 @@ export function NavegationMobile() {
             </Sheet>
 
             <Button className="bg-transparent hover:bg-transparent text-white hover:text-red-600 px-1">
-              <Heart className="size-10 text-red-500 hover:text-red-600" />
+              <Heart className="text-red-500 hover:text-red-600" />
             </Button>
 
             <Button className="bg-transparent hover:bg-transparent text-white hover:text-red-600 px-1">
-              <HomeIcon className="size-10 text-red-500 hover:text-red-600" />
+              <HomeIcon className="text-red-500 hover:text-red-600" />
             </Button>
 
             <Dialog>
               <DialogTrigger asChild>
                 <Button className="bg-transparent hover:bg-transparent text-white hover:text-red-600 px-1">
-                  <Search className="size-10 text-red-500 hover:text-red-600" />
+                  <Search className="text-red-500 hover:text-red-600" />
                 </Button>
               </DialogTrigger>
               <DialogContent className="flex flex-col max-md:max-w-full max-md:h-full border-none bg-gray-900 text-red-600">
@@ -182,7 +182,7 @@ export function NavegationMobile() {
             <Dialog>
               <DialogTrigger asChild>
                 <Button className="bg-transparent hover:bg-transparent text-white hover:text-red-600 px-1">
-                  <ShoppingCart className="size-10 text-red-500 hover:text-red-600" />
+                  <ShoppingCart className="text-red-500 hover:text-red-600" />
                 </Button>
               </DialogTrigger>
               <DialogContent className="flex flex-col max-md:max-w-full max-md:h-full border-none bg-gray-900 text-red-600">
