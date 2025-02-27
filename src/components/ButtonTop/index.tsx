@@ -6,7 +6,7 @@ export default function ButtonTop() {
   };
 
   return (
-    <div className="fixed bottom-5 max-md:bottom-16 right-5">
+    <div className="fixed bottom-5 max-md:bottom-16 right-4 max-md:right-2">
       <button
         onClick={scrollToTop}
         className="relative p-3 bg-gray-900 text-white rounded-full shadow-lg hover:bg-red-500 transition"
