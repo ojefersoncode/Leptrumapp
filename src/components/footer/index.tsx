@@ -13,7 +13,7 @@ export function Footer() {
       <div className="flex w-full gap-2 text-2xl font-bold items-center justify-center py-4">
         <img className="size-10" src="/logo/Leptrum.png" alt="logo" />
         <div className="flex">
-          <h1 className="text-red-600">Lep</h1>{" "}
+          <h1 className="text-red-500">Lep</h1>{" "}
           <h1 className="text-red-50">trum</h1>
         </div>
       </div>
@@ -31,7 +31,7 @@ export function Footer() {
         <div className="flex flex-col text-white justify-top items-center cursor-pointer gap-2">
           <p className="text-xl font-semibold text-red-500">Sobre</p>
           <span>Quem somos?</span>
-          <span>Nossod objetivos</span>
+          <span>Nossos objetivos</span>
           <span>Lojas parceiras</span>
           <span>Blog</span>
         </div>
@@ -60,8 +60,8 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="w-full mb-4 max-md:mb-16 text-white text-center pt-7 px-2">
-        <span className="text-base">
+      <div className="w-full mb-4 max-md:mb-12 text-white text-center pt-7 px-2">
+        <span className="text-base py-2">
           © 2025 Leptrum. Todos os direitos reservados.
         </span>
       </div>

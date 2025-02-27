@@ -36,7 +36,7 @@ export function Sidebar() {
           <div className="flex w-full items-center bg-transparent gap-3">
             <Sheet>
               <SheetTrigger asChild>
-                <button className="text-red-700">
+                <button className="text-red-500">
                   <Menu />
                   <span className="sr-only">Menu</span>
                 </button>
@@ -54,7 +54,7 @@ export function Sidebar() {
                       <h1 className="text-indigo-50">Menu</h1>
                     </div>
                     <div>
-                      <div className="flex items-center text-red-600 px-2.5 mb-2">
+                      <div className="flex items-center text-red-500 px-2.5 mb-2">
                         <h1 className="font-bold text-lg">Leptrum store</h1>
                       </div>
                       <div className="flex items-center px-2.5 text-indigo-50 gap-1 whitespace-nowrap flex-shrink-0">
