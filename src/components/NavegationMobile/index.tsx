@@ -37,7 +37,7 @@ export function NavegationMobile() {
           <div className="flex w-full items-center justify-between bg-transparent gap-3">
             <Sheet>
               <SheetTrigger asChild>
-                <button className="text-gray-100 hover:text-gray-300">
+                <button className="text-slate-100 hover:text-slate-400">
                   <Menu />
                   <span className="sr-only">Menu</span>
                 </button>
@@ -96,7 +96,7 @@ export function NavegationMobile() {
                       href="#"
                       className="flex items-center gap-4 px-2.5 text-slate-50 hover:text-red-600"
                     >
-                      <Settings className="h-5 w-5 transition-all" />
+                      <Settings className="size-5 transition-all" />
                       Configurações
                     </Link>
                   </nav>
@@ -112,17 +112,17 @@ export function NavegationMobile() {
             </Sheet>
 
             <button className="bg-transparent hover:bg-transparent text-white hover:text-red-600 px-1">
-              <Heart className="text-gray-100 hover:text-gray-300" />
+              <Heart className="text-slate-100 hover:text-slate-400" />
             </button>
 
             <button className="bg-transparent hover:bg-transparent text-white hover:text-red-600 px-1">
-              <HomeIcon className="text-gray-100 hover:text-gray-300" />
+              <HomeIcon className="text-slate-100 hover:text-slate-400" />
             </button>
 
             <Dialog>
               <DialogTrigger asChild>
                 <button className="bg-transparent hover:bg-transparent text-white hover:text-red-600 px-1">
-                  <Search className="text-gray-100 hover:text-gray-300" />
+                  <Search className="text-slate-100 hover:text-slate-400" />
                 </button>
               </DialogTrigger>
               <DialogContent className="flex flex-col max-md:max-w-full max-md:h-full border-none bg-gray-900 text-red-600">
@@ -182,7 +182,7 @@ export function NavegationMobile() {
             <Dialog>
               <DialogTrigger asChild>
                 <button className="bg-transparent hover:bg-transparent text-white hover:text-red-600 px-1">
-                  <ShoppingCart className="text-gray-100 hover:text-gray-300" />
+                  <ShoppingCart className="text-slate-100 hover:text-slate-400" />
                 </button>
               </DialogTrigger>
               <DialogContent className="flex flex-col max-md:max-w-full max-md:h-full border-none bg-gray-900 text-red-600">
