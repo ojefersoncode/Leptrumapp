@@ -32,7 +32,7 @@ export function NavegationMobile() {
 
   return (
     <div className="flex flex-col w-full md:hidden max-md:fixed z-10 max-md:bottom-0 bg-gray-900 max-md:p-2">
-      <div className="flex w-full flex-col sm:gap-4 sm:py-2">
+      <div className="flex w-full flex-col py-2">
         <header className="flex px-2 items-center w-full justify-center gap-4">
           <div className="flex w-full items-center justify-between bg-transparent gap-3">
             <Sheet>
@@ -111,19 +111,19 @@ export function NavegationMobile() {
               </SheetContent>
             </Sheet>
 
-            <Button className="bg-transparent hover:bg-transparent text-white hover:text-red-600 px-1">
+            <button className="bg-transparent hover:bg-transparent text-white hover:text-red-600 px-1">
               <Heart className="text-red-500 hover:text-red-600" />
-            </Button>
+            </button>
 
-            <Button className="bg-transparent hover:bg-transparent text-white hover:text-red-600 px-1">
+            <button className="bg-transparent hover:bg-transparent text-white hover:text-red-600 px-1">
               <HomeIcon className="text-red-500 hover:text-red-600" />
-            </Button>
+            </button>
 
             <Dialog>
               <DialogTrigger asChild>
-                <Button className="bg-transparent hover:bg-transparent text-white hover:text-red-600 px-1">
+                <button className="bg-transparent hover:bg-transparent text-white hover:text-red-600 px-1">
                   <Search className="text-red-500 hover:text-red-600" />
-                </Button>
+                </button>
               </DialogTrigger>
               <DialogContent className="flex flex-col max-md:max-w-full max-md:h-full border-none bg-gray-900 text-red-600">
                 <DialogHeader>
@@ -181,9 +181,9 @@ export function NavegationMobile() {
 
             <Dialog>
               <DialogTrigger asChild>
-                <Button className="bg-transparent hover:bg-transparent text-white hover:text-red-600 px-1">
+                <button className="bg-transparent hover:bg-transparent text-white hover:text-red-600 px-1">
                   <ShoppingCart className="text-red-500 hover:text-red-600" />
-                </Button>
+                </button>
               </DialogTrigger>
               <DialogContent className="flex flex-col max-md:max-w-full max-md:h-full border-none bg-gray-900 text-red-600">
                 <DialogHeader>
