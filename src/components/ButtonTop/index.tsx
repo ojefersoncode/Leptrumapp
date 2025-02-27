@@ -9,49 +9,29 @@ export default function ButtonTop() {
     <div className="fixed bottom-5 max-md:bottom-16 right-5">
       <button
         onClick={scrollToTop}
-        className="relative p-3 bg-gray-900 text-white rounded-full shadow-lg hover:bg-red-400 transition"
+        className="relative p-3 bg-gray-900 text-red-500 hover:text-white rounded-full shadow-lg hover:bg-red-500 transition"
       >
-        <ArrowUp className="size-7" />
-        <span className="absolute inset-0 rounded-full border-2 border-transparent animate-spin-border"></span>
+        <ArrowUp className="size-7 " />
+        <span className="absolute inset-0 rounded-full border-2 border-white animate-spin-border"></span>
       </button>
       <style jsx>{`
         @keyframes spin-border {
           0% {
-            border-color: red transparent transparent transparent;
-          }
-          10% {
-            border-color: red red transparent transparent;
-          }
-          20% {
-            border-color: red red red transparent;
-          }
-          30% {
-            border-color: red red red red;
-          }
-          40% {
-            border-color: transparent red red red;
+            transform: rotate(0deg);
+            opacity: 1;
           }
           50% {
-            border-color: transparent transparent red red;
-          }
-          60% {
-            border-color: transparent transparent transparent red;
-          }
-          70% {
-            border-color: red transparent transparent red;
-          }
-          80% {
-            border-color: red red transparent red;
-          }
-          90% {
-            border-color: red red red red;
+            opacity: 0.6;
           }
           100% {
-            border-color: red transparent transparent transparent;
+            transform: rotate(360deg);
+            opacity: 1;
           }
         }
         .animate-spin-border {
-          animation: spin-border 4s linear infinite;
+          animation: spin-border 3s linear infinite;
+          border-width: 3px;
+          box-shadow: 0 0 10px red;
         }
       `}</style>
     </div>
