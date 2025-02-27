@@ -16,6 +16,7 @@ import {
   Heart,
   LogOut,
   ShoppingCart,
+  HomeIcon,
 } from "lucide-react";
 import {
   DialogTitle,
@@ -32,11 +33,11 @@ export function NavegationMobile() {
   return (
     <div className="flex flex-col w-full md:hidden max-md:fixed z-10 max-md:bottom-0 bg-gray-900 max-md:p-2">
       <div className="flex w-full flex-col sm:gap-4 sm:py-2">
-        <header className="flex px-2 items-center w-full justify-between gap-4 sm:static sm:h-auto sm:border-0">
-          <div className="flex w-full items-center bg-transparent gap-3">
+        <header className="flex px-2 items-center w-full justify-center gap-4">
+          <div className="flex w-full items-center justify-between bg-transparent gap-3">
             <Sheet>
               <SheetTrigger asChild>
-                <button className="text-red-700">
+                <button className="text-red-500 hover:text-red-600">
                   <Menu />
                   <span className="sr-only">Menu</span>
                 </button>
@@ -109,97 +110,105 @@ export function NavegationMobile() {
                 </Link>
               </SheetContent>
             </Sheet>
-          </div>
 
-          <Dialog>
-            <DialogTrigger asChild>
-              <Button className="bg-transparent hover:bg-transparent text-white hover:text-red-600 px-1">
-                <Search className="size-10" />
-              </Button>
-            </DialogTrigger>
-            <DialogContent className="flex flex-col max-md:max-w-full max-md:h-full border-none bg-gray-900 text-red-600">
-              <DialogHeader>
-                <DialogTitle className="text-xl text-red-600 font-bold">
-                  Buscar Produtos
-                </DialogTitle>
-              </DialogHeader>
-              <div className="flex flex-col gap-4 mt-4">
-                <div className="flex gap-4">
-                  <Input
-                    type="search"
-                    placeholder="buscar..."
-                    className="w-full px-4 py-2 rounded text-black font-semibold bg-gray-100 border border-none focus:outline-none"
-                  />
-                  <Button className="bg-gray-800 hover:bg-gray-700">
-                    <Search className="size-7" />
-                  </Button>
-                </div>
+            <Button className="bg-transparent hover:bg-transparent text-white hover:text-red-600 px-1">
+              <Heart className="size-10 text-red-500 hover:text-red-600" />
+            </Button>
 
-                <div className="text-black rounded">
-                  <div className="flex items-center justify-between mx-auto">
-                    <h1 className="font-bold text-lg text-white">
-                      Filtro de busca
-                    </h1>
-                    <Button
-                      className="transition-all fade-in-15 hover:bg-gray-800"
-                      onClick={() => setShowFilters(!showFilters)}
-                    >
-                      <ListFilter className="size-7 text-white" />
+            <Button className="bg-transparent hover:bg-transparent text-white hover:text-red-600 px-1">
+              <HomeIcon className="size-10 text-red-500 hover:text-red-600" />
+            </Button>
+
+            <Dialog>
+              <DialogTrigger asChild>
+                <Button className="bg-transparent hover:bg-transparent text-white hover:text-red-600 px-1">
+                  <Search className="size-10 text-red-500 hover:text-red-600" />
+                </Button>
+              </DialogTrigger>
+              <DialogContent className="flex flex-col max-md:max-w-full max-md:h-full border-none bg-gray-900 text-red-600">
+                <DialogHeader>
+                  <DialogTitle className="text-xl text-red-600 font-bold">
+                    Buscar Produtos
+                  </DialogTitle>
+                </DialogHeader>
+                <div className="flex flex-col gap-4 mt-4">
+                  <div className="flex gap-4">
+                    <Input
+                      type="search"
+                      placeholder="buscar..."
+                      className="w-full px-4 py-2 rounded text-black font-semibold bg-gray-100 border border-none focus:outline-none"
+                    />
+                    <Button className="bg-gray-800 hover:bg-gray-700">
+                      <Search className="size-7" />
                     </Button>
                   </div>
-                  {showFilters && (
-                    <div className="flex flex-wrap gap-4">
-                      <a className="flex flex-nowrap text-sm rounded text-indigo-50 bg-red-600 hover:bg-red-700 px-2 py-1">
-                        Usado
-                      </a>
-                      <a className="flex flex-nowrap text-sm rounded text-indigo-50 bg-red-600 hover:bg-red-700 px-2 py-1">
-                        Novo
-                      </a>
-                      <a className="flex flex-nowrap text-sm rounded text-indigo-50 bg-red-600 hover:bg-red-700 px-2 py-1">
-                        Promoção
-                      </a>
-                    </div>
-                  )}
-                </div>
-                <hr className="w-full mb-1 text-gray-900" />
-                <div className="text-white">
-                  <div className="mb-1">
-                    <span>Sugestões de busca...</span>
-                  </div>
-                </div>
-              </div>
-            </DialogContent>
-          </Dialog>
 
-          <Dialog>
-            <DialogTrigger asChild>
-              <Button className="bg-transparent hover:bg-transparent text-white hover:text-red-600 px-1">
-                <ShoppingCart className="size-10 text-white hover:text-red-600" />
-              </Button>
-            </DialogTrigger>
-            <DialogContent className="flex flex-col max-md:max-w-full max-md:h-full border-none bg-gray-900 text-red-600">
-              <DialogHeader>
-                <DialogTitle className="text-xl text-red-600 font-bold">
-                  Carrinho
-                </DialogTitle>
-              </DialogHeader>
-              <div className="flex flex-col gap-4 mt-4">
-                <div className="text-black rounded">
-                  <div className="flex items-center justify-between mx-auto">
-                    <h1 className="font-bold text-lg text-white">
-                      Produtos na lista
-                    </h1>
+                  <div className="text-black rounded">
+                    <div className="flex items-center justify-between mx-auto">
+                      <h1 className="font-bold text-lg text-white">
+                        Filtro de busca
+                      </h1>
+                      <Button
+                        className="transition-all fade-in-15 hover:bg-gray-800"
+                        onClick={() => setShowFilters(!showFilters)}
+                      >
+                        <ListFilter className="size-7 text-white" />
+                      </Button>
+                    </div>
+                    {showFilters && (
+                      <div className="flex flex-wrap gap-4">
+                        <a className="flex flex-nowrap text-sm rounded text-indigo-50 bg-red-600 hover:bg-red-700 px-2 py-1">
+                          Usado
+                        </a>
+                        <a className="flex flex-nowrap text-sm rounded text-indigo-50 bg-red-600 hover:bg-red-700 px-2 py-1">
+                          Novo
+                        </a>
+                        <a className="flex flex-nowrap text-sm rounded text-indigo-50 bg-red-600 hover:bg-red-700 px-2 py-1">
+                          Promoção
+                        </a>
+                      </div>
+                    )}
+                  </div>
+                  <hr className="w-full mb-1 text-gray-900" />
+                  <div className="text-white">
+                    <div className="mb-1">
+                      <span>Sugestões de busca...</span>
+                    </div>
                   </div>
                 </div>
-                <hr className="w-full mb-1 text-gray-900" />
-                <div className="text-white">
-                  <div className="mb-1">
-                    <span>Drone 1</span>
+              </DialogContent>
+            </Dialog>
+
+            <Dialog>
+              <DialogTrigger asChild>
+                <Button className="bg-transparent hover:bg-transparent text-white hover:text-red-600 px-1">
+                  <ShoppingCart className="size-10 text-red-500 hover:text-red-600" />
+                </Button>
+              </DialogTrigger>
+              <DialogContent className="flex flex-col max-md:max-w-full max-md:h-full border-none bg-gray-900 text-red-600">
+                <DialogHeader>
+                  <DialogTitle className="text-xl text-red-600 font-bold">
+                    Carrinho
+                  </DialogTitle>
+                </DialogHeader>
+                <div className="flex flex-col gap-4 mt-4">
+                  <div className="text-black rounded">
+                    <div className="flex items-center justify-between mx-auto">
+                      <h1 className="font-bold text-lg text-white">
+                        Produtos na lista
+                      </h1>
+                    </div>
+                  </div>
+                  <hr className="w-full mb-1 text-gray-900" />
+                  <div className="text-white">
+                    <div className="mb-1">
+                      <span>Drone 1</span>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </DialogContent>
-          </Dialog>
+              </DialogContent>
+            </Dialog>
+          </div>
         </header>
       </div>
     </div>
