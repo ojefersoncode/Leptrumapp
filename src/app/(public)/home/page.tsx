@@ -54,7 +54,7 @@ const Home = () => {
         <NavegationMobile />
       </div>
 
-      <div className="w-full mx-auto bg-gray-300 p-2 max-md:mb-14">
+      <div className="w-full mx-auto bg-gray-300 p-2">
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
           {products.map((product) => (
             <div

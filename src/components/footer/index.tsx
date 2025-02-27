@@ -43,17 +43,17 @@ export function Footer() {
         <div className="flex flex-col text-white justify-top items-center cursor-pointer gap-4">
           <p className="text-xl font-semibold text-red-500"> Redes Sociais</p>
           <div className="flex flex-col gap-4">
-            <div className="flex gap-2">
-              <Instagram className="size-6" />
+            <div className="flex items-center gap-2">
+              <Instagram className="size-5" />
               <span>Instagram</span>
             </div>
-            <div className="flex gap-2">
-              <Facebook className="size-6" />
+            <div className="flex items-center gap-2">
+              <Facebook className="size-5" />
               <span>Facebook</span>
             </div>
 
-            <div className="flex gap-2">
-              <Phone className="size-6" />
+            <div className="flex items-center gap-2">
+              <Phone className="size-5" />
               <span>Whatsapp</span>
             </div>
           </div>
