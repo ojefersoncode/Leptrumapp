@@ -11,25 +11,25 @@ export default function ButtonTop() {
         onClick={scrollToTop}
         className="relative p-3 bg-red-500 text-white rounded-full shadow-lg hover:bg-red-400 transition"
       >
-        <ArrowUp className="size-7 max-md:size-10" />
+        <ArrowUp className="size-7" />
         <span className="absolute inset-0 rounded-full border-2 border-transparent animate-spin-border"></span>
       </button>
       <style jsx>{`
         @keyframes spin-border {
           0% {
-            border-color: white transparent transparent transparent;
+            border-color: red transparent transparent transparent;
           }
           25% {
-            border-color: transparent white transparent transparent;
+            border-color: transparent red transparent transparent;
           }
           50% {
-            border-color: transparent transparent white transparent;
+            border-color: transparent transparent red transparent;
           }
           75% {
-            border-color: transparent transparent transparent white;
+            border-color: transparent transparent transparent red;
           }
           100% {
-            border-color: white transparent transparent transparent;
+            border-color: red transparent transparent transparent;
           }
         }
         .animate-spin-border {
