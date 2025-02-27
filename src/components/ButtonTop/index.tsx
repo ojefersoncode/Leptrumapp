@@ -19,21 +19,39 @@ export default function ButtonTop() {
           0% {
             border-color: red transparent transparent transparent;
           }
-          25% {
-            border-color: transparent red transparent transparent;
+          10% {
+            border-color: red red transparent transparent;
+          }
+          20% {
+            border-color: red red red transparent;
+          }
+          30% {
+            border-color: red red red red;
+          }
+          40% {
+            border-color: transparent red red red;
           }
           50% {
-            border-color: transparent transparent red transparent;
+            border-color: transparent transparent red red;
           }
-          75% {
+          60% {
             border-color: transparent transparent transparent red;
+          }
+          70% {
+            border-color: red transparent transparent red;
+          }
+          80% {
+            border-color: red red transparent red;
+          }
+          90% {
+            border-color: red red red red;
           }
           100% {
             border-color: red transparent transparent transparent;
           }
         }
         .animate-spin-border {
-          animation: spin-border 1.5s linear infinite;
+          animation: spin-border 4s linear infinite;
         }
       `}</style>
     </div>
