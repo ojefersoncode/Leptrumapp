@@ -39,7 +39,7 @@ const Home = () => {
 
   return (
     <div>
-      <div>
+      <div className="z-20">
         <Sidebar />
         <NavegationMobile />
       </div>
