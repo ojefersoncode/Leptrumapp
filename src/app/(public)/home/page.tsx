@@ -68,19 +68,19 @@ const Home = () => {
                   className="w-full h-48 object-contain p-2"
                 />
               </div>
-              <div className="flex items-center mx-4 mt-1 gap-0.5">
+              <div className="flex items-center mx-3 mt-1 gap-0.5">
                 <MapPin className="size-3 text-slate-800" />
                 <span className="text-xs font-sans text-slate-800">
                   Sua localização
                 </span>
               </div>
-              <div className="mx-4 my-0.5">
+              <div className="mx-3 my-0.5">
                 <h1 className="text-base font-semibold line-clamp-2">
                   {product.title}
                 </h1>
               </div>
 
-              <div className="flex w-full justify-between content-center md:my-2 items-center px-2">
+              <div className="flex w-full justify-between content-center md:my-2 items-center px-1">
                 <h2 className="font-semibold max-md:font-bold mx-2 md:text-2xl text-xl">
                   R$:{product.price}
                 </h2>
