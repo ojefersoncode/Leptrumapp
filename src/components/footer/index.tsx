@@ -60,7 +60,7 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="w-full mb-4 max-md:mb-12 text-white text-center pt-7 px-2">
+      <div className="w-full mb-4 text-white text-center pt-7 px-2">
         <span className="text-base py-2">
           © 2025 Leptrum. Todos os direitos reservados.
         </span>

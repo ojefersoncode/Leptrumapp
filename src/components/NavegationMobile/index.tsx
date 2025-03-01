@@ -17,6 +17,7 @@ import {
   LogOut,
   ShoppingCart,
   HomeIcon,
+  LayoutGrid,
 } from "lucide-react";
 import {
   DialogTitle,
@@ -38,7 +39,7 @@ export function NavegationMobile() {
             <Sheet>
               <SheetTrigger asChild>
                 <button className="text-slate-100 hover:text-slate-400">
-                  <Menu />
+                  <LayoutGrid />
                   <span className="sr-only">Menu</span>
                 </button>
               </SheetTrigger>
