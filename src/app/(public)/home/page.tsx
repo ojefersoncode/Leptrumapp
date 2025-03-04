@@ -55,35 +55,33 @@ const Home = () => {
       </div>
 
       <div className="w-full mx-auto bg-gray-300 p-2">
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
-          {products.map((product) => (
-            <div key={product.id} className="w-full rounded-lg bg-white py-3">
-              <div>
+        <div className="w-full mx-auto p-4">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+            {products.map((product) => (
+              <div
+                key={product.id}
+                className="bg-white rounded-lg shadow-md p-3 transition-all hover:shadow-lg hover:-translate-y-1"
+              >
                 <img
                   src={product.image}
                   alt={product.title}
-                  className="w-full h-48 object-contain p-2"
+                  className="w-full h-52 object-contain p-2"
                 />
-              </div>
-              <div className="flex items-center mx-3 mt-1 gap-0.5">
-                <MapPin className="size-3 text-slate-800" />
-                <span className="text-xs font-sans text-slate-800">
-                  Sua localização
-                </span>
-              </div>
-              <div className="mx-3 my-0.5">
-                <h1 className="text-base font-semibold line-clamp-2">
+                <div className="flex items-center gap-1 mt-2">
+                  <MapPin className="size-4 text-gray-600" />
+                  <span className="text-xs text-gray-600">Sua localização</span>
+                </div>
+                <h1 className="text-sm font-semibold line-clamp-2 mt-1">
                   {product.title}
                 </h1>
+                <div className="mt-2">
+                  <h2 className="text-lg font-bold text-green-600">
+                    R$ {product.price.toFixed(2)}
+                  </h2>
+                </div>
               </div>
-
-              <div className="flex w-full justify-between content-center md:my-2 items-center px-1">
-                <h2 className="font-semibold max-md:font-bold mx-2 md:text-2xl text-xl">
-                  R$:{product.price}
-                </h2>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
 
