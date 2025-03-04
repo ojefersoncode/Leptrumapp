@@ -5,7 +5,7 @@ import ProductSkeleton from "@/components/ProductSkeleton";
 import { MapPin } from "lucide-react";
 import { Sidebar } from "@/components/sidebar";
 import { NavegationMobile } from "@/components/NavegationMobile";
-import { HeaderMobile } from "@/components/HeaderMobile";
+import { Header } from "@/components/Header";
 import ButtonTop from "@/components/ButtonTop";
 import { Footer } from "@/components/footer";
 
@@ -45,8 +45,8 @@ const Home = () => {
         <ButtonTop />
       </div>
 
-      <div>
-        <HeaderMobile />
+      <div className="md:hidden">
+        <Header />
       </div>
 
       <div className="z-20">

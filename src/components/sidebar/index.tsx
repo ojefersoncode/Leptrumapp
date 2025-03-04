@@ -25,7 +25,7 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "../ui/input";
 import { useState } from "react";
-import { Cart } from "../NavegationMobile/cart";
+
 
 export function Sidebar() {
   const [showFilters, setShowFilters] = useState(false);
@@ -182,7 +182,6 @@ export function Sidebar() {
             </DialogContent>
           </Dialog>
 
-          <Cart />
         </header>
       </div>
     </div>

@@ -12,14 +12,13 @@ import {
   LogOut,
   HomeIcon,
   LayoutGrid,
+  ShoppingCart,
 } from "lucide-react";
 import { DialogTitle } from "@/components/ui/dialog";
-import { Cart } from "./cart";
 import { SearchProducts } from "./SeachProducts";
 import { Favorites } from "./Favorites";
 
 export function NavegationMobile() {
-
   return (
     <div className="flex flex-col w-full md:hidden max-md:fixed z-10 max-md:bottom-0 bg-red-600 max-md:p-2">
       <div className="flex w-full flex-col py-1">
@@ -109,7 +108,11 @@ export function NavegationMobile() {
 
             <SearchProducts />
 
-            <Cart />
+            <Link href="/carrinho">
+              <button className="bg-transparent hover:bg-transparent text-white hover:text-red-600 px-1">
+                <ShoppingCart className="text-slate-100 md:size-4 hover:text-slate-400" />
+              </button>
+            </Link>
           </div>
         </header>
       </div>
