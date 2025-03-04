@@ -20,11 +20,35 @@ const LandingPage = () => {
   return (
     <>
       <div className="min-h-screen w-full mx-auto bg-gray-900 text-white flex flex-col items-center justify-center text-center">
+        <style>
+          {`
+        ::-webkit-scrollbar {
+          width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+          background: #1f2937;
+          border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+          background: #dc2626;
+          border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+          background: #ef4444;
+        }
+        * {
+          scrollbar-width: thin;
+          scrollbar-color: #dc2626 #1f2937;
+        }
+      `}
+        </style>
+
         <header className="w-full fixed top-0 z-20 bg-gray-800 bg-opacity-90 px-4 flex justify-between items-center rouded-2xl py-4">
           <div className="flex gap-2 text-2xl font-bold items-center">
             <img className="size-10" src="/logo/Leptrum.png" alt="logo" />
             <div className="flex">
-              <h1 className="text-red-500">Lep</h1> <h1 className="text-red-50">trum</h1>
+              <h1 className="text-red-500">Lep</h1>{" "}
+              <h1 className="text-red-50">trum</h1>
             </div>
           </div>
           <nav className="hidden md:flex space-x-6 font-semibold">
@@ -85,7 +109,6 @@ const LandingPage = () => {
             <AnimatedTittleSection2 />
           </div>
         </section>
-
 
         <div className="w-full my-10 px-7">
           <AccordionDemo />
