@@ -25,6 +25,7 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "../ui/input";
 import { useState } from "react";
+import { Cart } from "../NavegationMobile/cart";
 
 export function Sidebar() {
   const [showFilters, setShowFilters] = useState(false);
@@ -181,35 +182,7 @@ export function Sidebar() {
             </DialogContent>
           </Dialog>
 
-          <Dialog>
-            <DialogTrigger asChild>
-              <Button className="bg-transparent hover:bg-transparent text-white hover:text-red-600 px-1">
-                <ShoppingCart className="size-5 text-white hover:text-red-600" />
-              </Button>
-            </DialogTrigger>
-            <DialogContent className="flex flex-col max-md:max-w-full max-md:h-full border-none bg-gray-900 text-red-600">
-              <DialogHeader>
-                <DialogTitle className="text-xl text-red-600 font-bold">
-                  Carrinho
-                </DialogTitle>
-              </DialogHeader>
-              <div className="flex flex-col gap-4 mt-4">
-                <div className="text-black rounded">
-                  <div className="flex items-center justify-between mx-auto">
-                    <h1 className="font-bold text-lg text-white">
-                      Produtos na lista
-                    </h1>
-                  </div>
-                </div>
-                <hr className="w-full mb-1 text-gray-900" />
-                <div className="text-white">
-                  <div className="mb-1">
-                    <span>Drone 1</span>
-                  </div>
-                </div>
-              </div>
-            </DialogContent>
-          </Dialog>
+          <Cart />
         </header>
       </div>
     </div>
