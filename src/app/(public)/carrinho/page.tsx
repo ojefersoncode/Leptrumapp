@@ -121,7 +121,7 @@ export default function Carrinho() {
   return (
     <>
       <Header />
-      <div className="p-4 h-screen bg-gray-900 text-white min-h-screen">
+      <div className="p-4 h-screen max-md:mb-40 mb-24 bg-gray-900 text-white min-h-screen">
         <div className="flex items-center gap-2 pb-4 py-3">
           <ShoppingCart className="text-red-600 size-7" />
           <h1 className="text-2xl font-semibold">Items do seu carrinho</h1>
@@ -227,7 +227,7 @@ export default function Carrinho() {
           </aside>
         )}
 
-        <div className="flex max-md:flex-wrap w-full justify-center items-center gap-4 mt-4 bg-gray-800 p-4 rounded-lg">
+        <div className="flex max-md:flex-wrap w-full justify-center items-center gap-4 mt-4 py-4 bg-gray-800 p-4 rounded-lg">
           <div className="flex items-center gap-2 md:gap-4 text-nowrap bg-red-600 font-bold py-2 px-4 rounded-md">
             <span className="max-md:text-xs">Aplicar cupom de desconto</span>
             <Gem className="max-md:size-4" />
@@ -249,11 +249,11 @@ export default function Carrinho() {
             </button>
           </div>
         </div>
-        <div className="flex px-4 items-center pb-5 justify-between w-full mt-4 text-lg font-bold">
+        <div className="flex fixed bottom-0 left-0 right-0 z-20 px-4 py-4 items-center justify-between w-full text-lg font-bold border-t border-red-600 bg-gray-900">
           Total: R$ {totalWithDiscount.toFixed(2)}
           <Link href="/checkout" className="flex justify-center items-center">
             <button className="flex justify-center items-centermt-4 bg-green-600 text-white w-full px-4 py-2 rounded">
-              Continuar
+              <span className="text-sm font-semibold"> Continuar</span>
             </button>
           </Link>
         </div>
