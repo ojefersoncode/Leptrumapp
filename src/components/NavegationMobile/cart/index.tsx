@@ -122,7 +122,7 @@ export function Cart() {
             <ShoppingCart className="text-slate-100 md:size-4 hover:text-slate-400" />
           </button>
         </DialogTrigger>
-        <DialogContent className="flex flex-col max-md:max-w-full h-screen max-md:h-full border-none bg-gray-900 text-red-600 overflow-y-auto">
+        <DialogContent className="flex flex-col max-md:max-w-full h-screen max-md:h-full border-none bg-gray-900 text-red-600 scroll-smooth overflow-y-auto">
           <DialogHeader>
             <DialogTitle className="text-xl text-red-600 font-bold">
               Carrinho

@@ -40,7 +40,7 @@ const Home = () => {
   }
 
   return (
-    <div>
+    <div className="scroll-smooth">
       <div>
         <ButtonTop />
       </div>

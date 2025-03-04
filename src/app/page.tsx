@@ -19,7 +19,7 @@ const LandingPage = () => {
 
   return (
     <>
-      <div className="min-h-screen w-full mx-auto bg-gray-900 text-white flex flex-col items-center justify-center text-center">
+      <div className="min-h-screen w-full mx-auto bg-gray-900 text-white flex flex-col items-center justify-center text-center scroll-smooth">
         <style>
           {`
         ::-webkit-scrollbar {
@@ -74,7 +74,7 @@ const LandingPage = () => {
           </div>
         </header>
 
-        <main className="mb-7 max-md:mt-10 md:mt-12 overflow-hidden">
+        <main className="mb-7 max-md:mt-10 md:mt-12 overflow-hidden scroll-smooth">
           <div className="flex relative z-10 flex-col w-auto overflow-hidden">
             <Ripple />
             <Hero />
