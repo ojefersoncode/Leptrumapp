@@ -1,7 +1,7 @@
 "use client"; // Garante que o código será executado no cliente
 
 import { useState, useEffect } from "react";
-import { Check, Gem, ShoppingCart, Trash2 } from "lucide-react";
+import { Check, Gem, Minus, Plus, ShoppingCart, Trash2 } from "lucide-react";
 import Link from "next/link";
 import { Header } from "@/components/Header";
 
@@ -154,23 +154,23 @@ export default function Carrinho() {
                   <div className="flex items-center">
                     <button
                       onClick={() => removeItem(item.id)}
-                      className="bg-red-600 text-white px-2 py-1 rounded-l"
+                      className="text-white p-1 rounded-l"
                     >
-                      -
+                      <Minus className="size-4" />
                     </button>
                     <span className="px-3">{item.quantity}</span>
                     <button
                       onClick={() => addItem(item.id)}
-                      className="bg-green-600 text-white px-2 py-1 rounded-r"
+                      className="text-white p-1 rounded-r"
                     >
-                      +
+                      <Plus className="size-4" />
                     </button>
                   </div>
                   <button
                     onClick={() => deleteItem(item.id)}
                     className="ml-4 text-red-500 hover:text-red-700"
                   >
-                    <Trash2 />
+                    <Trash2 className="size-4" />
                   </button>
                 </div>
               ))
@@ -205,21 +205,21 @@ export default function Carrinho() {
                       onClick={() => removeItem(item.id)}
                       className="text-white px-2 py-1 rounded-l"
                     >
-                      -
+                      <Minus className="size-4" />
                     </button>
                     <span className="px-3">{item.quantity}</span>
                     <button
                       onClick={() => addItem(item.id)}
                       className="text-white px-2 py-1 rounded-r"
                     >
-                      +
+                      <Plus className="size-4" />
                     </button>
                   </div>
                   <button
                     onClick={() => deleteItem(item.id)}
                     className="ml-4 text-red-500 hover:text-red-700"
                   >
-                    <Trash2 />
+                    <Trash2 className="size-4" />
                   </button>
                 </div>
               ))
