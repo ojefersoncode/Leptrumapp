@@ -1,7 +1,17 @@
-"use client"; // Garante que o código será executado no cliente
+"use client";
 
 import { useState, useEffect } from "react";
-import { Check, Gem, Minus, Plus, ShoppingCart, Trash2 } from "lucide-react";
+import {
+  ArrowBigLeftDashIcon,
+  ArrowLeft,
+  Check,
+  Gem,
+  Minus,
+  Plus,
+  ShoppingCart,
+  TicketX,
+  Trash2,
+} from "lucide-react";
 import Link from "next/link";
 import { Header } from "@/components/Header";
 
@@ -19,70 +29,71 @@ export default function Carrinho() {
       id: 1,
       name: "Drone 1",
       price: 199.99,
-      image: "https://via.placeholder.com/80",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn5IYu8FsGOWxtCdLZ_UK9WNKnV2ou9XWyUJJrJ2QrpDS5pG9ea5K3CQpT&s=10",
       quantity: 1,
     },
     {
       id: 2,
       name: "Câmera 4K",
       price: 499.99,
-      image: "https://via.placeholder.com/80",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxDvSLRy4o7hGIlz5GELD6nrWGBZ0Z1irk0m8ET3ExCZrFewe0srvGD44V&s=10",
       quantity: 1,
     },
     {
       id: 3,
       name: "Sd Card 256gb",
       price: 99.99,
-      image: "https://via.placeholder.com/80",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbl0VQNhj7Spj1itg6oL2YO8vb5ZJiwULqFB2L6LKvMrp1Y6gDuhlTEb2I&s=10",
       quantity: 1,
     },
     {
       id: 4,
       name: "Cable HDMI 4k",
       price: 139.99,
-      image: "https://via.placeholder.com/80",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTonUsgELNAndHIs0NuUVrS1gAwS1T-LO3n4F59y28ZT_NyDp9dVTU9qY&s=10",
       quantity: 1,
     },
     {
       id: 5,
       name: "HD 1 terabyte",
       price: 289.99,
-      image: "https://via.placeholder.com/80",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDv01LPE34MipTN3C-D20-2ENKBaqd4G6oupmHwFvd-XY4A1lBouMv1JRj&s=10",
       quantity: 1,
     },
   ]);
 
   const [coupon, setCoupon] = useState("");
   const [discount, setDiscount] = useState(0);
-  const [isMounted, setIsMounted] = useState(false); // Estado para garantir que estamos no cliente
-  const [isMobile, setIsMobile] = useState(false); // Verificação se é mobile
+  const [isMounted, setIsMounted] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    setIsMounted(true); // Marca que o componente foi montado no cliente
+    setIsMounted(true);
 
-    // Função para verificar a largura da tela e definir se é mobile
     const handleResize = () => {
       if (window.innerWidth <= 768) {
-        setIsMobile(true); // Tela pequena (mobile)
+        setIsMobile(true);
       } else {
-        setIsMobile(false); // Tela maior (desktop)
+        setIsMobile(false);
       }
     };
 
-    // Inicializa a verificação de tamanho da tela
     handleResize();
 
-    // Adiciona event listener para detectar mudanças no tamanho da tela
     window.addEventListener("resize", handleResize);
 
-    // Limpa o event listener quando o componente for desmontado
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
 
   if (!isMounted) {
-    return null; // Ou um loading, se preferir
+    return null;
   }
 
   const addItem = (id: number) => {
@@ -121,16 +132,23 @@ export default function Carrinho() {
   return (
     <>
       <Header />
-      <div className="p-4 h-screen max-md:mb-40 mb-24 bg-gray-900 text-white min-h-screen">
-        <div className="flex items-center gap-2 pb-4 py-3">
-          <ShoppingCart className="text-red-600 size-7" />
-          <h1 className="text-2xl font-semibold">Items do seu carrinho</h1>
+      <div className="p-4 bg-gray-900 text-white min-h-screen pb-40 md:pb-44">
+        <div className="flex w-full items-center justify-between gap-2 px-1 pt-1  pb-4">
+          <Link href="/home">
+          <ArrowLeft className="size-5" />
+          </Link>
+          <h1 className="text-xl max-md:text-base items-center font-semibold">
+            Items do seu carrinho
+          </h1>
         </div>
 
         {isMobile ? (
           <section className="flex flex-col gap-4">
             {cart.length === 0 ? (
-              <p className="text-center text-lg">Seu carrinho está vazio.</p>
+              <div className="flex flex-col h-full pt-32 flex-grow justify-center items-center gap-4">
+                <p className="text-center text-lg">Seu carrinho está vazio.</p>
+                <ShoppingCart className="size-20" />
+              </div>
             ) : (
               cart.map((item) => (
                 <div
@@ -144,24 +162,21 @@ export default function Carrinho() {
                   />
                   <div className="flex-1 ml-4">
                     <h2 className="font-bold">{item.name}</h2>
-                    <p className="text-sm">
-                      R$ {item.price.toFixed(2)} x {item.quantity} ={" "}
-                      <span className="font-bold">
-                        R$ {(item.price * item.quantity).toFixed(2)}
-                      </span>
+                    <p className="text-sm font-bold">
+                      R$ {(item.price * item.quantity).toFixed(2)}
                     </p>
                   </div>
                   <div className="flex items-center">
                     <button
                       onClick={() => removeItem(item.id)}
-                      className="text-white p-1 rounded-l"
+                      className="text-white px-2 py-1 rounded-l"
                     >
                       <Minus className="size-4" />
                     </button>
                     <span className="px-3">{item.quantity}</span>
                     <button
                       onClick={() => addItem(item.id)}
-                      className="text-white p-1 rounded-r"
+                      className="text-white px-2 py-1 rounded-r"
                     >
                       <Plus className="size-4" />
                     </button>
@@ -179,7 +194,10 @@ export default function Carrinho() {
         ) : (
           <aside className="flex flex-col gap-4">
             {cart.length === 0 ? (
-              <p className="text-center text-lg">Seu carrinho está vazio.</p>
+              <div className="flex h-full pt-32 flex-grow justify-center items-center gap-4">
+                  <ShoppingCart className="size-20" />
+                <p className="text-center text-xl font-semibold">Seu carrinho está vazio.</p>
+              </div>
             ) : (
               cart.map((item) => (
                 <div
@@ -193,11 +211,8 @@ export default function Carrinho() {
                   />
                   <div className="flex-1 ml-4">
                     <h2 className="font-bold">{item.name}</h2>
-                    <p className="text-sm">
-                      R$ {item.price.toFixed(2)} x {item.quantity} ={" "}
-                      <span className="font-bold">
-                        R$ {(item.price * item.quantity).toFixed(2)}
-                      </span>
+                    <p className="text-sm font-bold">
+                      R$ {(item.price * item.quantity).toFixed(2)}
                     </p>
                   </div>
                   <div className="flex items-center">
@@ -227,35 +242,37 @@ export default function Carrinho() {
           </aside>
         )}
 
-        <div className="flex max-md:flex-wrap w-full justify-center items-center gap-4 mt-4 py-4 bg-gray-800 p-4 rounded-lg">
-          <div className="flex items-center gap-2 md:gap-4 text-nowrap bg-red-600 font-bold py-2 px-4 rounded-md">
-            <span className="max-md:text-xs">Aplicar cupom de desconto</span>
-            <Gem className="max-md:size-4" />
-          </div>
+        <div className="fixed bottom-0 left-0 right-0 z-20 p-2 items-center justify-between w-full text-lg font-bold  bg-gray-800 border-t border-red-600">
+          <div className="flex w-full justify-center items-center gap-4 mt-2 py-2 bg-gray-800 p-4 rounded-lg">
+            <div className="flex items-center gap-2 md:gap-2 text-nowrap bg-red-600 font-bold md:p-3 px-2 py-1 rounded-md">
+              <span className="max-md:hidden">Aplicar cupom de desconto</span>
+              <TicketX className="max-md:size-7" />
+            </div>
 
-          <div className="flex w-full gap-4">
-            <input
-              type="text"
-              placeholder="Cupom de desconto"
-              value={coupon}
-              onChange={(e) => setCoupon(e.target.value)}
-              className="w-full items-center p-2 rounded text-black"
-            />
-            <button
-              onClick={applyCoupon}
-              className="flex justify-center items-center p-4 bg-red-600 text-white py-2 rounded"
-            >
-              <Check />
-            </button>
+            <div className="flex w-full gap-4">
+              <input
+                type="text"
+                placeholder="Cupom de desconto"
+                value={coupon}
+                onChange={(e) => setCoupon(e.target.value)}
+                className="w-full items-center p-2 rounded text-black"
+              />
+              <button
+                onClick={applyCoupon}
+                className="flex justify-center items-center p-4 bg-red-600 text-white py-2 rounded"
+              >
+                <Check />
+              </button>
+            </div>
           </div>
-        </div>
-        <div className="flex fixed bottom-0 left-0 right-0 z-20 px-4 py-4 items-center justify-between w-full text-lg font-bold border-t border-red-600 bg-gray-900">
-          Total: R$ {totalWithDiscount.toFixed(2)}
-          <Link href="/checkout" className="flex justify-center items-center">
-            <button className="flex justify-center items-centermt-4 bg-green-600 text-white w-full px-4 py-2 rounded">
-              <span className="text-sm font-semibold"> Continuar</span>
-            </button>
-          </Link>
+          <div className="flex z-20 p-3 items-center justify-between w-full text-lg font-bold">
+            Total: R$ {totalWithDiscount.toFixed(2)}
+            <Link href="/checkout" className="flex justify-center items-center">
+              <button className="flex justify-center items-centermt-4 bg-green-600 text-white w-full px-4 py-2 rounded">
+                <span className="text-base font-semibold"> Continuar</span>
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
     </>
