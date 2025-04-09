@@ -115,10 +115,7 @@ export const Navbar = ({ user }: { user: User | null }) => {
 
           <div className="hidden md:flex gap-4 p-2">
             <Link href="/Home" passHref>
-              <Button
-                className="px-4 py-0.5 text-sm bg-black"
-                variant="outline"
-              >
+              <Button className="px-4 py-0.5 text-sm" variant="outline">
                 Carrinho
               </Button>
             </Link>
