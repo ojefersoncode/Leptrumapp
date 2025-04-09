@@ -79,7 +79,7 @@ export const Navbar = ({ user }: { user: User | null }) => {
               <SheetContent side={'left'}>
                 <SheetHeader>
                   <SheetTitle className="font-bold text-xl select-none">
-                    Cooderfy
+                    Leptrum
                   </SheetTitle>
                 </SheetHeader>
                 <nav className="flex flex-col justify-center items-center gap-2 mt-4">
@@ -89,7 +89,7 @@ export const Navbar = ({ user }: { user: User | null }) => {
                       key={label}
                       href={href}
                       onClick={() => setIsOpen(false)}
-                      className={buttonVariants({ variant: 'ghost' })}
+                      className={buttonVariants({ variant: 'outline' })}
                     >
                       {label}
                     </a>
