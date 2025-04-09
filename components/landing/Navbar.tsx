@@ -89,7 +89,6 @@ export const Navbar = ({ user }: { user: User | null }) => {
                       key={label}
                       href={href}
                       onClick={() => setIsOpen(false)}
-                      className={buttonVariants({ variant: 'outline' })}
                     >
                       {label}
                     </a>
