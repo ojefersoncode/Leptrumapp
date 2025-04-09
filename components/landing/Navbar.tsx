@@ -15,13 +15,9 @@ import {
   SheetTrigger
 } from '@/components/ui/sheet';
 
-import { Button, buttonVariants } from '../../components/ui/button';
-import { Menu } from 'lucide-react';
-import { User } from '@supabase/supabase-js';
-import { createApiClient } from '@/utils/supabase/api';
-import { createClient } from '@/utils/supabase/client';
+import { Button } from '../../components/ui/button';
+import { Menu, ShoppingBag } from 'lucide-react';
 import { useRouter } from 'next/navigation';
-import { useToast } from '../../components/ui/use-toast';
 
 interface RouteProps {
   href: string;
@@ -34,7 +30,7 @@ const routeList: RouteProps[] = [
     label: 'Inicio'
   },
   {
-    href: '/#loja',
+    href: '/Home',
     label: 'Loja'
   },
   {
@@ -43,26 +39,22 @@ const routeList: RouteProps[] = [
   }
 ];
 
-export const Navbar = ({ user }: { user: User | null }) => {
+export const Navbar = () => {
   const router = useRouter();
-  const { toast } = useToast();
-  const api = createApiClient(createClient());
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const handleAuth = async () => {
-    if (user) {
-      return router.push('/account');
-    }
-    return router.push('/auth');
-  };
+
   return (
     <header className="stick bg-slate-100 top-0 z-40 w-full ">
       <NavigationMenu className="mx-auto">
         <NavigationMenuList className="container py-2 px-3 md:px-6 w-screen flex justify-between ">
           <NavigationMenuItem className="font-bold flex">
             <div className="flex gap-2 text-xl font-bold items-center">
-              <img className="size-10" src="/logo.webp" alt="logo" />
               <div className="flex">
-                <h1 className="text-gray-900">Leptrum</h1>
+                <img
+                  className="w-20 select-none cursor-context-menu"
+                  src="logo.png"
+                  alt="logo"
+                />
               </div>
             </div>
           </NavigationMenuItem>
@@ -112,13 +104,7 @@ export const Navbar = ({ user }: { user: User | null }) => {
             ))}
           </nav>
 
-          <div className="hidden md:flex gap-4 p-2">
-            <Link href="/Home" passHref>
-              <Button className="px-4 py-0.5 text-sm" variant="outline">
-                Carrinho
-              </Button>
-            </Link>
-          </div>
+          <div className="hidden md:flex gap-4 p-2"></div>
         </NavigationMenuList>
       </NavigationMenu>
     </header>

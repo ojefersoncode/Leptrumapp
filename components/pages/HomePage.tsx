@@ -6,7 +6,7 @@ import Navbar from '../HomeComponents/Navbar';
 import { ScrollToTop } from '../landing/ScrollToTop';
 import { Truck } from 'lucide-react';
 
-export default function HomePage({ user }: { user: User }) {
+export default function HomePage() {
   return (
     <div className="relative flex min-h-screen w-full bg-slate-100">
       <main className="flex min-h-[calc(100vh_-_theme(spacing.16))] flex-1 flex-col">
