@@ -11,32 +11,32 @@ type Produto = {
 const produtos: Produto[] = [
   {
     id: 1,
-    nome: 'Camisa Oversized',
+    nome: 'Camisa Masculina',
     imagem: '/vitrine/camisa.jpeg'
   },
   {
     id: 2,
-    nome: 'Blazer Minimal',
+    nome: 'Sapato Minimal',
     imagem: '/vitrine/sapato.webp'
   },
   {
     id: 3,
-    nome: 'Calça Reta',
+    nome: 'Saia Reta',
     imagem: '/vitrine/saia.webp'
   },
   {
     id: 4,
-    nome: 'Vestido Linho',
+    nome: 'Calça confort',
     imagem: '/vitrine/calça.jpg'
   },
   {
     id: 5,
-    nome: 'Camiseta Basic',
+    nome: 'Camiseta Basica',
     imagem: '/vitrine/camiseta.jpeg'
   },
   {
     id: 6,
-    nome: 'Jaqueta Clean',
+    nome: 'Vestido Clean',
     imagem: '/vitrine/vestido.jpeg'
   }
 ];
