@@ -9,7 +9,7 @@ export default async function LandingPage() {
   return (
     <>
       <div className="w-full overflow-hidden">
-        <Navbar user={null} />
+        <Navbar />
         <Hero />
         <Vitrine />
         <Newsletter />
