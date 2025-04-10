@@ -9,11 +9,11 @@ type Product = {
 
 export function ProductCard({ product }: { product: Product }) {
   return (
-    <div className="border rounded-2xl shadow-sm overflow-hidden bg-white">
+    <div className="border max-md:border-slate-300 md:border-slate-400 rounded-2xl shadow-sm overflow-hidden bg-white">
       <img
         src={product.image}
         alt={product.name}
-        className="w-full h-58 object-cover rounded-2xl"
+        className="w-full h-58 object-cover rounded-t-2xl"
       />
       <div className="p-4">
         <h3 className="text-lg font-semibold text-slate-950">{product.name}</h3>
