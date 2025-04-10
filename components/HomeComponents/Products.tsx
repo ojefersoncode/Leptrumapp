@@ -4,7 +4,6 @@ import React, { useEffect, useState } from 'react';
 import ProductSkeleton from '../../components/ProductSkeleton';
 import { MapPin } from 'lucide-react';
 import { ScrollToTop } from '../../components/landing/ScrollToTop';
-import { Footer } from '../../components/landing/Footer';
 
 type Product = {
   id: number;
@@ -41,8 +40,8 @@ const Products = () => {
         <ScrollToTop />
       </div>
 
-      <div className="w-full mx-auto bg-gray-300 p-2">
-        <div className="w-full mx-auto p-4">
+      <div className="w-full mx-auto bg-slate-200 p-2">
+        <div className="w-full mx-auto p-2">
           <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
             {products.map((product) => (
               <div
@@ -54,9 +53,11 @@ const Products = () => {
                   alt={product.title}
                   className="w-full h-52 object-contain p-2"
                 />
-                <div className="flex items-center gap-1 mt-2">
-                  <MapPin className="size-4 text-gray-600" />
-                  <span className="text-xs text-gray-600">Sua localização</span>
+                <div className="flex items-center  gap-1 my-3">
+                  <MapPin className="size-4 text-slate-600" />
+                  <span className="text-xs text-slate-900">
+                    Sua localização
+                  </span>
                 </div>
                 <h1 className="text-sm font-semibold line-clamp-2 mt-1 text-slate-900">
                   {product.title}

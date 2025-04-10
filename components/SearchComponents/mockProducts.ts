@@ -3,7 +3,7 @@ export const products = [
     id: 1,
     name: 'Sapato sociual',
     category: 'Calçados',
-    gender: 'Feminina',
+    gender: 'Feminino',
     price: 199.99,
     image: '/vitrine/sapato.webp'
   },
@@ -11,7 +11,7 @@ export const products = [
     id: 2,
     name: 'Camiseta confort',
     category: 'Roupas',
-    gender: 'Feminina',
+    gender: 'Feminino',
     price: 129.99,
     image: '/vitrine/camiseta.jpeg'
   },
@@ -19,7 +19,7 @@ export const products = [
     id: 3,
     name: 'Calça Social',
     category: 'Roupas',
-    gender: 'Unisex',
+    gender: 'Unissex',
     price: 129.99,
     image: '/vitrine/calça.jpg'
   },
@@ -27,7 +27,7 @@ export const products = [
     id: 4,
     name: 'Saia Feminina',
     category: 'Roupas',
-    gender: 'Feminina',
+    gender: 'Feminino',
     price: 109.99,
     image: '/vitrine/saia.webp'
   },
@@ -35,7 +35,7 @@ export const products = [
     id: 5,
     name: 'Vestito florido',
     category: 'Roupas',
-    gender: 'Feminina',
+    gender: 'Feminino',
     price: 89.99,
     image: '/vitrine/vestido.jpeg'
   },
