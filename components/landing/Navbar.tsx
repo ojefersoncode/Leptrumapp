@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import Link from 'next/link';
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -16,7 +15,7 @@ import {
 } from '@/components/ui/sheet';
 
 import { Button } from '../../components/ui/button';
-import { Menu, ShoppingBag } from 'lucide-react';
+import { Menu } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 
 interface RouteProps {
@@ -60,21 +59,31 @@ export const Navbar = () => {
           </NavigationMenuItem>
 
           {/* mobile */}
-          <span className="flex md:hidden">
+          <span className="flex md:hidden bg-slate-100 text-slate-900">
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
-              <SheetTrigger className="px-2" asChild>
-                <Button variant="outline" size="icon" className="bg-white">
+              <SheetTrigger
+                className="px-2 bg-slate-100 text-slate-900"
+                asChild
+              >
+                <Button variant="outline" size="icon" className="bg-slate-100">
                   <Menu className="h-4 w-4 text-slate-900" />
                 </Button>
               </SheetTrigger>
 
-              <SheetContent side={'left'}>
-                <SheetHeader>
-                  <SheetTitle className="font-bold text-xl select-none">
-                    Leptrum
+              <SheetContent
+                className="p-0 bg-slate-100 text-slate-900 h-screen"
+                side={'right'}
+              >
+                <SheetHeader className="bg-slate-100 p-0">
+                  <SheetTitle className="font-bold text-xl select-none p-0">
+                    <img
+                      className="w-24 select-none cursor-context-menu p-4"
+                      src="logo.png"
+                      alt="logo"
+                    />
                   </SheetTitle>
                 </SheetHeader>
-                <nav className="flex flex-col justify-center items-center gap-2 mt-4">
+                <nav className="flex flex-col px-4 items-center text-base text-bold gap-4 pt-4 bg-slate-100 text-slate-950 h-screen">
                   {routeList.map(({ href, label }: RouteProps) => (
                     <a
                       rel="noreferrer noopener"

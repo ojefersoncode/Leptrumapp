@@ -1,5 +1,5 @@
-// src/components/Dashboard.jsx
 'use client';
+import { User } from '@supabase/supabase-js';
 
 import React, { useState } from 'react';
 import WhatsLeads from '../DashboardComponents/WhatsLeads';
@@ -73,7 +73,7 @@ const Topbar = () => (
 );
 
 // Dashboard principal
-const Dashboard = () => {
+const Dashboard = ({ user }: { user: User }) => {
   const [selectedPage, setSelectedPage] = useState('Dashboard');
 
   const renderContent = () => {

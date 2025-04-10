@@ -1,4 +1,7 @@
+'use client';
+
 import { Heart, Search, ShoppingBag } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Navbar() {
   return (
@@ -10,7 +13,9 @@ export default function Navbar() {
           </div>
         </div>
         <div className="flex items-center gap-5 py-4">
-          <Search className="text-slate-900 size-5" />
+          <Link href="/Buscar">
+            <Search className="text-slate-900 size-5" />
+          </Link>
           <Heart className="text-slate-900 size-5" />
           <ShoppingBag className="text-slate-900 size-5" />
         </div>
