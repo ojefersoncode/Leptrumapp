@@ -33,7 +33,7 @@ export const products = [
   },
   {
     id: 5,
-    name: 'Vestito florido',
+    name: 'Vestido florido',
     category: 'Roupas',
     gender: 'Feminino',
     price: 89.99,
