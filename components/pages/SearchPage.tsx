@@ -27,7 +27,7 @@ export function SearchPage() {
   return (
     <div className="w-full mx-auto bg-slate-200">
       <div className="flex justify-center items-center w-full bg-red-700 hover:bg-red-600 transition-all duration-200 p-3">
-        <div className="flex items-center text-sm max-sm:text-xs font-semibold ">
+        <div className="flex items-center text-sm max-sm:text-xs font-semibold text-white">
           <Truck className="size-5 max-sm:size-4 mr-2 text-white" /> Frete grátis para
           minas gerais
         </div>
