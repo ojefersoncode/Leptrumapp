@@ -20,8 +20,10 @@ export default function Navbar() {
           <Link href="/Buscar">
             <Search className="text-slate-900 size-5" />
           </Link>
+          <Link href="/Detalhes">
+            <ShoppingBag className="text-slate-900 size-5" />
+          </Link>
           <Heart className="text-slate-900 size-5" />
-          <ShoppingBag className="text-slate-900 size-5" />
         </div>
       </nav>
     </>

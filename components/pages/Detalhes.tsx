@@ -22,6 +22,12 @@ export function Detalhes() {
   return (
     <div className="w-full mx-auto">
       <div>
+        <div className="flex justify-center items-center w-full bg-red-500 hover:bg-red-600/80 transition-all duration-200 p-3">
+          <div className="flex items-center text-sm max-sm:text-xs font-semibold text-white">
+            <Truck className="size-6 max-sm:size-5 mr-2" /> Frete grátis para
+            minas gerais
+          </div>
+        </div>
         <Navbar />
       </div>
       <div className="px-4 py-16 max-sm:py-7 rounded-xl bg-slate-200">
