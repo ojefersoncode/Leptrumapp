@@ -15,7 +15,7 @@ export const Hero = () => {
       />
       {/* Sombra escura por cima */}
       <div className="absolute inset-0 bg-black/40 z-10" />
-      <div className="flex flex-col justify-center px-7 py-5 md:bottom-28 bottom-14 items-center absolute z-10 bg-black/30 gap-5 rounded-xl">
+      <div className="flex flex-col justify-center px-7 py-5 md:bottom-28 bottom-14 items-center absolute z-10 bg-black/30 gap-5 rounded-xl text-slate-50">
         <h1 className="text-xl font-sans">Deslise para cima</h1>
         <div>
           <Mouse />
