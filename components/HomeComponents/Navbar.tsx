@@ -23,7 +23,6 @@ export default function Navbar() {
           <Link href="/Detalhes">
             <ShoppingBag className="text-slate-900 size-5" />
           </Link>
-          <Heart className="text-slate-900 size-5" />
         </div>
       </nav>
     </>
