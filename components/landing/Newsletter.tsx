@@ -58,7 +58,11 @@ export const Newsletter = () => {
                 onChange={handleChange}
                 required
               />
-              <Button variant="ghost" className="w-full" type="submit">
+              <Button
+                variant="ghost"
+                className="w-full text-white bg-black dark:bg-black"
+                type="submit"
+              >
                 Cadastrar
               </Button>
             </form>
