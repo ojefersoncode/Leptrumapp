@@ -13,7 +13,9 @@ export default async function LandingPage() {
         <Hero />
         <Vitrine />
         <Newsletter />
-        <Footer />
+        <div className="bg-slate-200">
+          <Footer />
+        </div>
         <ScrollToTop />
       </div>
     </>

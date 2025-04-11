@@ -39,10 +39,10 @@ export const Newsletter = () => {
 
   return (
     <section id="newsletter">
-      <div className="container py-4 sm:py-4 bg-slate-100">
+      <div className="container py-4 sm:py-4 bg-slate-200">
         <div className="py-12">
           <div className="px-4">
-            <p className="text-2xl text-muted-foreground text-center mt-4 mb-7 text-slate-900">
+            <p className="text-2xl max-sm:text-lg text-muted-foreground text-center mt-4 mb-7 text-slate-900">
               Receba as melhores ofertas e novidades direto no seu WhatsApp.
             </p>
 
