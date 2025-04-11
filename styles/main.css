@@ -10,8 +10,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
 
-/* Restante do seu CSS... */
-
 /* *=========== Green theme =========== */
 @layer base {
   :root {
@@ -76,20 +74,20 @@
   }
   /* Barra de rolagem personalizada WebKit (Chrome, Edge, Safari) */
   ::-webkit-scrollbar {
-    width: 7px; /* Largura da barra de rolagem */
+    width: 4px; /* Largura da barra de rolagem */
   }
 
   ::-webkit-scrollbar-track {
-    background: #5c5c5c; /* Cor do fundo */
+    background: #a3999e; /* Cor do fundo */
     border-radius: 4px;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #ff4747; /* Cor da barra de rolagem */
+    background: #ffd1ea; /* Cor da barra de rolagem */
     border-radius: 4px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #d43d3d; /* Cor ao passar o mouse */
+    background: #f7acd5; /* Cor ao passar o mouse */
   }
 }
