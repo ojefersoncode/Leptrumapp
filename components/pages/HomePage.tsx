@@ -8,7 +8,7 @@ import { Truck } from 'lucide-react';
 
 export default function HomePage() {
   return (
-    <div className="relative flex min-h-screen w-full bg-slate-100">
+    <div className="relative flex w-full bg-slate-100">
       <main className="flex min-h-[calc(100vh_-_theme(spacing.16))] flex-1 flex-col">
         <div className="flex justify-center items-center w-full bg-red-700 hover:bg-red-600 transition-all duration-200 p-3">
           <div className="flex items-center text-sm max-sm:text-xs font-semibold text-white">
