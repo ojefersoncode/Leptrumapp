@@ -58,7 +58,7 @@ export function Detalhes() {
             </div>
           </div>
 
-          <div className="flex flex-col pt-7 max-sm:pt-4">
+          <div className="flex flex-col pt-4 max-sm:pt-4">
             <h1 className="text-3xl font-bold mb-2">{product.name}</h1>
             <p className="text-slate-800 text-sm mb-2">
               {product.category} - {product.gender}
@@ -82,7 +82,7 @@ export function Detalhes() {
                 Adicionar ao carrinho
               </Button>
 
-              <div className="flex w-full justify-center items-center mt-7 border border-slate-900 cursor-pointer select-none">
+              <div className="flex w-full justify-center items-center mt-7 border border-slate-900 cursor-pointer select-none rounded-md">
                 <span className="flex gap-2 text-slate-900 p-4">
                   <Truck />
                   Frete graís disponivel para sua região
