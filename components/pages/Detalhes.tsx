@@ -98,7 +98,7 @@ export function Detalhes() {
               <div className="flex w-full justify-start pt-4">
                 <Description />
               </div>
-              <div className="flex w-full pt-4">
+              <div className="flex w-full py-4">
                 <CalcFrete />
               </div>
             </div>

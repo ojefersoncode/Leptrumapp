@@ -43,9 +43,9 @@ export function SearchBar({ onFilterChange }: Props) {
         onChange={(e) => handleChange('keyword', e.target.value)}
         className="w-full md:w-1/2 p-5"
       />
-      <div className="flex max-md:w-full max-md:flex-col max-md:pt-4 items-center gap-4">
+      <div className="flex max-md:pt-4 justify-center items-center md:gap-7 gap-4">
         <Select onValueChange={(value) => handleChange('category', value)}>
-          <SelectTrigger className="w-full md:w-[180px]">
+          <SelectTrigger className="w-full md:w-[130px]">
             <SelectValue placeholder="Categoria" />
           </SelectTrigger>
           <SelectContent>
@@ -55,7 +55,7 @@ export function SearchBar({ onFilterChange }: Props) {
           </SelectContent>
         </Select>
         <Select onValueChange={(value) => handleChange('gender', value)}>
-          <SelectTrigger className="w-full md:w-[180px]">
+          <SelectTrigger className="w-full md:w-[120px]">
             <SelectValue placeholder="Gênero" />
           </SelectTrigger>
           <SelectContent>

@@ -9,7 +9,7 @@ type Product = {
 
 export function ProductCard({ product }: { product: Product }) {
   return (
-    <div className="border max-md:border-slate-300 md:border-slate-400 rounded-2xl shadow-sm overflow-hidden bg-white">
+    <div className="border max-md:border-slate-200 md:border-slate-300 rounded-2xl shadow-sm overflow-hidden bg-white">
       <img
         src={product.image}
         alt={product.name}
