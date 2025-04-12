@@ -34,7 +34,7 @@ export function SearchPage() {
       </div>
       <Navbar />
       <div className="p-7 bg-slate-100">
-        <div className="pt-5">
+        <div className="py-5">
           <SearchBar onFilterChange={setFilters} />
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-7 bg-slate-100">
