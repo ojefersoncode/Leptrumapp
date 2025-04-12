@@ -1,8 +1,10 @@
 'use client';
 
+import { Newsletter } from './Newsletter';
+
 export const Footer = () => {
   return (
-    <footer className="bg-slate-100 text-slate-800">
+    <footer className="bg-white text-slate-800">
       <div className="container mx-auto px-6 py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
         {/* Logo e nome */}
         <div className="col-span-1 flex flex-col gap-2">
@@ -61,8 +63,11 @@ export const Footer = () => {
         </div>
       </div>
 
-      <div className="border-t border-slate-200 mt-8">
-        <div className="container mx-auto px-6 py-4 text-center text-sm text-slate-700">
+      <div className="py-2 bg-black">
+        <Newsletter />
+      </div>
+      <div className="bg-black">
+        <div className="container mx-auto px-6 py-4 text-center text-sm text-slate-100">
           &copy; 2024 Leptrum. Todos os direitos reservados.{' '}
           <a
             href="https://github.com/Ojefersoncode"

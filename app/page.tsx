@@ -12,7 +12,6 @@ export default async function LandingPage() {
         <Navbar />
         <Hero />
         <Vitrine />
-        <Newsletter />
         <div className="bg-slate-200">
           <Footer />
         </div>

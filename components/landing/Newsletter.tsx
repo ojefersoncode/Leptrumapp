@@ -39,10 +39,10 @@ export const Newsletter = () => {
 
   return (
     <section id="newsletter">
-      <div className="container py-4 sm:py-4 bg-slate-200">
-        <div className="py-12">
+      <div className="container py-4 bg-black">
+        <div className="">
           <div className="px-4">
-            <p className="text-2xl max-sm:text-lg text-muted-foreground text-center mt-4 mb-7 text-slate-900">
+            <p className="text-2xl max-sm:text-lg text-white text-center mt-4 mb-7 text-slate-900">
               Receba as melhores ofertas e novidades direto no seu WhatsApp.
             </p>
 
@@ -52,7 +52,7 @@ export const Newsletter = () => {
             >
               <Input
                 placeholder="(11) 91234-5678"
-                className="bg-muted/50 py-4"
+                className="bg-slate-100 py-4"
                 type="tel"
                 value={whatsapp}
                 onChange={handleChange}
@@ -60,7 +60,7 @@ export const Newsletter = () => {
               />
               <Button
                 variant="ghost"
-                className="w-full text-white bg-black dark:bg-black"
+                className="w-full text-black bg-slate-100 hover:bg-slate-300/80"
                 type="submit"
               >
                 Cadastrar

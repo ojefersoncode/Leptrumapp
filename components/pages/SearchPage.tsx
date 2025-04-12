@@ -25,19 +25,19 @@ export function SearchPage() {
   });
 
   return (
-    <div className="w-full mx-auto bg-slate-200">
-      <div className="flex justify-center items-center w-full bg-red-500 hover:bg-red-600/80 transition-all duration-200 p-3">
+    <div className="w-full mx-auto bg-slate-100">
+      <div className="flex justify-center items-center w-full bg-red-500 hover:bg-red-600/80 transition-all duration-200 p-2">
         <div className="flex items-center text-sm max-sm:text-xs font-semibold text-white">
           <Truck className="size-6 max-sm:size-5 mr-2" /> Frete grátis para
           minas gerais
         </div>
       </div>
       <Navbar />
-      <div className="p-7 bg-slate-200">
+      <div className="p-7 bg-slate-100">
         <div className="pt-5">
           <SearchBar onFilterChange={setFilters} />
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-7 bg-slate-200">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-7 bg-slate-100">
           {filteredProducts.map((p) => (
             <ProductCard key={p.id} product={p} />
           ))}
