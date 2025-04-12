@@ -63,20 +63,23 @@ export const Footer = () => {
         </div>
       </div>
 
-      <div className="py-2 bg-black">
-        <Newsletter />
-      </div>
-      <div className="bg-black">
-        <div className="container mx-auto px-6 py-4 text-center text-sm text-slate-100">
-          &copy; 2024 Leptrum. Todos os direitos reservados.{' '}
-          <a
-            href="https://github.com/Ojefersoncode"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-red-600 hover:underline"
-          >
-            by Ojefersoncode
-          </a>
+      <div className="bg-black rounded-t-xl">
+        <div className="p-2">
+          <Newsletter />
+        </div>
+
+        <div className="bg-transparemt">
+          <div className="container mx-auto px-6 py-4 text-center text-sm text-slate-100">
+            &copy; 2024 Leptrum. Todos os direitos reservados.{' '}
+            <a
+              href="https://github.com/Ojefersoncode"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-red-600 hover:underline"
+            >
+              by Ojefersoncode
+            </a>
+          </div>
         </div>
       </div>
     </footer>
