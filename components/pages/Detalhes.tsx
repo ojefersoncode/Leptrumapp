@@ -81,7 +81,7 @@ export function Detalhes() {
             </div>
 
             <div className="flex flex-col w-full justify-center items-center gap-5 mt-2">
-              <div className="flex gap-4 w-full px-2">
+              <div className="flex space-x-4 sm:space-x-10 w-full px-2">
                 <Button
                   variant={'ghost'}
                   className="w-full sm:max-w-md text-base text-slate-200 p-6 bg-red-600 hover:bg-red-600/80 hover:text-slate-100"

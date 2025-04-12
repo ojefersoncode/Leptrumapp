@@ -58,7 +58,7 @@ export function CalcFrete() {
           variant={'ghost'}
           onClick={calcularFrete}
           disabled={loading}
-          className="w-full text-white font-semibold p-6 mt-4 transition-all bg-green-600 hover:text-white/80 hover:bg-green-500/95 text-xs"
+          className="w-full text-white font-semibold p-6 mt-4 transition-all bg-green-600 hover:text-white/80 hover:bg-green-500/95 text-base"
         >
           {loading ? 'Calculando...' : 'Calcular Frete'}
         </Button>
