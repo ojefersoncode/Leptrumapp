@@ -43,7 +43,7 @@ export function SearchBar({ onFilterChange }: Props) {
         onChange={(e) => handleChange('keyword', e.target.value)}
         className="w-full md:w-1/2 p-5"
       />
-      <div className="flex max-md:pt-4 max-md:px-4 justify-center items-center md:space-x-7 gap-5">
+      <div className="flex max-md:pt-4 max-sm:mx-7 justify-center items-center md:space-x-7 gap-5">
         <Select onValueChange={(value) => handleChange('category', value)}>
           <SelectTrigger className="max-md:w-full md:w-[130px] px-3">
             <SelectValue placeholder="Categoria" />
