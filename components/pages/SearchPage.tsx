@@ -7,6 +7,7 @@ import { products as allProducts } from '../SearchComponents/mockProducts';
 import Navbar from '../HomeComponents/Navbar';
 import { Footer } from '../landing/Footer';
 import { Truck } from 'lucide-react';
+import { Fab } from '../ui/Fab';
 
 export function SearchPage() {
   const [filters, setFilters] = useState({
@@ -26,6 +27,7 @@ export function SearchPage() {
 
   return (
     <div className="w-full mx-auto bg-slate-100">
+      <Fab />
       <div className="flex justify-center items-center w-full bg-red-500 hover:bg-red-600/80 transition-all duration-200 p-2">
         <div className="flex items-center text-sm max-sm:text-xs font-semibold text-white">
           <Truck className="size-6 max-sm:size-5 mr-2" /> Frete grátis para

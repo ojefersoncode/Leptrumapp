@@ -51,7 +51,7 @@ export const Navbar = () => {
               <div className="flex">
                 <img
                   className="w-20 select-none cursor-context-menu"
-                  src="logo.png"
+                  src="Leptrum-logo.png"
                   alt="logo"
                 />
               </div>

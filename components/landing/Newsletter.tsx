@@ -52,7 +52,7 @@ export const Newsletter = () => {
             >
               <Input
                 placeholder="(11) 91234-5678"
-                className="bg-slate-100 py-4"
+                className="bg-slate-100 p-5"
                 type="tel"
                 value={whatsapp}
                 onChange={handleChange}

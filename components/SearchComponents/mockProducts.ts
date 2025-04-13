@@ -1,7 +1,7 @@
 export const products = [
   {
     id: 1,
-    name: 'Sapato sociual',
+    name: 'Sapato social',
     category: 'Calçados',
     gender: 'Feminino',
     price: 199.99,

@@ -17,6 +17,7 @@ import { Card, CardContent } from '../ui/card';
 import { CalcFrete } from '../DetailsComponents/CalcFrete';
 import { Newsletter } from '../landing/Newsletter';
 import { Description } from '../DetailsComponents/Description';
+import { Fab } from '../ui/Fab';
 
 export function Detalhes() {
   const { id } = useParams();
@@ -32,6 +33,8 @@ export function Detalhes() {
 
   return (
     <div className="w-full mx-auto">
+      <Fab />
+
       <div>
         <div className="flex justify-center items-center w-full bg-red-500 hover:bg-red-600/80 transition-all duration-200 p-2">
           <div className="flex items-center text-sm max-sm:text-xs font-semibold text-white">

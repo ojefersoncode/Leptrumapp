@@ -48,6 +48,7 @@ export function CalcFrete() {
           <Label htmlFor="cep">Digite seu CEP:</Label>
           <Input
             id="cep"
+            className="p-5"
             placeholder="30140-010"
             value={cep}
             maxLength={9}
