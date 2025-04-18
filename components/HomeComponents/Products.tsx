@@ -38,23 +38,23 @@ const Products = () => {
     <div className="scroll-smooth">
       <div className="w-full mx-auto bg-slate-200">
         <Card className="w-full mx-auto">
-          <CardHeader className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-0.5 p-2">
+          <CardHeader className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-0.5">
             {products.slice(0).map((product) => (
               <CardContent
                 key={product.id}
-                className="bg-white shadow-md p-2 flex flex-col justify-between h-[320px] max-sm:h-[330px]"
+                className="w-full bg-white shadow-md flex flex-col"
               >
                 <img
                   src={product.image}
                   alt={product.title}
-                  className="w-full h-44 object-contain p-4 transition-all hover:scale-110"
+                  className="w-full h-44 object-contain p-3 transition-all hover:scale-110"
                 />
-                <CardFooter className="flex flex-col justify-between flex-1 p-1">
-                  <div className="w-full text-center pb-1 max-sm:pb-2">
+                <CardFooter className="flex flex-col w-full flex-1 pt-1 p-0">
+                  <div className="flex flex-col w-full">
                     <h1 className="text-sm line-clamp-2 text-slate-900">
                       {product.title}
                     </h1>
-                    <div className="flex w-full justify-center items-center gap-2 pt-2">
+                    <div className="flex w-full items-center gap-2 pt-2">
                       <h2 className="text-base font-bold text-red-600 max-sm:font-bold">
                         R$: {product.price.toFixed(2)}
                       </h2>
@@ -62,14 +62,6 @@ const Products = () => {
                         no PIX
                       </h2>
                     </div>
-                  </div>
-
-                  <div className="flex w-full justify-center items-center mb-2 mx-4 max-sm:mx-6">
-                    <button className="flex w-full justify-center items-center rounded-lg bg-red-600 hover:bg-red-500 text-white hover:text-white mt-2">
-                      <span className="flex items-center gap-2 text-sm py-1.5">
-                        Adicionar <ShoppingBag className="size-4" />
-                      </span>
-                    </button>
                   </div>
                 </CardFooter>
               </CardContent>
