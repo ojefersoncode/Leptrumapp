@@ -22,19 +22,6 @@ export default function QuantitySelector() {
     setQuantity((prev) => Math.max(1, Math.min(99, prev + adjustment)));
   }
 
-  // Bloquear o scroll do <body> ao abrir o Drawer
-  React.useEffect(() => {
-    if (open) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
-
-    return () => {
-      document.body.style.overflow = '';
-    };
-  }, [open]);
-
   return (
     <Drawer open={open} onOpenChange={setOpen}>
       <DrawerTrigger asChild>
