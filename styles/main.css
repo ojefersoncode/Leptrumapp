@@ -91,7 +91,3 @@
     background: #f7acd5;
   }
 }
-
-html:has([data-state='open']) {
-  overflow: hidden;
-}
