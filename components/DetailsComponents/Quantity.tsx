@@ -32,7 +32,7 @@ export default function QuantitySelector() {
       <DrawerContent>
         <div className="mx-auto w-full max-w-sm">
           <DrawerHeader className="flex w-full justify-center">
-            <DrawerTitle>Adicionar ao carrinho</DrawerTitle>
+            <DrawerTitle>Adicionar items</DrawerTitle>
           </DrawerHeader>
           <div className="p-4 pb-0">
             <div className="flex items-center justify-center space-x-4">
@@ -62,12 +62,12 @@ export default function QuantitySelector() {
             </div>
           </div>
           <DrawerFooter>
-            <DrawerClose className="my-3" asChild>
+            <DrawerClose className="mt-3" asChild>
               <Button className="bg-black hover:bg-black/90 text-sm p-5">
                 Adicionar {quantity} item{quantity > 1 ? 's' : ''}
               </Button>
             </DrawerClose>
-            <DrawerClose className="my-3" asChild>
+            <DrawerClose className="mb-3" asChild>
               <Button
                 variant="outline"
                 className="text-sm font-semibold p-5 border-red-600 text-red-600"
