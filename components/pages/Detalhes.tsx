@@ -5,7 +5,7 @@ import { products } from '../SearchComponents/mockProducts';
 import { Button } from '@/components/ui/button';
 import Navbar from '../HomeComponents/Navbar';
 import { Footer } from '../landing/Footer';
-import { ShoppingCart, Truck } from 'lucide-react';
+import { ShoppingBag, Truck } from 'lucide-react';
 import {
   Carousel,
   CarouselContent,
@@ -15,10 +15,9 @@ import {
 } from '@/components/ui/carousel';
 import { Card, CardContent, CardFooter, CardHeader } from '../ui/card';
 import { CalcFrete } from '../DetailsComponents/CalcFrete';
-import { Newsletter } from '../landing/Newsletter';
 import { Description } from '../DetailsComponents/Description';
 import { Fab } from '../ui/Fab';
-import { Separator } from '@radix-ui/react-select';
+import Banner from '../HomeComponents/Banner';
 
 export function Detalhes() {
   const { id } = useParams();
@@ -37,12 +36,7 @@ export function Detalhes() {
       <Fab />
 
       <div>
-        <div className="flex justify-center items-center w-full bg-red-500 hover:bg-red-600/80 transition-all duration-200 p-2">
-          <div className="flex items-center text-sm max-sm:text-xs font-semibold text-white">
-            <Truck className="size-6 max-sm:size-5 mr-2" /> Frete grátis para
-            minas gerais
-          </div>
-        </div>
+        <Banner />
         <Navbar />
       </div>
       <main className="px-4 py-16 max-sm:py-7 rounded-xl bg-slate-100">
@@ -99,7 +93,7 @@ export function Detalhes() {
                   variant={'outline'}
                   className="text-base text-black p-5 hover:bg-slate-400/30 hover:text-slate-800"
                 >
-                  <ShoppingCart className="text-red-600" />
+                  <ShoppingBag className="text-red-600" />
                 </Button>
               </div>
             </CardContent>

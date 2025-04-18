@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import ProductSkeleton from '../../components/ProductSkeleton';
-import { MapPin, ShoppingBasket } from 'lucide-react';
+import { MapPin, ShoppingBag, ShoppingBasket } from 'lucide-react';
 import { ScrollToTop } from '../../components/landing/ScrollToTop';
 import { Card, CardContent, CardFooter, CardHeader } from '../ui/card';
 import { Button } from '../ui/button';
@@ -42,34 +42,29 @@ const Products = () => {
         <Card className="w-full mx-auto">
           <CardHeader className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-0.5 p-2">
             {products.map((product) => (
-              <CardContent
-                key={product.id}
-                className="bg-white shadow-md p-2 transition-all hover:shadow-lg"
-              >
+              <CardContent key={product.id} className="bg-white shadow-md p-2">
                 <img
                   src={product.image}
                   alt={product.title}
-                  className="w-full h-36 object-contain mt-2 p-2"
+                  className="w-full h-36 object-contain mt-2 p-2 transition-all hover:scale-110"
                 />
                 <CardFooter className="flex w-full flex-col gap-1 mt-2">
-                  <h1 className="w-full justify-center text-center text-sm line-clamp-1 mt-3 text-slate-900 max-sm:text-xs">
+                  <h1 className="w-full justify-center text-center text-sm line-clamp-2 h-10 mt-3 text-slate-900">
                     {product.title}
                   </h1>
-                  <div className="flex gap-1 mt-1">
-                    <h2 className="flex justify-center text-center text-base font-bold text-red-600 max-sm:font-bold max-sm:text-sm">
+                  <div className="flex items-center gap-1 mt-1">
+                    <h2 className="flex justify-center text-center text-base font-bold text-red-600 max-sm:font-bold max-sm:text-xs">
                       R$: {product.price.toFixed(2)}
                     </h2>
-                    <h2 className="text-red-600 font-semibold text-xs max-sm:mt-1 mt-2">
+                    <h2 className="text-red-600 font-semibold text-xs sm:mt-1">
                       no PIX
                     </h2>
                   </div>
                   <div className="flex w-full pt-4">
                     <button className="flex w-full bg-red-600 py-2 sm:px-7 text-white rounded-lg hover:bg-red-500 hover:text-white transition-all">
                       <div className="flex w-full items-center justify-center gap-2 px-2">
-                        <span className="text-xs max-sm:text-[0.7rem] font-semibold">
-                          Adicionar
-                        </span>{' '}
-                        <ShoppingBasket className="size-4" />
+                        <span className="text-xs font-semibold">Adicionar</span>
+                        <ShoppingBag className="size-4" />
                       </div>
                     </button>
                   </div>
