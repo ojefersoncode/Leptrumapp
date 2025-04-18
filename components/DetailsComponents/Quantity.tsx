@@ -67,7 +67,7 @@ export default function QuantitySelector() {
                 Adicionar {quantity} item{quantity > 1 ? 's' : ''}
               </Button>
             </DrawerClose>
-            <DrawerClose className="mb-3" asChild>
+            <DrawerClose className="mb-3 mt-1" asChild>
               <Button
                 variant="outline"
                 className="text-base font-semibold p-5 border-red-600 text-red-600"
