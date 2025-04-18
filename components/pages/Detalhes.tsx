@@ -18,6 +18,7 @@ import { CalcFrete } from '../DetailsComponents/CalcFrete';
 import { Description } from '../DetailsComponents/Description';
 import { Fab } from '../ui/Fab';
 import Banner from '../HomeComponents/Banner';
+import Quantity from '../DetailsComponents/Quantity';
 
 export function Detalhes() {
   const { id } = useParams();
@@ -40,9 +41,9 @@ export function Detalhes() {
         <Navbar />
       </div>
       <main className="px-4 py-16 max-sm:py-7 rounded-xl bg-slate-100">
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-7">
           <div className="flex flex-col w-full items-center">
-            <Carousel className="w-full max-w-sm max-sm:max-w-xs">
+            <Carousel className="w-full max-w-md max-sm:max-w-xs">
               <CarouselContent>
                 {Array.from({ length: 1 }).map((_, index) => (
                   <CarouselItem key={index}>
@@ -65,9 +66,9 @@ export function Detalhes() {
             </Carousel>
           </div>
 
-          <Card className="flex flex-col w-full justify-center items-center p-2 pt-4 max-sm:pt-4">
-            <CardHeader className="flex flex-col w-full justify-center items-center px-4">
-              <div className="sm:flex w-full items-center justify-between max-sm:flex-col mb-1">
+          <Card className="flex flex-col w-full justify-center items-center">
+            <CardHeader className="flex flex-col w-full justify-center items-center">
+              <div className="sm:flex w-full items-center justify-between max-sm:flex-col">
                 <h1 className="text-xl max-sm:text-xl font-bold">
                   {product.name}
                 </h1>
@@ -76,9 +77,12 @@ export function Detalhes() {
                 </p>
               </div>
 
-              <p className="flex w-full justify-start text-lg text-primary font-bold pb-2">
+              <p className="flex w-full justify-start text-base text-primary font-bold pb-2">
                 R$ {product.price.toFixed(2)}
               </p>
+              <div className="flex w-full justify-start">
+                <Quantity />
+              </div>
             </CardHeader>
 
             <CardContent className="flex w-full flex-col justify-center items-center gap-5">
@@ -91,14 +95,14 @@ export function Detalhes() {
                 </Button>
                 <Button
                   variant={'outline'}
-                  className="text-base text-black p-5 hover:bg-slate-400/30 hover:text-slate-800"
+                  className="text-base text-black px-3 py-5 hover:bg-slate-400/30 hover:text-slate-800"
                 >
                   <ShoppingBag className="text-red-600" />
                 </Button>
               </div>
             </CardContent>
 
-            <CardFooter className="flex flex-col w-full justify-center items-center py-2">
+            <CardFooter className="flex flex-col w-full justify-center items-center py-2 mb-7">
               <div className="flex w-full items-center justify-center mb-4">
                 <Description />
               </div>

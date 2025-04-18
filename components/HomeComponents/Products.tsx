@@ -49,14 +49,14 @@ const Products = () => {
                   className="w-full h-36 object-contain mt-2 p-2 transition-all hover:scale-110"
                 />
                 <CardFooter className="flex w-full flex-col gap-1 mt-2">
-                  <h1 className="w-full justify-center text-center text-sm line-clamp-2 h-10 mt-3 text-slate-900">
+                  <h1 className="w-full justify-center text-center text-sm line-clamp-1 mt-3 text-slate-900">
                     {product.title}
                   </h1>
                   <div className="flex items-center gap-1 mt-1">
-                    <h2 className="flex justify-center text-center text-base font-bold text-red-600 max-sm:font-bold max-sm:text-xs">
+                    <h2 className="flex justify-center text-center text-base font-bold text-red-600 max-sm:font-bold text-base">
                       R$: {product.price.toFixed(2)}
                     </h2>
-                    <h2 className="text-red-600 font-semibold text-xs sm:mt-1">
+                    <h2 className="text-red-600 font-semibold text-sm sm:mt-1">
                       no PIX
                     </h2>
                   </div>
