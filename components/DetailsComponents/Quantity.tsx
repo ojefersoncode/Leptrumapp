@@ -63,14 +63,14 @@ export default function QuantitySelector() {
           </div>
           <DrawerFooter>
             <DrawerClose className="mt-3" asChild>
-              <Button className="bg-black hover:bg-black/90 text-sm p-5">
+              <Button className="bg-black hover:bg-black/90 text-base p-5">
                 Adicionar {quantity} item{quantity > 1 ? 's' : ''}
               </Button>
             </DrawerClose>
             <DrawerClose className="mb-3" asChild>
               <Button
                 variant="outline"
-                className="text-sm font-semibold p-5 border-red-600 text-red-600"
+                className="text-base font-semibold p-5 border-red-600 text-red-600"
               >
                 Cancelar
               </Button>
