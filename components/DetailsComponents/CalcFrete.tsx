@@ -43,7 +43,7 @@ export function CalcFrete() {
           <Label htmlFor="cep"> Calcule o frete para sua região :</Label>
           <Input
             id="cep"
-            className="p-5"
+            className="p-5 bg-white"
             placeholder="30140-010"
             value={cep}
             maxLength={9}

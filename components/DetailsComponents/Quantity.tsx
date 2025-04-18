@@ -24,7 +24,7 @@ export default function QuantitySelector() {
 
   return (
     <Drawer open={open} onOpenChange={setOpen}>
-      <DrawerTrigger asChild>
+      <DrawerTrigger asChild className="bg-white">
         <Button variant="outline" className="flex items-center gap-2">
           <Plus className="size-4" /> {quantity}
         </Button>
