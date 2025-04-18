@@ -7,7 +7,7 @@ export function Description() {
   return (
     <div className="border rounded-xl bg-white w-full">
       <div
-        className="flex items-center justify-between p-2 cursor-pointer bg-slate-100 border border-red-400 rounded-lg"
+        className="flex items-center justify-between p-2 cursor-pointer bg-white border border-red-400 rounded-lg"
         onClick={() => setOpen(!open)}
       >
         <h2 className="text-sm max-sm:text-xs font-bold text-red-600">
