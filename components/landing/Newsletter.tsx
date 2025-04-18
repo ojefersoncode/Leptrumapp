@@ -60,7 +60,7 @@ export const Newsletter = () => {
               />
               <Button
                 variant="ghost"
-                className="w-full bg-green-600 text-white hover:text-white/80 hover:bg-green-600/80"
+                className="w-full bg-red-600 text-white hover:text-white/80 hover:bg-red-600/80"
                 type="submit"
               >
                 Cadastrar

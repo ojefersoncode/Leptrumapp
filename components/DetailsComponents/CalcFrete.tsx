@@ -38,14 +38,9 @@ export function CalcFrete() {
 
   return (
     <div className="rounded-xl w-full space-y-4">
-      <div className="flex flex-col justify-center w-full sm:max-w-xl px-3 max-md:px-2">
-        <div className="flex w-full justify-center">
-          <h1 className="text-base py-4 font-semibold">
-            Calcule o frete para sua região
-          </h1>
-        </div>
+      <div className="flex flex-col justify-center w-full">
         <div className="space-y-2">
-          <Label htmlFor="cep">Digite seu CEP:</Label>
+          <Label htmlFor="cep"> Calcule o frete para sua região :</Label>
           <Input
             id="cep"
             className="p-5"
@@ -59,7 +54,7 @@ export function CalcFrete() {
           variant={'ghost'}
           onClick={calcularFrete}
           disabled={loading}
-          className="w-full text-white font-semibold p-6 mt-4 transition-all bg-green-600 hover:text-white/80 hover:bg-green-500/95 text-base"
+          className="w-full text-white font-semibold p-5 mt-4 transition-all bg-green-600 hover:text-white/80 hover:bg-green-500/95 text-base rounded-lg"
         >
           {loading ? 'Calculando...' : 'Calcular Frete'}
         </Button>

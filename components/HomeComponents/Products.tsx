@@ -2,8 +2,10 @@
 
 import React, { useEffect, useState } from 'react';
 import ProductSkeleton from '../../components/ProductSkeleton';
-import { MapPin } from 'lucide-react';
+import { MapPin, ShoppingBasket } from 'lucide-react';
 import { ScrollToTop } from '../../components/landing/ScrollToTop';
+import { Card, CardContent, CardFooter, CardHeader } from '../ui/card';
+import { Button } from '../ui/button';
 
 type Product = {
   id: number;
@@ -36,36 +38,46 @@ const Products = () => {
 
   return (
     <div className="scroll-smooth">
-      <div>
-        <ScrollToTop />
-      </div>
-
       <div className="w-full mx-auto bg-slate-100 p-2">
-        <div className="w-full mx-auto">
-          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-0.5 p-2">
+        <Card className="w-full mx-auto">
+          <CardHeader className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-0.5 p-2">
             {products.map((product) => (
-              <div
+              <CardContent
                 key={product.id}
-                className="bg-white shadow-md p-3 transition-all hover:shadow-lg"
+                className="bg-white shadow-md p-2 transition-all hover:shadow-lg"
               >
                 <img
                   src={product.image}
                   alt={product.title}
-                  className="w-full h-44 object-contain p-2"
+                  className="w-full h-36 object-contain mt-2 p-2"
                 />
-
-                <h1 className="text-sm line-clamp-2 mt-3 mb-1 text-slate-900">
-                  {product.title}
-                </h1>
-                <div>
-                  <h2 className="text-lg text-green-600">
-                    R$: {product.price.toFixed(2)}
-                  </h2>
-                </div>
-              </div>
+                <CardFooter className="flex w-full flex-col gap-1 mt-2">
+                  <h1 className="w-full justify-center text-center text-sm line-clamp-1 mt-3 text-slate-900 max-sm:text-xs">
+                    {product.title}
+                  </h1>
+                  <div className="flex gap-1 mt-1">
+                    <h2 className="flex justify-center text-center text-base font-bold text-red-600 max-sm:font-bold max-sm:text-sm">
+                      R$: {product.price.toFixed(2)}
+                    </h2>
+                    <h2 className="text-red-600 font-semibold text-xs max-sm:mt-1 mt-2">
+                      no PIX
+                    </h2>
+                  </div>
+                  <div className="flex w-full pt-4">
+                    <button className="flex w-full bg-red-600 py-2 sm:px-7 text-white rounded-lg hover:bg-red-500 hover:text-white transition-all">
+                      <div className="flex w-full items-center justify-center gap-2 px-2">
+                        <span className="text-xs max-sm:text-[0.7rem] font-semibold">
+                          Adicionar
+                        </span>{' '}
+                        <ShoppingBasket className="size-4" />
+                      </div>
+                    </button>
+                  </div>
+                </CardFooter>
+              </CardContent>
             ))}
-          </div>
-        </div>
+          </CardHeader>
+        </Card>
       </div>
     </div>
   );

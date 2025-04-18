@@ -13,11 +13,12 @@ import {
   CarouselNext,
   CarouselPrevious
 } from '@/components/ui/carousel';
-import { Card, CardContent } from '../ui/card';
+import { Card, CardContent, CardFooter, CardHeader } from '../ui/card';
 import { CalcFrete } from '../DetailsComponents/CalcFrete';
 import { Newsletter } from '../landing/Newsletter';
 import { Description } from '../DetailsComponents/Description';
 import { Fab } from '../ui/Fab';
+import { Separator } from '@radix-ui/react-select';
 
 export function Detalhes() {
   const { id } = useParams();
@@ -70,42 +71,46 @@ export function Detalhes() {
             </Carousel>
           </div>
 
-          <div className="flex flex-col w-full justify-center items-center pt-4 max-sm:pt-4">
-            <div className="flex flex-col w-full px-4">
-              <h1 className="text-3xl font-bold mb-2">{product.name}</h1>
-              <p className="text-slate-800 text-sm mb-2">
-                {product.category} - {product.gender}
-              </p>
+          <Card className="flex flex-col w-full justify-center items-center p-2 pt-4 max-sm:pt-4">
+            <CardHeader className="flex flex-col w-full justify-center items-center px-4">
+              <div className="sm:flex w-full items-center justify-between max-sm:flex-col mb-1">
+                <h1 className="text-xl max-sm:text-xl font-bold">
+                  {product.name}
+                </h1>
+                <p className="text-slate-800 text-sm max-sm:text-xs sm:px-3">
+                  {product.category} - {product.gender}
+                </p>
+              </div>
 
-              <p className="text-lg mb-4">{product.description}</p>
-              <p className="text-3xl text-primary font-bold mb-4">
+              <p className="flex w-full justify-start text-lg text-primary font-bold pb-2">
                 R$ {product.price.toFixed(2)}
               </p>
-            </div>
+            </CardHeader>
 
-            <div className="flex flex-col w-full justify-center items-center gap-5 mt-2">
-              <div className="flex space-x-4 sm:space-x-10 w-full px-2">
+            <CardContent className="flex w-full flex-col justify-center items-center gap-5">
+              <div className="flex w-full justify-between items-center gap-7">
                 <Button
                   variant={'ghost'}
-                  className="w-full sm:max-w-md text-base text-slate-200 p-6 bg-red-600 hover:bg-red-600/80 hover:text-slate-100"
+                  className="w-full text-base rounded-lg text-slate-200 p-5 bg-red-600 hover:bg-red-600/80 hover:text-slate-100"
                 >
                   Comprar agora
                 </Button>
                 <Button
                   variant={'outline'}
-                  className="text-base text-black p-6 hover:bg-slate-400/30 hover:text-slate-800"
+                  className="text-base text-black p-5 hover:bg-slate-400/30 hover:text-slate-800"
                 >
-                  <ShoppingCart />
+                  <ShoppingCart className="text-red-600" />
                 </Button>
               </div>
-              <div className="flex w-full justify-start pt-4">
+            </CardContent>
+
+            <CardFooter className="flex flex-col w-full justify-center items-center py-2">
+              <div className="flex w-full items-center justify-center mb-4">
                 <Description />
               </div>
-              <div className="flex w-full py-4">
-                <CalcFrete />
-              </div>
-            </div>
-          </div>
+              <CalcFrete />
+            </CardFooter>
+          </Card>
         </div>
       </main>
       <div>

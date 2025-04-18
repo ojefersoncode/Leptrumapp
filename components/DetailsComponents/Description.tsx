@@ -1,4 +1,3 @@
-// components/Description.tsx
 import { useState } from 'react';
 import { ChevronUp, ChevronDown } from 'lucide-react';
 
@@ -6,12 +5,14 @@ export function Description() {
   const [open, setOpen] = useState(true);
 
   return (
-    <div className="border rounded-xl bg-white w-full max-w-xl shadow-md">
+    <div className="border rounded-xl bg-white w-full">
       <div
-        className="flex items-center justify-between p-4 cursor-pointer bg-slate-100 border-b border-red-300 rounded-t-xl"
+        className="flex items-center justify-between p-2 cursor-pointer bg-slate-100 border border-red-400 rounded-lg"
         onClick={() => setOpen(!open)}
       >
-        <h2 className="text-lg font-bold text-red-600">DESCRIÇÃO DO PRODUTO</h2>
+        <h2 className="text-sm max-sm:text-xs font-bold text-red-600">
+          DESCRIÇÃO DO PRODUTO
+        </h2>
         {open ? (
           <ChevronUp className="text-red-600" />
         ) : (
@@ -20,8 +21,8 @@ export function Description() {
       </div>
 
       {open && (
-        <div className="p-6 space-y-4 text-gray-700 bg-slate-100">
-          <h3 className="text-xl font-semibold text-black">
+        <div className="p-4 space-y-4 text-gray-700 bg-slate-100">
+          <h3 className="text-base max-sm:text-sm font-semibold text-black">
             Sapato Feminino Melissa Ml-1108
           </h3>
           <p>
