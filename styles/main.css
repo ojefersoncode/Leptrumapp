@@ -74,20 +74,24 @@
   }
   /* Barra de rolagem personalizada WebKit (Chrome, Edge, Safari) */
   ::-webkit-scrollbar {
-    width: 4px; /* Largura da barra de rolagem */
+    width: 4px;
   }
 
   ::-webkit-scrollbar-track {
-    background: #a3999e; /* Cor do fundo */
+    background: #a3999e;
     border-radius: 4px;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #ffd1ea; /* Cor da barra de rolagem */
+    background: #ffd1ea;
     border-radius: 4px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #f7acd5; /* Cor ao passar o mouse */
+    background: #f7acd5;
   }
+}
+
+html:has([data-state='open']) {
+  overflow: hidden;
 }
