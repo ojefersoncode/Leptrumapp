@@ -46,7 +46,7 @@ const Products = () => {
                 <img
                   src={product.image}
                   alt={product.title}
-                  className="w-full h-36 object-contain mt-2 p-2 transition-all hover:scale-110"
+                  className="w-full h-40 object-contain mt-2 p-2 transition-all hover:scale-110"
                 />
                 <CardFooter className="flex w-full flex-col gap-1 mt-2">
                   <h1 className="w-full justify-center text-center text-sm line-clamp-1 mt-3 text-slate-900">
