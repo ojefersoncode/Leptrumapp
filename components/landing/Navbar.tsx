@@ -33,7 +33,7 @@ export const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
 
   return (
-    <header className="stick bg-slate-100 top-0 z-40 w-full">
+    <header className="stick bg-white top-0 z-40 w-full">
       <NavigationMenu className="mx-auto">
         <NavigationMenuList className="container py-2 px-3 md:px-6 w-screen flex justify-between">
           {/* Logo */}

@@ -42,7 +42,8 @@ const Products = () => {
             {products.slice(0).map((product) => (
               <CardContent
                 key={product.id}
-                className="bg-white shadow-md p-2 flex flex-col justify-between h-[330px]"
+                className="bg-white shadow-md p-2 flex flex-col justify-between h-[330px] 
+                max-sm:h-[340px]"
               >
                 <img
                   src={product.image}
