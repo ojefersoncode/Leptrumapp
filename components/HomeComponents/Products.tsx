@@ -53,7 +53,7 @@ const Products = () => {
                     {product.title}
                   </h1>
                   <div className="flex items-center gap-1 mt-1">
-                    <h2 className="flex justify-center text-center text-base font-bold text-red-600 max-sm:font-bold text-base">
+                    <h2 className="flex justify-center text-center text-base font-bold text-red-600 max-sm:font-bold">
                       R$: {product.price.toFixed(2)}
                     </h2>
                     <h2 className="text-red-600 font-semibold text-sm sm:mt-1">
