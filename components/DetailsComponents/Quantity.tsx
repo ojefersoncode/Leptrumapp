@@ -46,7 +46,7 @@ export default function QuantitySelector() {
                 <Minus />
                 <span className="sr-only">Diminuir</span>
               </Button>
-              <div className="text-4xl font-semibold w-12 text-center">
+              <div className="text-3xl font-semibold w-12 text-center">
                 {quantity}
               </div>
               <Button
@@ -62,13 +62,16 @@ export default function QuantitySelector() {
             </div>
           </div>
           <DrawerFooter>
-            <DrawerClose asChild>
-              <Button className="bg-black hover:bg-black/90">
+            <DrawerClose className="my-3" asChild>
+              <Button className="bg-black hover:bg-black/90 text-sm p-5">
                 Adicionar {quantity} item{quantity > 1 ? 's' : ''}
               </Button>
             </DrawerClose>
-            <DrawerClose asChild>
-              <Button variant="outline" className="border-red-600 text-red-600">
+            <DrawerClose className="my-3" asChild>
+              <Button
+                variant="outline"
+                className="text-sm font-semibold p-5 border-red-600 text-red-600"
+              >
                 Cancelar
               </Button>
             </DrawerClose>
